@@ -5,6 +5,6 @@ module G_m(
   input G
   );
 
-  assign result = (G) ? a : b;
+  assign result = (G) ? b : a;
 
 endmodule

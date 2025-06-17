@@ -29,7 +29,7 @@ module decoder (
     output logic writeRam,
     output logic branch,
     output t_aluCodes aluCode,
-    output logic [1:0] immSample,
+    output logic [2:0] immSample,
     output logic A,
     output logic B,
     output logic C,
@@ -46,7 +46,7 @@ module decoder (
 
     {writeReg, writeRam, branch, A, B, C, D, E, F, G, H} = 0;
     aluCode = NOP;
-    immSample = 2'd0;
+    immSample = '1;
 
     case (opcode)
 
@@ -64,6 +64,7 @@ module decoder (
         writeReg = 1;
         aluCode = ADD;
         C = 1;
+        immSample = 3'b101;
       end
 
       JALR: begin
@@ -72,17 +73,17 @@ module decoder (
         C = 1;
         G = 1;
         H = 1;
+        immSample = 3'b000;
       end
 
       BRANCH: begin
-        immSample = 2'b00;
         branch = 1;
         aluCode = SUB;
         F = 1;
+        immSample = 3'b100;
       end
 
       LOAD: begin
-        immSample = 2'b01;
         writeReg = 1;
         A = 1;
         C = 1;
@@ -90,15 +91,16 @@ module decoder (
         F = 1;
         G = 1;
         aluCode = ADD;
+        immSample = 3'b000;
       end
 
       STORE: begin
-        immSample = 2'b10;
         writeReg = 1;
         aluCode = ADD;
         A = 1;
         F = 1;
         G = 1;
+        immSample = 3'b010;
       end
 
       OPIMM: begin
@@ -109,8 +111,8 @@ module decoder (
         G = 1;
         aluCode = ctrl;
 
-        immSample = 2'b11;
-
+        if (ctrl == 4'b1010) immSample = 3'b001;
+        else immSample = 3'b000;
       end
 
       OP: begin

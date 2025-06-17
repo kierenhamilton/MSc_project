@@ -5,54 +5,53 @@ module top (
 
   timeunit 1ns; timeprecision 100ps;
 
-  logic [31:0] instruction;
-  logic [31:0] rs1;
-  logic [31:0] rs2;
-  logic writeRegMem;
-  logic writeRam;
-  logic [4:0] rd;
-  logic [4:0] addr1, addr2;
-  logic A, B, C, D, E, F, G, H;
-  logic wData;
-  logic rData;
 
+  wire [31:0] instruction;
+  wire [31:0] pc, pcNext;
+  wire A, B, C, D, E, F, G, H;
+  wire branch, writeReg, writeRam;
+  wire [3:0] aluCode;
+  wire [2:0] immSample;
+  wire [31:0] Bout, Cout, Dout, Eout, Fout, Gout, Hout;
+  wire [31:0] aluResult, rs1, rs2;
+  wire [31:0] ramOut, branchLogicOut;
+  wire zeroFlag, negFlag, carryFlag;
 
   regMem regMem0 (
       .rs1(rs1),
       .rs2(rs2),
       .Clock(Clock),
       .nReset(nReset),
-      .writeRegMem(writeRegMem),
-      .rd(rd),
-      .addr1(addr1),
-      .addr2(addr2),
-      .dataIn(dataIn)
+      .writeRegMem(writeReg),
+      .rd(instruction[11:7]),
+      .addr1(instruction[19:15]),
+      .addr2(instruction[24:20]),
+      .dataIn(Cout)
   );
 
   ram ram0 (
       .Clock(Clock),
       .nReset(nReset),
-      .rData(rData),
+      .rData(ramOut),
       .writeRam(writeRam),
-      .ctrl(ctrl),
-      .address(address),
-      .wData(wData)
+      .ctrl(instruction[14:12]),
+      .address(aluResult),
+      .wData(rs2)
   );
 
   progMem progMem0 (
-      .PC(PC),
+      .PC(pc),
       .instruction(instruction)
   );
 
   progCounter progCounter (
       .Clock(Clock),
       .nReset(nReset),
-      .PCin(PCin),
-      .PCbypass(PCbypass),
+      .PCin(branchLogicOut),
       .A(A),
       .H(H),
-      .PC(PC),
-      .PCnext(PCnext)
+      .PC(pc),
+      .PCnext(pcNext)
   );
 
   decoder decoder0 (
@@ -69,59 +68,73 @@ module top (
       .F(F),
       .G(G),
       .H(H),
-      .opcode(opcode),
-      .ctrl(ctrl)
+      .opcode(instruction[6:2]),
+      .ctrl({instruction[30], instruction[14:12]})
   );
 
   branLog branLog0 (
 
-      .PCout(PCout),
-      .ctrl(ctrl),
+      .PCout(branchLogicOut),
+      .ctrl(instruction[14:12]),
       .branch(branch),
-      .neg_flag(neg_flag),
-      .zero_flag(zero_flag),
-      .carry_flag(carry_flag),
-      .PCin(PCin)
+      .neg_flag(negFlag),
+      .zero_flag(zeroFlag),
+      .carry_flag(carryFlag),
+      .PCin(Bout)
   );
 
   alu alu0 (
 
       .aluResult(aluResult),
-      .negative_flag(negative_flag),
-      .zero_flag(zero_flag),
-      .carry_flag(carry_flag),
+      .negative_flag(negFlag),
+      .zero_flag(zeroFlag),
+      .carry_flag(carryFlag),
       .aluCode(aluCode),
-      .aluIn1(aluIn1),
-      .aluIn2(aluIn2)
+      .aluIn1(Gout),
+      .aluIn2(Dout)
   );
 
   B_m b (
 
-      .result(result),
-      .aluIn(aluIn),
-      .immIn(immIn),
+      .result(Bout),
+      .aluIn(Eout),
+      .immIn(instruction[31:12]),
       .B(B)
   );
 
   C_m c (
-      .result(result),
+      .result(Cout),
       .rs1(rs1),
-      .PC(PC),
+      .PC(Fout),
       .C(C)
   );
 
   D_m d (
-      .result(result),
+      .result(Dout),
       .rs2(rs2),
-      .imm(imm),
-      .imm2(imm2),
+      .imm(instruction[31:7]),
       .immSample(immSample),
       .D(D)
   );
 
-  E_m e ();
-  F_m f ();
-  G_m g ();
+  E_m e (
+      .result(Eout),
+      .a(aluResult),
+      .b(ramOut),
+      .E(E)
+  );
+  F_m f (
+      .result(Fout),
+      .a(pcNext),
+      .b(Eout),
+      .F(F)
+  );
+  G_m g (
+      .result(Gout),
+      .a(pc),
+      .b(rs1),
+      .G(G)
+  );
 
 
 endmodule

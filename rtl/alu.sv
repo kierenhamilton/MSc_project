@@ -11,14 +11,14 @@ typedef enum logic [3:0] {
   SRL  = 4'b0101,
   SRA  = 4'b1101,
   NOP  = 4'b1111
-} aluCodes;
+} aluCodes_t;
 
 module alu (
     output logic signed [31:0] aluResult,
     output logic negative_flag,
     output logic zero_flag,
     output logic carry_flag,
-    input aluCodes aluCode,
+    input aluCodes_t aluCode,
     input signed [31:0] aluIn1,
     input signed [31:0] aluIn2
 );
@@ -27,6 +27,7 @@ module alu (
 
     negative_flag = 0;
     zero_flag = 0;
+    carry_flag = 0;
     aluResult = 0;
 
     case (aluCode)

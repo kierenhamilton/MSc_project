@@ -2,7 +2,6 @@ module progCounter (
     input Clock,
     input nReset,
     input [31:0] PCin,
-    input [31:0] PCbypass,
     input A,
     input H,
     output logic [31:0] PC,
@@ -12,7 +11,7 @@ module progCounter (
   always_ff @(posedge Clock, negedge nReset)
 
     if (!nReset) PC <= 0;
-    else if (H) PC <= PCbypass;
+    else if (H) PC <= PCin;
     else if (A) PC <= PC + 4;
     else PC <= PC + PCin;
 

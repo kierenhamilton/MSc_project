@@ -10,7 +10,7 @@ module regMem (
     input [31:0] dataIn
 );
 
-  logic [31:0] regMemory[31:0];
+  logic [31:0] regMemory[0:31];
 
   always_ff @(posedge Clock, negedge nReset) begin
 
