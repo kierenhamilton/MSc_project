@@ -23,14 +23,14 @@ module D_m (
           result = {{20{imm[24]}}, imm[24:18], imm[4:0]};
         end
         3'b100: begin  // branch
-          result = {{20{imm[24]}}, imm[24], imm[0], imm[23:18], imm[4:1]};
+          result = {{19{imm[24]}}, imm[24], imm[0], imm[23:18], imm[4:1], 1'b0};
         end
         3'b101: begin  // jal
-          result = {{20{imm[24]}}, imm[24:13]};
+          result = {{19{imm[24]}}, imm[24:13], 1'b0};
         end
 
         default: begin
-          result = '0;
+          result = 0;
         end
 
       endcase
