@@ -5,6 +5,8 @@ module C_m (
     input C
 );
 
+timeunit 1ns; timeprecision 100ps;
+
   always_comb
     if (C) result = rs1;
     else result = PC;

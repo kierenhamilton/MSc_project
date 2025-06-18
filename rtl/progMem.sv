@@ -3,10 +3,11 @@ module progMem (
     output logic [31:0] instruction
 );
 
+timeunit 1ns; timeprecision 100ps;
   logic [7:0] programMemory[0:1023];
 
   initial begin
-    foreach (programMemory[i]) programMemory[i] = 0;
+    //foreach (programMemory[i]) programMemory[i] = 0;
     $readmemb("program.bin", programMemory);
   end
 

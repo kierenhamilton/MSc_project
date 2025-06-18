@@ -5,6 +5,7 @@ module G_m(
   input G
   );
 
+timeunit 1ns; timeprecision 100ps;
   assign result = (G) ? b : a;
 
 endmodule

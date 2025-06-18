@@ -6,6 +6,7 @@ module D_m (
     input D
 );
 
+  timeunit 1ns; timeprecision 100ps;
 
   always_comb begin
     if (D) result = rs2;
@@ -27,6 +28,9 @@ module D_m (
         end
         3'b101: begin  // jal
           result = {{19{imm[24]}}, imm[24:13], 1'b0};
+        end
+        3'b110: begin // auipc
+          result = {imm[24:5], 12'b0};
         end
 
         default: begin

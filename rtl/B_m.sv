@@ -5,6 +5,8 @@ module B_m (
     input logic B
 );
 
+timeunit 1ns; timeprecision 100ps;
+
   always_comb begin
 
     if (B) result = {immIn, 12'b0};

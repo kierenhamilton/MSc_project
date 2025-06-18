@@ -10,13 +10,13 @@ module regMem (
     input [31:0] dataIn
 );
 
+  timeunit 1ns; timeprecision 100ps;
   logic [31:0] regMemory[0:31];
 
   always_ff @(posedge Clock, negedge nReset) begin
 
-    if (!nReset) for (int i = 0; i < 32; i++) regMemory[i] <= 0;
 
-    else if (writeRegMem) regMemory[rd] <= dataIn;
+    if (writeRegMem) regMemory[rd] <= dataIn;
 
   end
 

@@ -8,6 +8,7 @@ module branLog (
     input [31:0] PCin
 );
 
+timeunit 1ns; timeprecision 100ps;
   always_comb
 
     if (branch) begin

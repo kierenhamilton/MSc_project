@@ -1,4 +1,4 @@
-module top (
+module netlist (
     input Clock,
     input nReset
 );
@@ -12,7 +12,7 @@ module top (
   wire branch, writeReg, writeRam;
   wire [3:0] aluCode;
   wire [2:0] immSample;
-  wire [31:0] Bout, Cout, Dout, Eout, Fout, Gout, Hout;
+  wire [31:0] Bout, Cout, Dout, Eout, Fout, Gout;
   wire [31:0] aluResult, rs1, rs2;
   wire [31:0] ramOut, branchLogicOut;
   wire zeroFlag, negFlag, carryFlag;

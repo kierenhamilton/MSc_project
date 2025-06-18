@@ -4,10 +4,20 @@ module testbench;
 
   logic Clock, nReset;
 
+  netlist dut (
+      .Clock (Clock),
+      .nReset(nReset)
+  );
+
   always begin
     Clock = 1;
     #100 Clock = 0;
     #100 Clock = 1;
+  end
+
+  initial begin
+    $dumpfile("waveform.vcd");
+    $dumpvars(0, testbench);
   end
 
   initial begin
@@ -17,7 +27,8 @@ module testbench;
   end
 
   initial begin
-    #10000 $stop;
+    #10000 $finish;
   end
+
 
 endmodule

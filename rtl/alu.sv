@@ -1,28 +1,17 @@
-
-typedef enum logic [3:0] {
-  ADD  = 4'b0000,
-  SUB  = 4'b1000,
-  SLL  = 4'b0001,
-  SLT  = 4'b0010,
-  SLTU = 4'b1010,
-  XOR  = 4'b0100,
-  OR   = 4'b0110,
-  AND  = 4'b0111,
-  SRL  = 4'b0101,
-  SRA  = 4'b1101,
-  NOP  = 4'b1111
-} aluCodes_t;
+//`include "./codes.sv"
+import codes::*;
 
 module alu (
     output logic signed [31:0] aluResult,
     output logic negative_flag,
     output logic zero_flag,
     output logic carry_flag,
-    input aluCodes_t aluCode,
+    input alucodes_t aluCode,
     input signed [31:0] aluIn1,
     input signed [31:0] aluIn2
 );
 
+  timeunit 1ns; timeprecision 100ps;
   always_comb begin
 
     negative_flag = 0;
