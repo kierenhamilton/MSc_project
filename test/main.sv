@@ -1,17 +1,11 @@
 module main;
 
-  logic [31:0] a;
-  logic [ 7:0] b;
 
+  logic [7:0] memory[50:0];
 
   initial begin
-
-    b = '1;
-
-
-    a = $signed(b);
-
-    $display(b);
+    $readmemh("program.hex", memory);
   end
+
 
 endmodule

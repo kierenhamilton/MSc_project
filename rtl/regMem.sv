@@ -15,7 +15,8 @@ module regMem (
 
   always_ff @(posedge Clock, negedge nReset) begin
 
-
+    if(!nReset) regMemory[0] <= 0;
+  else
     if (writeRegMem) regMemory[rd] <= dataIn;
 
   end
