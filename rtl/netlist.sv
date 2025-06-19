@@ -98,14 +98,14 @@ module netlist (
 
       .result(Bout),
       .aluIn(Eout),
-      .immIn(instruction[31:12]),
+      .immIn({instruction[31:25], instruction[11:7]}),
       .B(B)
   );
 
   C_m c (
       .result(Cout),
-      .rs1(rs1),
-      .PC(Fout),
+      .a(instruction[31:12]),
+      .b(Fout),
       .C(C)
   );
 

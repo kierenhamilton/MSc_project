@@ -1,14 +1,11 @@
 module C_m (
     output logic [31:0] result,
-    input [31:0] rs1,
-    input [31:0] PC,
+    input [31:12] a,
+    input [31:0] b,
     input C
 );
 
 timeunit 1ns; timeprecision 100ps;
 
-  always_comb
-    if (C) result = rs1;
-    else result = PC;
-
+assign result = (C) ? b : {{12{a[31]}}, a[31:12]};
 endmodule

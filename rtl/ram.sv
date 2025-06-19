@@ -7,11 +7,13 @@ module ram (
     input [31:0] address,
     input [31:0] wData
 );
-timeunit 1ns; timeprecision 100ps;
-  logic [7:0] ramMemory[0:1023];
+  timeunit 1ns; timeprecision 100ps;
+  logic [7:0] ramMemory[0:31];
 
   always_ff @(posedge Clock, negedge nReset) begin
-     if (writeRam)
+    if (!nReset) begin
+      ramMemory[0] <= 0;
+    end else if (writeRam)
       case (ctrl)
         3'b000: ramMemory[address] <= wData[7:0];
         3'b001: {ramMemory[address+1], ramMemory[address]} <= wData[15:0];
