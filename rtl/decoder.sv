@@ -50,6 +50,7 @@ module decoder (
         writeReg = 1;
         aluCode = 0000; // add
         C = 1;
+        B = 1;
         immSample = 3'b101;
       end
 
@@ -59,6 +60,7 @@ module decoder (
         C = 1;
         G = 1;
         H = 1;
+        B = 1;
         immSample = 3'b000;
       end
 

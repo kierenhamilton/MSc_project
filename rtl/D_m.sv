@@ -27,7 +27,7 @@ module D_m (
           result = {{19{imm[24]}}, imm[24], imm[0], imm[23:18], imm[4:1], 1'b0};
         end
         3'b101: begin  // jal
-          result = {{19{imm[24]}}, imm[24:13], 1'b0};
+          result = {{13{imm[24]}}, imm[24], imm[13:7], imm[23:14], 1'b0};
         end
         3'b110: begin // auipc
           result = {imm[24:5], 12'b0};

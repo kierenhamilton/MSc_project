@@ -27,7 +27,7 @@ module testbench;
   end
 
   initial begin
-    #10000 $finish;
+    #1000000 $finish;
   end
 
 

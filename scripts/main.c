@@ -1,8 +1,7 @@
-int main()
-{
-  int a = 3;
-  int b = 2;
 
-  int c = a + b;
+int main() {
+
+  for (int i = 0; i < 5; i++){}
+  while (1);
   return 0;
 }
