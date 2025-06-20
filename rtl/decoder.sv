@@ -51,6 +51,7 @@ module decoder (
         aluCode = 0000; // add
         C = 1;
         B = 1;
+        H = 1;
         immSample = 3'b101;
       end
 
@@ -101,6 +102,9 @@ module decoder (
         F = 1;
         G = 1;
         aluCode = ctrl;
+
+        if(ctrl[2:0] == 3'b000) aluCode = 4'b0000; // addi
+
         if (ctrl[2:0] == 3'b011) aluCode = 4'b1010; // sltiu
 
         if (ctrl == 4'b1101) immSample = 3'b001; // srai
