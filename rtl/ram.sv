@@ -8,7 +8,7 @@ module ram (
     input [31:0] wData
 );
   timeunit 1ns; timeprecision 100ps;
-  logic [7:0] ramMemory[0:31];
+  logic [7:0] ramMemory[0:1023];
 
   always_ff @(posedge Clock, negedge nReset) begin
     if (!nReset) begin

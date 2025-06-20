@@ -6,7 +6,7 @@ module decoder (
     output logic writeReg,
     output logic writeRam,
     output logic branch,
-    output [3:0] aluCode,
+    output logic [3:0] aluCode,
     output logic [2:0] immSample,
     output logic A,
     output logic B,

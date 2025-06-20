@@ -8,7 +8,7 @@ module progMem (
 
   initial begin
     //foreach (programMemory[i]) programMemory[i] = 0;
-    $readmemh("../scripts/main.hex", programMemory);
+    $readmemh("../osman_scripts/inst_mem.hex", programMemory);
     foreach (programMemory[i]) $display("%d: %h", i, programMemory[i]);
   end
 
