@@ -1,5 +1,14 @@
 package coreUtils;
 
+  typedef enum logic [2:0] {
+    BEQ = 3'b000,
+    BNE = 3'b001,
+    BLT = 3'b100,
+    BGE = 3'b101,
+    BLTU = 3'b110,
+    BGEU = 3'b111
+    } branch_signals_t;
+
   typedef enum logic [3:0] {
     ADD  = 4'b0000,
     SUB  = 4'b1000,
@@ -111,7 +120,7 @@ package coreUtils;
   endfunction
 
   function automatic logic [9:0] get_jalr_signals();
-    return 10'b00_0100_0010;
+    return 10'b00_0100_1010;
   endfunction
 
   function automatic logic [9:0] get_branch_signals();
