@@ -35,18 +35,18 @@ package coreUtils;
 
   typedef struct packed {
 
-    alu_codes_t alu_codes;
-    branch_type_t branch_type;
-    logic isLoad;
-    logic Wmem;
-    logic Rmem;
-    logic Wreg;
-    logic aluIn1_m;
-    logic aluIn2_m;
-    logic aluImm_m;
-    logic aluPC_m;
     logic [2:0] f3;
     logic [31:0] imm;
+    alu_codes_t alu_codes;
+    branch_type_t branch_type;
+    logic Wmem;
+    logic Wreg;
+    logic isLoad;
+    logic aluIn1;
+    logic aluIn2;
+    logic aluPC;
+    logic aluImm;
+    logic Rmem;
 
   } control_signals_t;
 
