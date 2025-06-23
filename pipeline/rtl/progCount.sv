@@ -7,7 +7,8 @@ module progCount (
     input hold,
     input branch,
     input bypass,
-    input [31:0] PCbranch
+    input [31:0] PCbranch,
+    input [31:0] PCcurrent
 
 );
 
@@ -19,7 +20,7 @@ module progCount (
 
       if (bypass) PC <= PCbranch;
 
-      else if (branch) PC <= PC + PCbranch;
+      else if (branch) PC <= PCcurrent + PCbranch;
 
       else if (hold) PC <= PC;
 

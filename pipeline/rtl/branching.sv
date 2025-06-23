@@ -2,11 +2,12 @@
 `include "./coreUtils.sv"
 import coreUtils::*;
 
-module forwarding (
+module  branching(
 
     output logic flush,
     output logic hold,
     output logic [31:0] PCnext,
+    output logic [31:0] PCcurrent,
     output logic branch,
     output logic bypass,
 
@@ -16,6 +17,7 @@ module forwarding (
     input branch_signals_t f3EXE,
     input branch_type_t branchType,
     input [31:0] PCIF,
+    input [31:0] PCEXE,
     input [31:0] imm,
     input [31:0] immEXE,
     input [31:0] aluOut,
@@ -41,7 +43,7 @@ module forwarding (
       // pipelining
 
       branchTypeEXE <= branchType;
-      branchingEXE  <= branchType != NON_TYPE;
+      branchingEXE  <= (branchType != NON_TYPE);
 
       // Execute stage
 
@@ -53,28 +55,30 @@ module forwarding (
 
 
   always_comb begin
+    // setting defaults
 
+    // output signals
+    flush = 0;
+    hold = 0;
+    bypass = 0;
+    branch = 0;
+    PCnext = 0;
+    PCcurrent = 0;
+
+    // internal signals
+    branchConfirmed = 0;
+    correctPrediction = 0;
 
     if (branchingEXE) begin : execute_stage
-
       case (branchTypeEXE)
-
         JAL_TYPE: begin
-          flush  = 0;
-          hold   = 0;
-          bypass = 0;
-          branch = 0;
-          PCnext = 0;
+          // default values
         end
-
         JALR_TYPE: begin
           flush  = 1;
-          hold   = 0;
           bypass = 1;
-          branch = 0;
           PCnext = aluOut;
         end
-
         CONDITIONAL_TYPE: begin
 
           case (f3EXE)
@@ -87,86 +91,47 @@ module forwarding (
             default: branchConfirmed = 0;
           endcase
 
-          if (branchConfirmed == prediction) begin
-            correctPrediction = 1;
-            flush = 0;
-            hold = 0;
-            bypass = 0;
-            branch = 0;
-            PCnext = 0;
-          end else begin
-            correctPrediction = 0;
+          if (branchConfirmed == prediction) correctPrediction = 1;
 
+          else begin
+            correctPrediction = 0;
             flush = 1;
-            hold = 0;
-            bypass = 0;
             branch = 1;
             PCnext = immEXE;
+            PCcurrent = PCEXE;
           end
 
         end
 
         default: begin
-          flush  = 0;
-          hold   = 0;
-          bypass = 0;
-          branch = 0;
-          PCnext = 0;
+          // default values
         end
-
       endcase
-
     end : execute_stage
-
     else begin : decode_stage
-
       unique case (branchType)
-
         NON_TYPE: begin
-          hold   = 0;
-          flush  = 0;
-          branch = 0;
-          bypass = 0;
-          PCnext = 0;
+          if (isLoad) hold = 1;
         end
-
         JAL_TYPE: begin
-          hold   = 0;
-          flush  = 0;
           branch = 1;
-          bypass = 0;
           PCnext = imm;
+          PCcurrent = PCIF;
         end
-
         JALR_TYPE: begin
-          hold   = 1;
-          flush  = 0;
-          branch = 0;
-          bypass = 0;
-          PCnext = 0;
+          // default values
         end
-
         CONDITIONAL_TYPE: begin
-
           if (prediction) begin
-            hold   = 0;
-            flush  = 0;
             branch = 1;
-            bypass = 0;
             PCnext = imm;
-
+            PCcurrent = PCIF;
           end else begin
-            hold   = 0;
-            flush  = 0;
-            branch = 0;
-            bypass = 0;
-            PCnext = 0;
+            // default values
           end
-
         end
-
       endcase
-
     end : decode_stage
-  end  // always_comb
+  end
+
 endmodule

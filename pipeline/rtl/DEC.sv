@@ -9,7 +9,7 @@ module DEC (
     output logic Wmem_out,
     output logic Rmem_out,
     output logic Wreg_out,
-    output logic func_out,
+    output logic func3_out,
     output logic aluin1_m_out,
     output logic aluin2_m_out,
     output logic aluPC_m_out,
@@ -28,7 +28,7 @@ module DEC (
     input Wmem,
     input Rmem,
     input Wreg,
-    input func,
+    input func3,
     input flush,
     input aluin1_m,
     input aluin2_m,
@@ -50,7 +50,7 @@ module DEC (
       Wmem_out <= 0;
       Rmem_out <= 0;
       Wreg_out <= 0;
-      func_out <= 0;
+      func3_out <= 0;
       aluin1_m_out <= 0;
       aluin2_m_out <= 1;
       aluPC_m_out <= 1;
@@ -68,7 +68,7 @@ module DEC (
         Wmem_out <= 0;
         Rmem_out <= 0;
         Wreg_out <= 0;
-        func_out <= 0;
+        func3_out <= 0;
         aluin1_m_out <= 0;
         aluin2_m_out <= 1;
         aluPC_m_out <= 1;
@@ -85,7 +85,7 @@ module DEC (
         Wmem_out <= Wmem;
         Rmem_out <= Rmem;
         Wreg_out <= Wreg;
-        func_out <= func;
+        func3_out <= func3;
         aluin1_m_out <= aluin1_m;
         aluin2_m_out <= aluin2_m;
         aluPC_m_out <= aluPC_m;
