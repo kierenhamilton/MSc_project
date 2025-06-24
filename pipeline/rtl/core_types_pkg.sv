@@ -1,4 +1,4 @@
-`include "./coreUtils.sv"
+// `include "./coreUtils.sv"
 import coreUtils::*;
 
 package core_types_pkg;

@@ -1,5 +1,5 @@
 
-`include "./core_types_pkg.sv"
+// `include "./core_types_pkg.sv"
 import core_types_pkg::*;
 module MEM (
 
