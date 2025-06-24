@@ -30,6 +30,7 @@ def extract_hex_from_asm(asm_file, output_file):
 				for part in parts:
 					hex_opcodes.append(part)
 
+	hex_opcodes = ["3f", "f0", "01", "13"] + hex_opcodes;
 	with open(output_file, 'w') as f:
 		for opcode in hex_opcodes:
 			f.write(opcode + '\n')
