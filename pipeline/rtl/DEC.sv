@@ -18,7 +18,7 @@ module DEC (
     input Wmem,
     input Rmem,
     input Wreg,
-    input func3,
+    input [2:0] func3,
     input flush,
     input aluin1_m,
     input aluin2_m,

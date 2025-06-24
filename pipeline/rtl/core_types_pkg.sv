@@ -14,7 +14,7 @@ package core_types_pkg;
     logic Wmem;
     logic Rmem;
     logic Wreg;
-    logic func3;
+    logic [2:0] func3;
     logic aluin1_m;
     logic aluin2_m;
     logic aluPC_m;
@@ -40,6 +40,7 @@ package core_types_pkg;
     logic [4:0] rd;
     logic [31:0] result;
     logic Wreg;
+    logic Rmem;
 
   } MEM_out_t;
 
@@ -68,7 +69,7 @@ package core_types_pkg;
 
   typedef struct packed {
 
-    logic [2:0] f3;
+    logic [2:0] func3;
     logic [31:0] imm;
     alu_codes_t alu_codes;
     branch_type_t branch_type;
@@ -80,6 +81,10 @@ package core_types_pkg;
     logic aluPC;
     logic aluImm;
     logic Rmem;
+    logic aluin1_m;
+    logic aluin2_m;
+    logic aluPC_m;
+    logic aluImm_m;
 
   } decoder_out_t;
 

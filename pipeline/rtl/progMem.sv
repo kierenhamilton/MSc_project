@@ -2,9 +2,9 @@ module progMem (
 
     output logic [31:0] instruction,
 
+    input Clock,
     input flush,
     input hold,
-    input Clock,
     input [31:0] PC
 
 );

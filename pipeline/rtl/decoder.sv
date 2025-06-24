@@ -9,14 +9,14 @@ module decoder (
     output decoder_out_t control_signals,
 
     input f7,
-    input [2:0] f3,
+    input [2:0] func3,
     input [24:0] immSample,
     input opcodes_t opcode
 );
 
   always_comb begin
 
-    control_signals.f3 = f3;
+    control_signals.func3 = func3;
 
     case (opcode)
       LUI: begin
@@ -45,10 +45,10 @@ module decoder (
 
       OPIMM: begin
         control_signals.imm = get_I_imm(immSample);
-        case (f3)
-          3'b101:  control_signals.alu_codes = alu_codes_t'({f7, f3});
-          3'b011:  control_signals.alu_codes = alu_codes_t'({1'b1, f3});
-          default: control_signals.alu_codes = alu_codes_t'({1'b0, f3});
+        case (func3)
+          3'b101:  control_signals.alu_codes = alu_codes_t'({f7, func3});
+          3'b011:  control_signals.alu_codes = alu_codes_t'({1'b1, func3});
+          default: control_signals.alu_codes = alu_codes_t'({1'b0, func3});
         endcase
         {
           control_signals.branch_type, control_signals.Wmem,
@@ -61,7 +61,7 @@ module decoder (
 
       OP: begin
         control_signals.imm = get_R_imm(immSample);
-        control_signals.alu_codes = alu_codes_t'({f7, f3});
+        control_signals.alu_codes = alu_codes_t'({f7, func3});
         {
           control_signals.branch_type, control_signals.Wmem,
           control_signals.Wreg, control_signals.isLoad,

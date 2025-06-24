@@ -11,7 +11,8 @@ module MEM (
     input [4:0] rd,
     input [31:0] result,
     input [31:0] memOut,
-    input Wreg
+    input Wreg,
+    input Rmem
 
 );
 
@@ -21,12 +22,14 @@ module MEM (
       MEM_out.rd <= 0;
       MEM_out.result <= 0;
       MEM_out.Wreg <= 0;
+      MEM_out.Rmem <= 0;
 
     end else begin
 
       MEM_out.rd <= rd;
       MEM_out.result <= result;
       MEM_out.Wreg <= Wreg;
+      MEM_out.Rmem <= Rmem;
 
     end
 
