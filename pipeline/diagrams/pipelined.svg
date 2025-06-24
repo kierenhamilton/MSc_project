@@ -26,12 +26,12 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="0.92947429"
-     inkscape:cx="1032.8419"
-     inkscape:cy="453.48215"
-     inkscape:window-width="2476"
-     inkscape:window-height="1566"
-     inkscape:window-x="-11"
+     inkscape:zoom="3.0199726"
+     inkscape:cx="654.47614"
+     inkscape:cy="390.56646"
+     inkscape:window-width="5688"
+     inkscape:window-height="2366"
+     inkscape:window-x="3829"
      inkscape:window-y="-11"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1"
@@ -487,7 +487,7 @@
        id="path25" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.346291;stroke-linecap:round;stroke-dasharray:none;marker-end:url(#ArrowWideRounded)"
-       d="m 37.228497,100.39886 v 21.93171 H 26.839799"
+       d="m 48.959942,100.36955 v 20.13784 l -3.959943,0"
        id="path31"
        sodipodi:nodetypes="ccc" />
     <g
@@ -1570,24 +1570,24 @@
     <text
        xml:space="preserve"
        style="font-size:1.79688px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.176965;stroke-linecap:round"
-       x="92.634895"
+       x="91"
        y="143.10796"
        id="text158"><tspan
          sodipodi:role="line"
          style="fill:#000000;stroke:none;stroke-width:0.176965"
-         x="92.634895"
+         x="91"
          y="143.10796"
          id="tspan158">PC.IF</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:1.98378px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.195372;stroke-linecap:round"
        x="78.783302"
-       y="147.13356"
+       y="145.89204"
        id="text159"><tspan
          sodipodi:role="line"
          style="fill:#000000;stroke:none;stroke-width:0.195372"
          x="78.783302"
-         y="147.13356"
+         y="145.89204"
          id="tspan159">hold</tspan></text>
     <text
        xml:space="preserve"
@@ -1602,7 +1602,7 @@
          id="tspan160">isLoad</tspan></text>
     <g
        id="g163"
-       transform="matrix(1.1543001,0,0,1.1543001,6.062397,-12.722545)">
+       transform="matrix(1.1543001,0,0,1.1543001,6.062397,-2.9789143)">
       <g
          id="g162"
          transform="matrix(-1,0,0,1,171.99999,27.000003)">
@@ -1637,35 +1637,36 @@
       </g>
     </g>
     <path
-       style="fill:#000000;stroke:#000000;stroke-width:0.346291;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#ArrowWideRounded)"
-       d="m 34.919899,126.94776 h -8.0801"
-       id="path163" />
+       style="fill:none;stroke:#000000;stroke-width:0.346291;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#ArrowWideRounded)"
+       d="m 34.999999,139 h -4 v -12 l -4.1602,-0.0522"
+       id="path163"
+       sodipodi:nodetypes="cccc" />
     <text
        xml:space="preserve"
        style="font-size:2.26742px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.223308;stroke-linecap:round"
-       x="48.470478"
-       y="124.63917"
+       x="48.161865"
+       y="134.69141"
        id="text163"><tspan
          sodipodi:role="line"
          style="fill:#000000;stroke:none;stroke-width:0.223308"
-         x="48.470478"
-         y="124.63917"
+         x="48.161865"
+         y="134.69141"
          id="tspan163">4</tspan></text>
     <path
        style="fill:#000000;stroke:#000000;stroke-width:0.346291;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#ArrowWideRounded)"
-       d="m 42.999999,126.94776 h -5.7715"
+       d="m 42.691387,137 -5.462888,0"
        id="path164"
        sodipodi:nodetypes="cc" />
     <text
        xml:space="preserve"
        style="font-size:1.98378px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.195372;stroke-linecap:round"
        x="78.783302"
-       y="143.67065"
+       y="143"
        id="text164"><tspan
          sodipodi:role="line"
          style="fill:#000000;stroke:none;stroke-width:0.195372"
          x="78.783302"
-         y="143.67065"
+         y="143"
          id="tspan164">flush</tspan></text>
     <text
        xml:space="preserve"
@@ -1682,16 +1683,16 @@
        xml:space="preserve"
        style="font-size:1.98378px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.195372;stroke-linecap:round"
        x="78.783302"
-       y="151.18806"
+       y="152"
        id="text169"><tspan
          sodipodi:role="line"
          style="fill:#000000;stroke:none;stroke-width:0.195372"
          x="78.783302"
-         y="151.18806"
+         y="152"
          id="tspan169">PCnext</tspan></text>
     <g
        id="g172"
-       transform="matrix(1.1543001,0,0,1.1543001,14.142508,-15.22548)">
+       transform="matrix(1.1543001,0,0,1.1543001,13.833896,-5.1732368)">
       <g
          id="g171"
          transform="matrix(-1,0,0,1,171.99999,27.000003)">
@@ -1728,22 +1729,22 @@
     <text
        xml:space="preserve"
        style="font-size:2.26742px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.223308;stroke-linecap:round"
-       x="48.470478"
-       y="129.58875"
+       x="48.161865"
+       y="139.64099"
        id="text172"><tspan
          sodipodi:role="line"
          style="fill:#000000;stroke:none;stroke-width:0.223308"
-         x="48.470478"
-         y="129.58875"
+         x="48.161865"
+         y="139.64099"
          id="tspan172">0</tspan></text>
     <path
        style="fill:#000000;stroke:#000000;stroke-width:0.346291;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#ArrowWideRounded)"
-       d="M 47.617203,124.2765 H 45.308604"
+       d="M 47.308591,134.32874 H 44.999992"
        id="path172"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:#000000;stroke:#000000;stroke-width:0.346291;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#ArrowWideRounded)"
-       d="M 47.617203,129.07229 H 45.308604"
+       d="M 47.308591,139.12453 H 44.999992"
        id="path173"
        sodipodi:nodetypes="cc" />
     <path
@@ -1752,8 +1753,9 @@
        id="path174" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.346291;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#ArrowWideRounded)"
-       d="m 40.691397,151.18807 v -19.6231 h -3.4629"
-       id="path175" />
+       d="M 40.691397,151.18807 V 141 h -3.4629"
+       id="path175"
+       sodipodi:nodetypes="ccc" />
     <text
        xml:space="preserve"
        style="font-size:1.38576px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.136477;stroke-linecap:round"
@@ -1826,12 +1828,12 @@
          id="tspan180">neguFlag</tspan></text>
     <path
        style="fill:#000000;stroke:#000000;stroke-width:0.346291;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#ArrowWideRounded)"
-       d="M 77.629002,146.57087 H 74.079679"
+       d="M 77.629002,145.32935 H 74.079679"
        id="path180"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:#000000;stroke:#000000;stroke-width:0.346291;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#ArrowWideRounded)"
-       d="M 77.629002,143.10797 H 74.079679"
+       d="M 77.629002,142.43732 H 74.079679"
        id="path181"
        sodipodi:nodetypes="cc" />
     <text
@@ -1943,28 +1945,28 @@
     <text
        xml:space="preserve"
        style="font-size:1.98378px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.195372;stroke-linecap:round"
-       x="42.464821"
-       y="120.64516"
+       x="42.691387"
+       y="144.26393"
        id="text197"><tspan
          sodipodi:role="line"
          style="fill:#000000;stroke:none;stroke-width:0.195372"
-         x="42.464821"
-         y="120.64516"
+         x="42.691387"
+         y="144.26393"
          id="tspan197">hold</tspan></text>
     <path
        style="fill:#f4d7d7;stroke:#000000;stroke-width:0.346291;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0"
-       d="m 36.074182,134.60925 1.1e-5,-1.31283"
+       d="m 36.074182,144.35288 1.1e-5,-1.31283"
        id="path206-0" />
     <text
        xml:space="preserve"
        style="font-size:1.98378px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.195372;stroke-linecap:round"
        x="78.783302"
-       y="154.13164"
+       y="154.48428"
        id="text198"><tspan
          sodipodi:role="line"
          style="fill:#000000;stroke:none;stroke-width:0.195372"
          x="78.783302"
-         y="154.13164"
+         y="154.48428"
          id="tspan198">bypass</tspan></text>
     <text
        xml:space="preserve"
@@ -1992,12 +1994,12 @@
        xml:space="preserve"
        style="font-size:1.98378px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.195372;stroke-linecap:round"
        x="32.611301"
-       y="136.42453"
+       y="146.16817"
        id="text201"><tspan
          sodipodi:role="line"
          style="fill:#000000;stroke:none;stroke-width:0.195372"
          x="32.611301"
-         y="136.42453"
+         y="146.16817"
          id="tspan201">branch</tspan></text>
     <text
        xml:space="preserve"
@@ -2061,7 +2063,7 @@
        id="path206-8" />
     <path
        style="fill:#f4d7d7;stroke:#000000;stroke-width:0.346291;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0"
-       d="m 44.127845,122.72662 1.1e-5,-1.31285"
+       d="m 43.819233,142.14536 1.1e-5,-1.31285"
        id="path206-85" />
     <path
        style="fill:#f4d7d7;stroke:#000000;stroke-width:0.346291;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0"
@@ -2094,41 +2096,42 @@
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round;marker-end:url(#ArrowWideRounded)"
-       d="M 80.51475,135.02788 V 137 h 14.485247 v 3.79938"
-       id="path1" />
+       d="m 93.365099,137 v 3.79938"
+       id="path1"
+       sodipodi:nodetypes="cc" />
     <text
        xml:space="preserve"
        style="font-size:1.72827px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.170209;stroke-linecap:round"
-       x="136.08961"
-       y="124.85538"
+       x="136"
+       y="125"
        id="text2"><tspan
          sodipodi:role="line"
          style="fill:#000000;stroke:none;stroke-width:0.170209"
-         x="136.08961"
-         y="124.85538"
-         id="tspan2">func</tspan></text>
+         x="136"
+         y="125"
+         id="tspan2">func3</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:1.72827px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.170209;stroke-linecap:round"
-       x="200.37216"
+       x="199.54108"
        y="124.85538"
        id="text15"><tspan
          sodipodi:role="line"
          style="fill:#000000;stroke:none;stroke-width:0.170209"
-         x="200.37216"
+         x="199.54108"
          y="124.85538"
-         id="tspan15">func</tspan></text>
+         id="tspan15">func3</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:2.26742px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.223308;stroke-linecap:round"
-       x="205.4948"
+       x="205"
        y="79"
        id="text18"><tspan
          sodipodi:role="line"
          style="fill:#000000;stroke:none;stroke-width:0.223308"
-         x="205.4948"
+         x="205"
          y="79"
-         id="tspan18">func</tspan></text>
+         id="tspan18">func3</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.346291;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#ArrowWideRounded)"
        d="m 204.60199,80.000002 25.398,0 0,8.855863"
@@ -2192,13 +2195,6 @@
          x="60.914005"
          y="100.66597"
          id="tspan29">instruction</tspan></text>
-    <rect
-       style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round;stroke-dasharray:2.4, 1.2;stroke-dashoffset:0"
-       id="rect29"
-       width="49.691395"
-       height="74.723503"
-       x="2.308604"
-       y="80.276497" />
     <text
        xml:space="preserve"
        style="font-size:2.26742px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.223308;stroke-linecap:round"
@@ -2221,6 +2217,105 @@
          x="15"
          y="101"
          id="tspan31">PCnext</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:1.98378px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.195372;stroke-linecap:round"
+       x="57.798481"
+       y="117.56159"
+       id="text19"><tspan
+         sodipodi:role="line"
+         style="fill:#000000;stroke:none;stroke-width:0.195372"
+         x="57.798481"
+         y="117.56159"
+         id="tspan19">flush</tspan></text>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.346291;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#ArrowWideRounded)"
+       d="M 59.999998,115.54933 V 112"
+       id="path27"
+       sodipodi:nodetypes="cc" />
+    <g
+       id="g34"
+       transform="matrix(1.1543001,0,0,1.1543001,13.833896,-18.978915)">
+      <g
+         id="g32"
+         transform="matrix(-1,0,0,1,171.99999,27.000003)">
+        <text
+           xml:space="preserve"
+           style="font-size:1.96433px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.193457;stroke-linecap:round"
+           x="-146.50882"
+           y="94.66127"
+           id="text28"
+           transform="scale(-1,1)"><tspan
+             sodipodi:role="line"
+             style="fill:#000000;stroke:none;stroke-width:0.193457"
+             x="-146.50882"
+             y="94.66127"
+             id="tspan28">0</tspan></text>
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round"
+           d="m 144.99999,92 v 8 L 147,99.000002 v -6.000001 z"
+           id="path28" />
+        <text
+           xml:space="preserve"
+           style="font-size:1.96433px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.193457;stroke-linecap:round"
+           x="-146.61461"
+           y="98.466438"
+           id="text32"
+           transform="scale(-1,1)"><tspan
+             sodipodi:role="line"
+             style="fill:#000000;stroke:none;stroke-width:0.193457"
+             x="-146.61461"
+             y="98.466438"
+             id="tspan32">1</tspan></text>
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:1.79688px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.176965;stroke-linecap:round"
+       x="78.80294"
+       y="148.43167"
+       id="text38"><tspan
+         sodipodi:role="line"
+         style="fill:#000000;stroke:none;stroke-width:0.176965"
+         x="78.80294"
+         y="148.43167"
+         id="tspan38">PCcurrent</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.346291;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#ArrowWideRounded)"
+       d="M 77.629002,148 H 58.999998 v -23 l -13.999999,0"
+       id="path41"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:#f4d7d7;stroke:#000000;stroke-width:0.346291;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0"
+       d="m 43.845692,118.95995 1.1e-5,-1.31283"
+       id="path42" />
+    <text
+       xml:space="preserve"
+       style="font-size:1.98378px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.195372;stroke-linecap:round"
+       x="40.253601"
+       y="117.28855"
+       id="text42"><tspan
+         sodipodi:role="line"
+         style="fill:#000000;stroke:none;stroke-width:0.195372"
+         x="40.253601"
+         y="117.28855"
+         id="tspan42">branch</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:1.79688px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.176965;stroke-linecap:round"
+       x="91"
+       y="145"
+       id="text50"><tspan
+         sodipodi:role="line"
+         style="fill:#000000;stroke:none;stroke-width:0.176965"
+         x="91"
+         y="145"
+         id="tspan50">PC.DEC</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.346291;stroke-linecap:round;stroke-dasharray:none;marker-end:url(#ArrowWideRounded)"
+       d="m 42.691387,123 -15.691388,0"
+       id="path50"
+       sodipodi:nodetypes="cc" />
   </g>
   <text
      xml:space="preserve"
