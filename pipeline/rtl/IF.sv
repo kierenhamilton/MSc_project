@@ -20,8 +20,7 @@ module IF (
 
   always_comb begin
 
-    if (flush || hold) instruction_out = 32'h00000013; // NOP -> addi x0 x0 0
-    else instruction_out = instruction;
+    instruction_out = instruction;
 
   end
 

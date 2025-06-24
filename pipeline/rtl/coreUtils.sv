@@ -42,22 +42,6 @@ package coreUtils;
     CONDITIONAL_TYPE
   } branch_type_t;
 
-  typedef struct packed {
-
-    logic [2:0] f3;
-    logic [31:0] imm;
-    alu_codes_t alu_codes;
-    branch_type_t branch_type;
-    logic Wmem;
-    logic Wreg;
-    logic isLoad;
-    logic aluIn1;
-    logic aluIn2;
-    logic aluPC;
-    logic aluImm;
-    logic Rmem;
-
-  } control_signals_t;
 
   // immediate cleaning functions
 

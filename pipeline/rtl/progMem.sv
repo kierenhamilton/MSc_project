@@ -1,8 +1,12 @@
 module progMem (
+
     output logic [31:0] instruction,
+
     input flush,
+    input hold,
     input Clock,
     input [31:0] PC
+
 );
 
   logic [7:0] mem[0:255];
@@ -13,7 +17,7 @@ module progMem (
 
   always_ff @(posedge Clock) begin
 
-    if (flush) instruction <= 32'h00000013;  // addi x0 x0 0
+    if (flush || hold) instruction <= 32'h00000013;  // addi x0 x0 0
 
     else begin
 

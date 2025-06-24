@@ -1,5 +1,8 @@
 `include "./coreUtils.sv"
+`include "./core_types_pkg.sv"
 import coreUtils::*;
+import core_types_pkg::*;
+
 module alu (
 
     output logic [31:0] result,
@@ -50,6 +53,7 @@ module alu (
       default: aluOut = 0;
     endcase
 
+    zeroFlag = aluOut == 0;
     negFlag = aluOut[31];
 
     // output multiplexers

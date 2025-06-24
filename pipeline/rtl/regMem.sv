@@ -5,6 +5,7 @@ module regMem (
 
     input Clock,
     input nReset,
+    input flush,
     input Wreg,
     input [4:0] rd,
     input [31:0] Wdata,
@@ -23,9 +24,18 @@ module regMem (
 
       if (Wreg && rd != 0) regs[rd] <= Wdata;
 
-      rs1 <= regs[addr1];
-      rs2 <= regs[addr2];
+      if (flush) begin
 
-    end // else
+        rs1 <= 0;
+        rs2 <= 0;
+
+      end else begin
+
+        rs1 <= regs[addr1];
+        rs2 <= regs[addr2];
+
+      end
+
+    end  // else
 
 endmodule

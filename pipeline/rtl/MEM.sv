@@ -1,9 +1,10 @@
+
+`include "./core_types_pkg.sv"
+import core_types_pkg::*;
 module MEM (
 
-    output logic [4:0] rd_out,
-    output logic [31:0] result_out,
+    output MEM_out_t MEM_out,
     output logic [31:0] memOut_out,
-    output logic Wreg_out,
 
     input Clock,
     input nReset,
@@ -17,15 +18,15 @@ module MEM (
   always_ff @(posedge Clock, negedge nReset)
     if (!nReset) begin
 
-      rd_out <= 0;
-      result_out <= 0;
-      Wreg_out <= 0;
+      MEM_out.rd <= 0;
+      MEM_out.result <= 0;
+      MEM_out.Wreg <= 0;
 
     end else begin
 
-      rd_out <= rd;
-      result_out <= result;
-      Wreg_out <= Wreg;
+      MEM_out.rd <= rd;
+      MEM_out.result <= result;
+      MEM_out.Wreg <= Wreg;
 
     end
 

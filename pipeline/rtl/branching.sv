@@ -14,12 +14,12 @@ module  branching(
     input Clock,
     input nReset,
     input isLoad,
-    input branch_signals_t f3EXE,
+    input branch_signals_t f3DEC,
     input branch_type_t branchType,
     input [31:0] PCIF,
-    input [31:0] PCEXE,
+    input [31:0] PCDEC,
     input [31:0] imm,
-    input [31:0] immEXE,
+    input [31:0] immDEC,
     input [31:0] aluOut,
     input zeroFlag,
     input negFlag,
@@ -81,7 +81,7 @@ module  branching(
         end
         CONDITIONAL_TYPE: begin
 
-          case (f3EXE)
+          case (f3DEC)
             BEQ: if (zeroFlag) branchConfirmed = 1;
             BNE: if (!zeroFlag) branchConfirmed = 1;
             BLT: if (negFlag) branchConfirmed = 1;
@@ -97,8 +97,8 @@ module  branching(
             correctPrediction = 0;
             flush = 1;
             branch = 1;
-            PCnext = immEXE;
-            PCcurrent = PCEXE;
+            PCnext = immDEC;
+            PCcurrent = PCDEC;
           end
 
         end
@@ -135,3 +135,4 @@ module  branching(
   end
 
 endmodule
+

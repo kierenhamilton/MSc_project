@@ -1,8 +1,11 @@
 `include "./coreUtils.sv"
+`include "./core_types_pkg.sv"
+
+import core_types_pkg::*;
 import coreUtils::*;
 
 module decoder (
-    output control_signals_t control_signals,
+    output decoder_out_t control_signals,
     input f7,
     input [2:0] f3,
     input [24:0] immSample,
