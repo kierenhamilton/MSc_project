@@ -43,7 +43,6 @@ module core (
 
       .Clock (Clock),
       .nReset(nReset),
-
   );
 
   EXE EXE0 (
@@ -92,28 +91,27 @@ module core (
   );
 
   progCount progCount0 (
-    .PC(PC),
+      .PC(PC),
 
-    .Clock(Clock),
-    .nReset(nReset),
-    );
+      .Clock (Clock),
+      .nReset(nReset),
+  );
 
   progMem progMem0 (
-    .instruction(inst_PM),
+      .instruction(inst_PM),
 
-    .Clock(Clock),
-    );
+      .Clock(Clock),
+  );
 
   regMem regMem0 (
-    .rs1(rs1_RM),
-    .rs2(rs2_RM),
+      .rs1(rs1_RM),
+      .rs2(rs2_RM),
 
-    .Clock(Clock),
-    .nReset(nReset),
-    );
+      .Clock (Clock),
+      .nReset(nReset),
+  );
 
-  write_back write_back0 (
-    );
+  write_back write_back0 (.write_back_out(write_back_out),);
 
 
 endmodule

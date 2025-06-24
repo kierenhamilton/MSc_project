@@ -1,8 +1,9 @@
+`include "./core_types_pkg.sv"
+import core_types_pkg::*;
+
 module write_back (
 
-    output logic [31:0] Wdata,
-    output logic [4:0] rd_wb,
-    output logic Wreg_wb,
+    output write_back_out_t write_back_out,
 
     input Rmem,
     input Wreg,
@@ -13,9 +14,9 @@ module write_back (
 );
 
   always_comb begin
-    Wdata   = (Rmem) ? memOut : result;
-    rd_wb   = rd;
-    Wreg_wb = Wreg;
+    write_back_out.Wdata = (Rmem) ? memOut : result;
+    write_back_out.rd = rd;
+    write_back_out.Wreg = Wreg;
   end
 
 endmodule
