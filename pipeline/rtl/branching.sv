@@ -1,15 +1,14 @@
 
+`include "./core_types_pkg.sv"
 `include "./coreUtils.sv"
+
 import coreUtils::*;
+import core_types_pkg::*;
 
-module  branching(
+module branching (
 
-    output logic flush,
-    output logic hold,
-    output logic [31:0] PCnext,
-    output logic [31:0] PCcurrent,
-    output logic branch,
-    output logic bypass,
+
+    output branching_out_t branching_out,
 
     input Clock,
     input nReset,
@@ -58,12 +57,12 @@ module  branching(
     // setting defaults
 
     // output signals
-    flush = 0;
-    hold = 0;
-    bypass = 0;
-    branch = 0;
-    PCnext = 0;
-    PCcurrent = 0;
+    branching_out.flush = 0;
+    branching_out.hold = 0;
+    branching_out.bypass = 0;
+    branching_out.branch = 0;
+    branching_out.PCnext = 0;
+    branching_out.PCcurrent = 0;
 
     // internal signals
     branchConfirmed = 0;
@@ -75,9 +74,9 @@ module  branching(
           // default values
         end
         JALR_TYPE: begin
-          flush  = 1;
-          bypass = 1;
-          PCnext = aluOut;
+          branching_out.flush  = 1;
+          branching_out.bypass = 1;
+          branching_out.PCnext = aluOut;
         end
         CONDITIONAL_TYPE: begin
 
@@ -95,10 +94,10 @@ module  branching(
 
           else begin
             correctPrediction = 0;
-            flush = 1;
-            branch = 1;
-            PCnext = immDEC;
-            PCcurrent = PCDEC;
+            branching_out.flush = 1;
+            branching_out.branch = 1;
+            branching_out.PCnext = immDEC;
+            branching_out.PCcurrent = PCDEC;
           end
 
         end
@@ -111,21 +110,21 @@ module  branching(
     else begin : decode_stage
       unique case (branchType)
         NON_TYPE: begin
-          if (isLoad) hold = 1;
+          if (isLoad) branching_out.hold = 1;
         end
         JAL_TYPE: begin
-          branch = 1;
-          PCnext = imm;
-          PCcurrent = PCIF;
+          branching_out.branch = 1;
+          branching_out.PCnext = imm;
+          branching_out.PCcurrent = PCIF;
         end
         JALR_TYPE: begin
           // default values
         end
         CONDITIONAL_TYPE: begin
           if (prediction) begin
-            branch = 1;
-            PCnext = imm;
-            PCcurrent = PCIF;
+            branching_out.branch = 1;
+            branching_out.PCnext = imm;
+            branching_out.PCcurrent = PCIF;
           end else begin
             // default values
           end

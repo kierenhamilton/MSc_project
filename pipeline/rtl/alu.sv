@@ -5,11 +5,7 @@ import core_types_pkg::*;
 
 module alu (
 
-    output logic [31:0] result,
-    output logic [31:0] aluOut,
-    output logic zeroFlag,
-    output logic negFlag,
-    output logic neguFlag,
+    output alu_out_t alu_out,
 
     input [31:0] rs1F,
     input [31:0] rs2F,
@@ -36,30 +32,30 @@ module alu (
 
     // alu
 
-    neguFlag = 0;
+    alu_out.neguFlag = 0;
 
     case (aluCode)
-      ADD: aluOut = aluin1_m_out + aluin2_m_out;
-      SUB: {neguFlag, aluOut} = {1'b0, aluin1_m_out} + ~{1'b0, aluin2_m_out} + 1;
-      SLL: aluOut = aluin1_m_out << aluin2_m_out[4:0];
-      SLT: aluOut = {31'b0, (aluin1_m_out < aluin2_m_out)};
-      SLTU: aluOut = {31'b0, ($unsigned(aluin1_m_out) < $unsigned(aluin2_m_out))};
-      XOR: aluOut = aluin1_m_out ^ aluin2_m_out;
-      OR: aluOut = aluin1_m_out | aluin2_m_out;
-      AND: aluOut = aluin1_m_out & aluin2_m_out;
-      SRL: aluOut = aluin1_m_out >> aluin2_m_out[4:0];
-      SRA: aluOut = aluin1_m_out >>> aluin2_m_out[4:0];
-      NOP: aluOut = 0;
-      default: aluOut = 0;
+      ADD: alu_out.aluOut = aluin1_m_out + aluin2_m_out;
+      SUB: {alu_out.neguFlag, alu_out.aluOut} = {1'b0, aluin1_m_out} + ~{1'b0, aluin2_m_out} + 1;
+      SLL: alu_out.aluOut = aluin1_m_out << aluin2_m_out[4:0];
+      SLT: alu_out.aluOut = {31'b0, (aluin1_m_out < aluin2_m_out)};
+      SLTU: alu_out.aluOut = {31'b0, ($unsigned(aluin1_m_out) < $unsigned(aluin2_m_out))};
+      XOR: alu_out.aluOut = aluin1_m_out ^ aluin2_m_out;
+      OR: alu_out.aluOut = aluin1_m_out | aluin2_m_out;
+      AND: alu_out.aluOut = aluin1_m_out & aluin2_m_out;
+      SRL: alu_out.aluOut = aluin1_m_out >> aluin2_m_out[4:0];
+      SRA: alu_out.aluOut = aluin1_m_out >>> aluin2_m_out[4:0];
+      NOP: alu_out.aluOut = 0;
+      default: alu_out.aluOut = 0;
     endcase
 
-    zeroFlag = aluOut == 0;
-    negFlag = aluOut[31];
+    alu_out.zeroFlag = alu_out.aluOut == 0;
+    alu_out.negFlag = alu_out.aluOut[31];
 
     // output multiplexers
 
-    aluPC_m_out = (aluPC_m) ? aluOut : PC4;
-    result = (aluImm_m) ? aluPC_m_out : imm;
+    aluPC_m_out = (aluPC_m) ? alu_out.aluOut : PC4;
+    alu_out.result = (aluImm_m) ? aluPC_m_out : imm;
 
   end
 
