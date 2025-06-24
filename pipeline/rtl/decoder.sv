@@ -25,8 +25,8 @@ module decoder (
         {
           control_signals.branch_type, control_signals.Wmem,
           control_signals.Wreg, control_signals.isLoad,
-          control_signals.aluIn1, control_signals.aluIn2,
-          control_signals.aluPC, control_signals.aluImm,
+          control_signals.aluin1_m, control_signals.aluin2_m,
+          control_signals.aluPC_m, control_signals.aluImm_m,
           control_signals.Rmem
         } = get_lui_signals();
       end
@@ -37,8 +37,8 @@ module decoder (
         {
           control_signals.branch_type, control_signals.Wmem,
           control_signals.Wreg, control_signals.isLoad,
-          control_signals.aluIn1, control_signals.aluIn2,
-          control_signals.aluPC, control_signals.aluImm,
+          control_signals.aluin1_m, control_signals.aluin2_m,
+          control_signals.aluPC_m, control_signals.aluImm_m,
           control_signals.Rmem
         } = get_auipc_signals();
       end
@@ -53,8 +53,8 @@ module decoder (
         {
           control_signals.branch_type, control_signals.Wmem,
           control_signals.Wreg, control_signals.isLoad,
-          control_signals.aluIn1, control_signals.aluIn2,
-          control_signals.aluPC, control_signals.aluImm,
+          control_signals.aluin1_m, control_signals.aluin2_m,
+          control_signals.aluPC_m, control_signals.aluImm_m,
           control_signals.Rmem
         } = get_opimm_signals();
       end
@@ -65,8 +65,8 @@ module decoder (
         {
           control_signals.branch_type, control_signals.Wmem,
           control_signals.Wreg, control_signals.isLoad,
-          control_signals.aluIn1, control_signals.aluIn2,
-          control_signals.aluPC, control_signals.aluImm,
+          control_signals.aluin1_m, control_signals.aluin2_m,
+          control_signals.aluPC_m, control_signals.aluImm_m,
           control_signals.Rmem
         } = get_op_signals();
       end
@@ -77,8 +77,8 @@ module decoder (
         {
           control_signals.branch_type, control_signals.Wmem,
           control_signals.Wreg, control_signals.isLoad,
-          control_signals.aluIn1, control_signals.aluIn2,
-          control_signals.aluPC, control_signals.aluImm,
+          control_signals.aluin1_m, control_signals.aluin2_m,
+          control_signals.aluPC_m, control_signals.aluImm_m,
           control_signals.Rmem
         } = get_load_signals();
       end
@@ -89,8 +89,8 @@ module decoder (
         {
           control_signals.branch_type, control_signals.Wmem,
           control_signals.Wreg, control_signals.isLoad,
-          control_signals.aluIn1, control_signals.aluIn2,
-          control_signals.aluPC, control_signals.aluImm,
+          control_signals.aluin1_m, control_signals.aluin2_m,
+          control_signals.aluPC_m, control_signals.aluImm_m,
           control_signals.Rmem
         } = get_store_signals();
       end
@@ -101,8 +101,8 @@ module decoder (
         {
           control_signals.branch_type, control_signals.Wmem,
           control_signals.Wreg, control_signals.isLoad,
-          control_signals.aluIn1, control_signals.aluIn2,
-          control_signals.aluPC, control_signals.aluImm,
+          control_signals.aluin1_m, control_signals.aluin2_m,
+          control_signals.aluPC_m, control_signals.aluImm_m,
           control_signals.Rmem
         } = get_jal_signals();
       end
@@ -113,8 +113,8 @@ module decoder (
         {
           control_signals.branch_type, control_signals.Wmem,
           control_signals.Wreg, control_signals.isLoad,
-          control_signals.aluIn1, control_signals.aluIn2,
-          control_signals.aluPC, control_signals.aluImm,
+          control_signals.aluin1_m, control_signals.aluin2_m,
+          control_signals.aluPC_m, control_signals.aluImm_m,
           control_signals.Rmem
         } = get_jal_signals();
       end
@@ -125,8 +125,8 @@ module decoder (
         {
           control_signals.branch_type, control_signals.Wmem,
           control_signals.Wreg, control_signals.isLoad,
-          control_signals.aluIn1, control_signals.aluIn2,
-          control_signals.aluPC, control_signals.aluImm,
+          control_signals.aluin1_m, control_signals.aluin2_m,
+          control_signals.aluPC_m, control_signals.aluImm_m,
           control_signals.Rmem
         } = get_branch_signals();
       end
@@ -137,8 +137,8 @@ module decoder (
         {
           control_signals.branch_type, control_signals.Wmem,
           control_signals.Wreg, control_signals.isLoad,
-          control_signals.aluIn1, control_signals.aluIn2,
-          control_signals.aluPC, control_signals.aluImm,
+          control_signals.aluin1_m, control_signals.aluin2_m,
+          control_signals.aluPC_m, control_signals.aluImm_m,
           control_signals.Rmem
         } = get_op_signals();
       end

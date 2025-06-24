@@ -76,7 +76,6 @@ package core_types_pkg;
     logic Wmem;
     logic Wreg;
     logic isLoad;
-    logic aluImm;
     logic Rmem;
     logic aluin1_m;
     logic aluin2_m;
