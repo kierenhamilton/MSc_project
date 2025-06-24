@@ -21,7 +21,7 @@ module regMem (
 
     else begin
 
-      if (Wreg) regs[rd] <= Wdata;
+      if (Wreg && rd != 0) regs[rd] <= Wdata;
 
       rs1 <= regs[addr1];
       rs2 <= regs[addr2];

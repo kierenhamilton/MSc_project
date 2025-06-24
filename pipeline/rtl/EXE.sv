@@ -6,7 +6,7 @@ module EXE (
     output logic Wmem_out,
     output logic Rmem_out,
     output logic Wreg_out,
-    output logic [2:0] func_out,
+    output logic [2:0] func3_out,
 
     input Clock,
     input nReset,
@@ -16,7 +16,7 @@ module EXE (
     input Wmem,
     input Rmem,
     input Wreg,
-    input [2:0] func
+    input [2:0] func3
 
 );
 
@@ -29,7 +29,7 @@ module EXE (
       Wmem_out <= 0;
       Rmem_out <= 0;
       Wreg_out <= 0;
-      func_out <= 0;
+      func3_out <= 0;
 
     end else begin
 
@@ -39,7 +39,7 @@ module EXE (
       Wmem_out <= Wmem;
       Rmem_out <= Rmem;
       Wreg_out <= Wreg;
-      func_out <= func;
+      func3_out <= func3;
 
     end
 endmodule

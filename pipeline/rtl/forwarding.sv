@@ -21,8 +21,6 @@ module forwarding (
 
   always_comb begin : main
 
-
-
       // for address 1
 
       if (rdEXE == addr1DEC && rdEXE != 0 && WregEXE) rs1F = resultEXE; // checks execute
@@ -35,7 +33,6 @@ module forwarding (
       if (rdEXE == addr2DEC && rdEXE != 0 && WregEXE) rs2F = resultEXE; // checks execute
       else if (rdMEM == addr2DEC && WregMEM && rdMEM != 0) rs2F = resultMEM; // checks memory
       else rs2F = rs2DEC;
-
 
   end : main
 
