@@ -118,7 +118,7 @@ module decoder (
           control_signals.aluin1_m, control_signals.aluin2_m,
           control_signals.aluPC_m, control_signals.aluImm_m,
           control_signals.Rmem
-        } = get_jal_signals();
+        } = get_jalr_signals();
       end
 
       BRANCH: begin
