@@ -121,6 +121,7 @@ module branching (
           branching_out.PCcurrent = PCIF;
         end
         JALR_TYPE: begin
+          branching_out.hold = 1;
           // default values
         end
         CONDITIONAL_TYPE: begin
