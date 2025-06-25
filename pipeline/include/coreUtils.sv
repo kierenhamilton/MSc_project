@@ -102,7 +102,7 @@ package coreUtils;
   endfunction
 
   function automatic logic [9:0] get_jal_signals();
-    return 10'b00_0100_0010;
+    return 10'b01_0100_0010;
   endfunction
 
   function automatic logic [9:0] get_jalr_signals();
