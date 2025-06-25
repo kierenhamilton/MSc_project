@@ -14,7 +14,7 @@ module progMem (
   logic [7:0] mem[0:255];
 
   initial begin
-    $readmemh("../../scripts/inst_mem.hex", mem);
+    $readmemh("../scripts/inst_mem.hex", mem);
   end
 
   always_ff @(posedge Clock) begin
