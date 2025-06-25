@@ -18,7 +18,7 @@ module dataMem (
 
   always_ff @(posedge Clock) begin : memory_allocation
 
-    if (Rmem)
+    if (Rmem) // read memory
 
       case (f3)
 
@@ -38,7 +38,7 @@ module dataMem (
 
     else memOut <= 0;
 
-    if (Wmem)
+    if (Wmem) // Write memory
 
       case (f3)
 
