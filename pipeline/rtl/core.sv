@@ -74,7 +74,7 @@ module core (
       .Clock (Clock),
       .nReset(nReset),
 
-      .rs2(rs2DEC),
+      .rs2(rs2F),
       .rd(DEC_out.rd),
       .result(alu_out.result),
       .Wmem(DEC_out.Wmem),
