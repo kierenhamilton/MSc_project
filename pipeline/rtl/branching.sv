@@ -116,6 +116,7 @@ module branching (
         end
         JAL_TYPE: begin
           branching_out.branch = 1;
+          branching_out.hold = 1;
           branching_out.PCnext = imm;
           branching_out.PCcurrent = PCIF;
         end
