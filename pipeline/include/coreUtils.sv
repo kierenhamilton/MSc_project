@@ -106,11 +106,11 @@ package coreUtils;
   endfunction
 
   function automatic logic [9:0] get_jalr_signals();
-    return 10'b00_0100_1010;
+    return 10'b10_0100_1010;
   endfunction
 
   function automatic logic [9:0] get_branch_signals();
-    return 10'b00_0000_0000;
+    return 10'b11_0000_0000;
   endfunction
 
 endpackage
