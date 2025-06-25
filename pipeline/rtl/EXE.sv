@@ -16,6 +16,8 @@ module EXE (
 
 );
 
+  timeunit 1ns; timeprecision 100ps;
+
   always_ff @(posedge Clock, negedge nReset)
     if (!nReset) begin
 

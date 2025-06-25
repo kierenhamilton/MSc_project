@@ -24,6 +24,8 @@ module core (
     input nReset
 );
 
+  timeunit 1ns; timeprecision 100ps;
+
   decoder_out_t decoder_out;
   DEC_out_t DEC_out;
   EXE_out_t EXE_out;

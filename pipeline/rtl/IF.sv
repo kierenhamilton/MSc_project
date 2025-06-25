@@ -12,6 +12,8 @@ module IF (
 
 );
 
+  timeunit 1ns; timeprecision 100ps;
+
   always_ff @(posedge Clock, negedge nReset)
 
     if (!nReset) PC_out <= 0;

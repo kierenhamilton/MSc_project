@@ -13,6 +13,8 @@ module write_back (
 
 );
 
+  timeunit 1ns; timeprecision 100ps;
+
   always_comb begin
     write_back_out.Wdata = (Rmem) ? memOut : result;
     write_back_out.rd = rd;

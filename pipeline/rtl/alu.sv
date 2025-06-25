@@ -19,6 +19,8 @@ module alu (
 
 );
 
+  timeunit 1ns; timeprecision 100ps;
+
   logic [31:0] aluin1_m_out, aluin2_m_out, aluPC_m_out, PC4;
 
   always_comb begin

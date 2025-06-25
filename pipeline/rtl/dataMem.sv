@@ -11,6 +11,8 @@ module dataMem (
 
 );
 
+  timeunit 1ns; timeprecision 100ps;
+
   logic [7:0] mem[0:1023];
 
 

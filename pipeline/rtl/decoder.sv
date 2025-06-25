@@ -14,6 +14,8 @@ module decoder (
     input opcodes_t opcode
 );
 
+  timeunit 1ns; timeprecision 100ps;
+
   always_comb begin
 
     control_signals.func3 = func3;

@@ -14,6 +14,8 @@ module regMem (
 
 );
 
+  timeunit 1ns; timeprecision 100ps;
+
   logic [31:0] regs[0:31];
 
   always_ff @(posedge Clock, negedge nReset)

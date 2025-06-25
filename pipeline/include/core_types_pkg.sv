@@ -3,6 +3,8 @@ import coreUtils::*;
 
 package core_types_pkg;
 
+  timeunit 1ns; timeprecision 100ps;
+
   typedef struct packed {
 
     logic [31:0] PC;

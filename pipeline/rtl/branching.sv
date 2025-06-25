@@ -26,6 +26,8 @@ module branching (
 
 );
 
+  timeunit 1ns; timeprecision 100ps;
+
   logic prediction;
   logic branchConfirmed;
   logic correctPrediction;

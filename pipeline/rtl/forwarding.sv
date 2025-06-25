@@ -19,6 +19,8 @@ module forwarding (
 
 );
 
+  timeunit 1ns; timeprecision 100ps;
+
   always_comb begin : main
 
       // for address 1

@@ -1,5 +1,7 @@
 package coreUtils;
 
+  timeunit 1ns; timeprecision 100ps;
+
   typedef enum logic [2:0] {
     BEQ = 3'b000,
     BNE = 3'b001,

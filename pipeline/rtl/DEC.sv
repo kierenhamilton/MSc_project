@@ -28,6 +28,8 @@ module DEC (
     input [31:0] rs2
 );
 
+  timeunit 1ns; timeprecision 100ps;
+
   always_ff @(posedge Clock, negedge nReset)
     if (!nReset) begin
 
