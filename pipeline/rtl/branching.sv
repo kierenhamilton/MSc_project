@@ -31,13 +31,18 @@ module branching (
   logic branchConfirmed;
   logic correctPrediction;
   branch_type_t branchTypeEXE;
+  logic isBranchEXE;
   logic flush_internal;
 
   always_ff @(posedge Clock, negedge nReset)
     if (!nReset) begin
       branchTypeEXE <= NON_TYPE;
       predictionReg <= 0;
+      isBranchEXE;
     end else begin
+
+      if (branchType != NON_TYPE) isBranchEXE <= 1;
+      else isBranchEXE <= 0;
 
       branchTypeEXE <= branchType;
 
@@ -61,55 +66,58 @@ module branching (
 
     prediction = predictionReg;
 
-    unique case (branchTypeEXE)
-      NON_TYPE: begin
-      end
-      JAL_TYPE: begin
-      end
-      JALR_TYPE: begin
-        branching_out.flush  = 1;
-        branching_out.bypass = 1;
-        branching_out.PCnext = aluOut;
-      end
-      CONDITIONAL_TYPE: begin
-        case (f3DEC)
-          BEQ: if (zeroFlag) branchConfirmed = 1;
-          BNE: if (!zeroFlag) branchConfirmed = 1;
-          BLT: if (negFlag) branchConfirmed = 1;
-          BGE: if (!negFlag) branchConfirmed = 1;
-          BLTU: if (neguFlag) branchConfirmed = 1;
-          BGEU: if (!neguFlag) branchConfirmed = 1;
-          default: branchConfirmed = 0;
-        endcase
+    if (isBranchEXE) begin
 
-        unique case ({
-          prediction, branchConfirmed
-        })
-          00: begin  // predicted flase, actually false
-            correctPrediction = 1;
-          end
-          01: begin  // predicted flase, actually true
-            branching_out.flush = 1;
-            branching_out.branch = 1;
-            branching_out.PCnext = immDEC;
-            branching_out.PCcurrent = PCDEC;
-          end
-          10: begin  // predicted true, actually false
-            branching_out.flush = 1;
-            branching_out.branch = 1;
-            branching_out.PCnext = 4;
-            branching_out.PCcurrent = PCDEC;
-          end
-          11: begin  // predicted true, actually true
-            correctPrediction = 1;
-          end
-        endcase
+      unique case (branchTypeEXE)
+        NON_TYPE: begin
+        end
+        JAL_TYPE: begin
+        end
+        JALR_TYPE: begin
+          branching_out.flush  = 1;
+          branching_out.bypass = 1;
+          branching_out.PCnext = aluOut;
+        end
+        CONDITIONAL_TYPE: begin
+          case (f3DEC)
+            BEQ: if (zeroFlag) branchConfirmed = 1;
+            BNE: if (!zeroFlag) branchConfirmed = 1;
+            BLT: if (negFlag) branchConfirmed = 1;
+            BGE: if (!negFlag) branchConfirmed = 1;
+            BLTU: if (neguFlag) branchConfirmed = 1;
+            BGEU: if (!neguFlag) branchConfirmed = 1;
+            default: branchConfirmed = 0;
+          endcase
 
-        if (correctPrediction) prediction = 1;
-        else prediction = 0;
-      end
-    endcase
+          unique case ({
+            prediction, branchConfirmed
+          })
+            00: begin  // predicted flase, actually false
+              correctPrediction = 1;
+            end
+            01: begin  // predicted flase, actually true
+              branching_out.flush = 1;
+              branching_out.branch = 1;
+              branching_out.PCnext = immDEC;
+              branching_out.PCcurrent = PCDEC;
+            end
+            10: begin  // predicted true, actually false
+              branching_out.flush = 1;
+              branching_out.branch = 1;
+              branching_out.PCnext = 4;
+              branching_out.PCcurrent = PCDEC;
+            end
+            11: begin  // predicted true, actually true
+              correctPrediction = 1;
+            end
+          endcase
 
+          if (correctPrediction) prediction = 1;
+          else prediction = 0;
+        end
+      endcase
+
+    end
 
     if (!flush_internal) begin : decode_stage
 
