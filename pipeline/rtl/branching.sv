@@ -119,7 +119,7 @@ module branching (
 
     end
 
-    if (!flush_internal) begin : decode_stage
+    if (!flush_internal || !branchConfirmed) begin : decode_stage
 
       branching_out.flush = 0;
       branching_out.hold = 0;
