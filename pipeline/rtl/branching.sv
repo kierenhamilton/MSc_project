@@ -38,7 +38,7 @@ module branching (
     if (!nReset) begin
       branchTypeEXE <= NON_TYPE;
       predictionReg <= 0;
-      isBranchEXE;
+      isBranchEXE <= 0;
     end else begin
 
       if (branchType != NON_TYPE) isBranchEXE <= 1;
