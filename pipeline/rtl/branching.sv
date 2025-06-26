@@ -1,12 +1,11 @@
 
-// `include "./core_types_pkg.sv"
-// `include "./coreUtils.sv"
+`include "../include/core_types_pkg.sv"
+`include "../include/coreUtils.sv"
 
 import coreUtils::*;
 import core_types_pkg::*;
 
 module branching (
-
 
     output branching_out_t branching_out,
 
@@ -28,92 +27,102 @@ module branching (
 
   timeunit 1ns; timeprecision 100ps;
 
+  logic predictionReg;
   logic prediction;
   logic branchConfirmed;
   logic correctPrediction;
   branch_type_t branchTypeEXE;
-  logic branchingEXE;
+  logic flush_internal;
 
-  always_ff @(posedge Clock, negedge nReset) begin : prediction_logic
+  always_ff @(posedge Clock, negedge nReset)
     if (!nReset) begin
-      prediction <= 0;
       branchTypeEXE <= NON_TYPE;
-      branchingEXE <= 0;
+      predictionReg <= 0;
     end else begin
 
-      // pipelining
-
       branchTypeEXE <= branchType;
-      branchingEXE  <= (branchType != NON_TYPE);
 
-      // Execute stage
-
-      if (branchingEXE && branchTypeEXE == CONDITIONAL_TYPE && correctPrediction == 0)
-        prediction <= !prediction;
+      predictionReg <= prediction;
 
     end
-  end
 
+  assign flush_internal = branching_out.flush;
 
   always_comb begin
-    // setting defaults
 
-    // output signals
     branching_out.flush = 0;
     branching_out.hold = 0;
-    branching_out.bypass = 0;
-    branching_out.branch = 0;
     branching_out.PCnext = 0;
     branching_out.PCcurrent = 0;
+    branching_out.branch = 0;
+    branching_out.bypass = 0;
 
-    // internal signals
     branchConfirmed = 0;
     correctPrediction = 0;
 
-    if (branchingEXE) begin : execute_stage
-      case (branchTypeEXE)
-        JAL_TYPE: begin
-          // default values
-        end
-        JALR_TYPE: begin
-          branching_out.flush  = 1;
-          branching_out.bypass = 1;
-          branching_out.PCnext = aluOut;
-        end
-        CONDITIONAL_TYPE: begin
+    prediction = predictionReg;
 
-          case (f3DEC)
-            BEQ: if (zeroFlag) branchConfirmed = 1;
-            BNE: if (!zeroFlag) branchConfirmed = 1;
-            BLT: if (negFlag) branchConfirmed = 1;
-            BGE: if (!negFlag) branchConfirmed = 1;
-            BLTU: if (neguFlag) branchConfirmed = 1;
-            BGEU: if (!neguFlag) branchConfirmed = 1;
-            default: branchConfirmed = 0;
-          endcase
+    unique case (branchTypeEXE)
+      NON_TYPE: begin
+      end
+      JAL_TYPE: begin
+      end
+      JALR_TYPE: begin
+        branching_out.flush  = 1;
+        branching_out.bypass = 1;
+        branching_out.PCnext = aluOut;
+      end
+      CONDITIONAL_TYPE: begin
+        case (f3DEC)
+          BEQ: if (zeroFlag) branchConfirmed = 1;
+          BNE: if (!zeroFlag) branchConfirmed = 1;
+          BLT: if (negFlag) branchConfirmed = 1;
+          BGE: if (!negFlag) branchConfirmed = 1;
+          BLTU: if (neguFlag) branchConfirmed = 1;
+          BGEU: if (!neguFlag) branchConfirmed = 1;
+          default: branchConfirmed = 0;
+        endcase
 
-          if (branchConfirmed == prediction) correctPrediction = 1;
-
-          else begin
-            correctPrediction = 0;
+        unique case ({
+          prediction, branchConfirmed
+        })
+          00: begin  // predicted flase, actually false
+            correctPrediction = 1;
+          end
+          01: begin  // predicted flase, actually true
             branching_out.flush = 1;
             branching_out.branch = 1;
             branching_out.PCnext = immDEC;
             branching_out.PCcurrent = PCDEC;
           end
+          10: begin  // predicted true, actually false
+            branching_out.flush = 1;
+            branching_out.branch = 1;
+            branching_out.PCnext = 4;
+            branching_out.PCcurrent = PCDEC;
+          end
+          11: begin  // predicted true, actually true
+            correctPrediction = 1;
+          end
+        endcase
 
-        end
+        if (correctPrediction) prediction = 1;
+        else prediction = 0;
+      end
+    endcase
 
-        default: begin
-          // default values
-        end
-      endcase
-    end : execute_stage
-    else begin : decode_stage
+
+    if (!flush_internal) begin : decode_stage
+
+      branching_out.flush = 0;
+      branching_out.hold = 0;
+      branching_out.PCnext = 0;
+      branching_out.PCcurrent = 0;
+      branching_out.branch = 0;
+      branching_out.bypass = 0;
+
       unique case (branchType)
-        NON_TYPE: begin
-          if (isLoad) branching_out.hold = 1;
-        end
+        NON_TYPE: if (isLoad) branching_out.hold = 1;
         JAL_TYPE: begin
           branching_out.branch = 1;
           branching_out.hold = 1;
@@ -122,15 +131,14 @@ module branching (
         end
         JALR_TYPE: begin
           branching_out.hold = 1;
-          // default values
         end
         CONDITIONAL_TYPE: begin
-          if (prediction) begin
+          if (prediction) // we are predicting that the branch is going to happen
+          begin
             branching_out.branch = 1;
             branching_out.PCnext = imm;
+            branching_out.hold = 1;
             branching_out.PCcurrent = PCIF;
-          end else begin
-            // default values
           end
         end
       endcase
