@@ -1,6 +1,5 @@
 
-`include "../include/core_types_pkg.sv"
-`include "../include/coreUtils.sv"
+
 
 import coreUtils::*;
 import core_types_pkg::*;
