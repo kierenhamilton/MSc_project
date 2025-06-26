@@ -178,7 +178,7 @@ module core (
       .resultEXE(EXE_out.result),
       .WregEXE(EXE_out.Wreg),
       .rdMEM(MEM_out.rd),
-      .WdataMEM(write_back_out),
+      .WdataMEM(write_back_out.Wdata),
       .WregMEM(MEM_out.Wreg)
   );
 
