@@ -27,61 +27,53 @@ module branching_new (
 
   timeunit 1ns; timeprecision 100ps;
 
+  logic predictionReg;
   logic prediction;
   logic branchConfirmed;
   logic correctPrediction;
   branch_type_t branchTypeEXE;
   logic branchingEXE;
 
-  always_ff @(posedge Clock, negedge nReset) begin : prediction_logic
+  always_ff @(posedge Clock, negedge nReset)
     if (!nReset) begin
-      prediction <= 0;
-      branchTypeEXE <= NON_TYPE;
-      branchingEXE <= 0;
     end else begin
 
-      // pipelining
+      if (!flush) branchingEXE <= (branchType != NON_TYPE);
+      else branchingEXE <= NON_TYPE;
 
-      if (!branchConfirmed) branchTypeEXE <= branchType;
-      else branchTypeEXE <= NON_TYPE;
-      branchingEXE <= (branchType != NON_TYPE);
+      branchTypeEXE <= branchType;
 
-      // Execute stage
+      predictionReg <= prediction;
 
-      if (branchingEXE && branchTypeEXE == CONDITIONAL_TYPE && correctPrediction == 0)
-        prediction <= !prediction;
 
     end
-  end
 
   always_comb begin
-    // setting defaults
 
-    // output signals
     branching_out.flush = 0;
     branching_out.hold = 0;
-    branching_out.bypass = 0;
-    branching_out.branch = 0;
     branching_out.PCnext = 0;
     branching_out.PCcurrent = 0;
+    branching_out.branch = 0;
+    branching_out.bypass = 0;
 
-    // internal signals
     branchConfirmed = 0;
     correctPrediction = 0;
 
+    prediction = predictionReg;
+
     if (branchingEXE) begin : execute_stage
-
-      case (branchTypeEXE)
-        JAL_TYPE: branchConfirmed = 1;
-
+      unique case (branchTypeEXE)
+        NON_TYPE: begin
+        end
+        JAL_TYPE: begin
+        end
         JALR_TYPE: begin
           branching_out.flush  = 1;
           branching_out.bypass = 1;
           branching_out.PCnext = aluOut;
         end
-
         CONDITIONAL_TYPE: begin
-
           case (f3DEC)
             BEQ: if (zeroFlag) branchConfirmed = 1;
             BNE: if (!zeroFlag) branchConfirmed = 1;
@@ -92,50 +84,56 @@ module branching_new (
             default: branchConfirmed = 0;
           endcase
 
-          if (branchConfirmed == prediction) correctPrediction = 1;
+          unique case ({
+            prediction, branchConfirmed
+          })
+            00: begin  // predicted flase, actually false
+              correctPrediction = 1;
+            end
+            01: begin  // predicted flase, actually true
+              branching_out.flush = 1;
+              branching_out.branch = 1;
+              branching_out.PCnext = immDEC;
+              branching_out.PCcurrent = PCDEC;
+            end
+            10: begin  // predicted true, actually false
+              branching_out.flush = 1;
+              branching_out.branch = 1;
+              branching_out.PCnext = PCDEC;
+              branching_out.PCcurrent = 4;
+            end
+            11: begin  // predicted true, actually true
+              correctPrediction = 1;
+            end
+          endcase
 
-          else begin
-            correctPrediction = 0;
-            branching_out.flush = 1;
-            branching_out.branch = 1;
-            branching_out.PCnext = immDEC;
-            branching_out.PCcurrent = PCDEC;
-          end
+          if (correctPrediction) prediction = 1;
+          else prediction = 0;
         end
-
-        default: begin
-          // default values
-        end
-
       endcase
-    end : execute_stage
 
+    end
 
-    // decode stage
-
-    if (!branchConfirmed) begin : decode_stage
-
+    if (!flush) begin : decode_stage
       unique case (branchType)
-
-        NON_TYPE:  if (isLoad) branching_out.hold = 1;
+        NON_TYPE: if (isLoad) branching_out.hold = 1;
         JAL_TYPE: begin
           branching_out.branch = 1;
           branching_out.hold = 1;
           branching_out.PCnext = imm;
           branching_out.PCcurrent = PCIF;
         end
-        JALR_TYPE: branching_out.hold = 1;
-
+        JALR_TPYE: begin
+          branching_out.hold = 1;
+        end
         CONDITIONAL_TYPE: begin
-
-          if (prediction) begin
+          if (prediction) // we are predicting that the branch is going to happen
+          begin
             branching_out.branch = 1;
             branching_out.PCnext = imm;
+            branching_out.hold = 1;
             branching_out.PCcurrent = PCIF;
-          end else begin
-            // default values
           end
-
         end
       endcase
     end : decode_stage
