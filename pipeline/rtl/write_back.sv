@@ -19,13 +19,13 @@ module write_back (
 
   always_ff @(posedge Clock, negedge nReset)
     if (!nReset) begin
-      WregR <= 0;
-      rdR <= 0;
-      WdataR <= 0;
+      write_back_out.WregR <= 0;
+      write_back_out.rdR <= 0;
+      write_back_out.WdataR <= 0;
     end else begin
-      WregR <= Wreg;
-      rdR   <= rd;
-      Wdata <= (Rmem) ? memOut : result;
+      write_back_out.WregR <= Wreg;
+      write_back_out.rdR   <= rd;
+      write_back_out.Wdata <= (Rmem) ? memOut : result;
     end
 
   always_comb begin
