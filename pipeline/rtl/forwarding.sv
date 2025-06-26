@@ -14,7 +14,7 @@ module forwarding (
     input WregEXE,
 
     input [4:0] rdMEM,
-    input [31:0] resultMEM,
+    input [31:0] WdataMEM,
     input WregMEM
 
 );
@@ -26,14 +26,14 @@ module forwarding (
       // for address 1
 
       if (rdEXE == addr1DEC && rdEXE != 0 && WregEXE) rs1F = resultEXE; // checks execute
-      else if (rdMEM == addr1DEC && WregMEM &&rdMEM != 0) rs1F = resultMEM; // checks memory
+      else if (rdMEM == addr1DEC && WregMEM &&rdMEM != 0) rs1F = WdataMEM; // checks memory
       else rs1F = rs1DEC; // default
 
 
       // address 2
 
       if (rdEXE == addr2DEC && rdEXE != 0 && WregEXE) rs2F = resultEXE; // checks execute
-      else if (rdMEM == addr2DEC && WregMEM && rdMEM != 0) rs2F = resultMEM; // checks memory
+      else if (rdMEM == addr2DEC && WregMEM && rdMEM != 0) rs2F = WdataMEM; // checks memory
       else rs2F = rs2DEC;
 
   end : main
