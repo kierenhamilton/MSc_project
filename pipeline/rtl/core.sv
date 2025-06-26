@@ -229,6 +229,9 @@ module core (
   write_back write_back0 (
       .write_back_out(write_back_out),
       .memOut(memOut_MEM),
+
+      .Clock(Clock),
+      .nReset(nReset),
       .Rmem(MEM_out.Rmem),
       .Wreg(MEM_out.Wreg),
       .result(MEM_out.result),
