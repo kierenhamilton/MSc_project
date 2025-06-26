@@ -25,7 +25,7 @@ module write_back (
     end else begin
       write_back_out.WregR <= Wreg;
       write_back_out.rdR   <= rd;
-      write_back_out.Wdata <= (Rmem) ? memOut : result;
+      write_back_out.WdataR <= (Rmem) ? memOut : result;
     end
 
   always_comb begin
