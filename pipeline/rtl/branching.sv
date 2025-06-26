@@ -50,7 +50,6 @@ module branching (
 
     end
 
-  assign flush_internal = branching_out.flush;
 
   always_comb begin
 
@@ -63,7 +62,7 @@ module branching (
 
     branchConfirmed = 0;
     correctPrediction = 0;
-
+    flush_internal = 0;
     prediction = predictionReg;
 
     if (isBranchEXE) begin
@@ -97,12 +96,14 @@ module branching (
             end
             01: begin  // predicted flase, actually true
               branching_out.flush = 1;
+              flush_internal = 1;
               branching_out.branch = 1;
               branching_out.PCnext = immDEC;
               branching_out.PCcurrent = PCDEC;
             end
             10: begin  // predicted true, actually false
               branching_out.flush = 1;
+              flush_internal = 1;
               branching_out.branch = 1;
               branching_out.PCnext = 4;
               branching_out.PCcurrent = PCDEC;
@@ -119,7 +120,7 @@ module branching (
 
     end
 
-    if (!flush_internal || !branchConfirmed) begin : decode_stage
+    if (!flush_internal) begin : decode_stage
 
       branching_out.flush = 0;
       branching_out.hold = 0;
