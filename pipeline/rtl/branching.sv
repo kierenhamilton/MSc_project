@@ -74,6 +74,7 @@ module branching (
         end
         JALR_TYPE: begin
           branching_out.flush  = 1;
+          flush_internal = 1;
           branching_out.bypass = 1;
           branching_out.PCnext = aluOut;
         end
