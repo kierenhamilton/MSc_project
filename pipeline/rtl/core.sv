@@ -174,12 +174,18 @@ module core (
 
       .addr1DEC(DEC_out.addr1),
       .addr2DEC(DEC_out.addr2),
+
       .rdEXE(EXE_out.rd),
       .resultEXE(EXE_out.result),
       .WregEXE(EXE_out.Wreg),
+
       .rdMEM(MEM_out.rd),
       .WdataMEM(write_back_out.Wdata),
-      .WregMEM(MEM_out.Wreg)
+      .WregMEM(MEM_out.Wreg),
+
+      .rdWB(write_back_out.rdR),
+      .WdataWB(write_back_out.WdataR),
+      .WregWB(write_back_out.WregR)
   );
 
   progCount progCount0 (

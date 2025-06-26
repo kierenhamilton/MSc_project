@@ -106,6 +106,10 @@ package core_types_pkg;
 
   typedef struct packed {
 
+    logic [31:0] WdataR;
+    logic [4:0] rdR;
+    logic WregR;
+
     logic [31:0] Wdata;
     logic [4:0] rd;
     logic Wreg;

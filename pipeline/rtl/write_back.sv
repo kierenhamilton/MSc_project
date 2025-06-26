@@ -5,6 +5,8 @@ module write_back (
 
     output write_back_out_t write_back_out,
 
+    input Clock,
+    input nReset,
     input Rmem,
     input Wreg,
     input [31:0] result,
@@ -14,6 +16,17 @@ module write_back (
 );
 
   timeunit 1ns; timeprecision 100ps;
+
+  always_ff @(posedge Clock, negedge nReset)
+    if (!nReset) begin
+      WregR <= 0;
+      rdR <= 0;
+      WdataR <= 0;
+    end else begin
+      WregR <= Wreg;
+      rdR   <= rd;
+      Wdata <= (Rmem) ? memOut : result;
+    end
 
   always_comb begin
     write_back_out.Wdata = (Rmem) ? memOut : result;

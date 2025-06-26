@@ -13,6 +13,10 @@ module forwarding (
     input [31:0] resultEXE,
     input WregEXE,
 
+    input [4:0] rdWB,
+    input [31:0] WdataWB,
+    input WregWB,
+
     input [4:0] rdMEM,
     input [31:0] WdataMEM,
     input WregMEM
@@ -23,18 +27,19 @@ module forwarding (
 
   always_comb begin : main
 
-      // for address 1
+    // for address 1
 
-      if (rdEXE == addr1DEC && rdEXE != 0 && WregEXE) rs1F = resultEXE; // checks execute
-      else if (rdMEM == addr1DEC && WregMEM &&rdMEM != 0) rs1F = WdataMEM; // checks memory
-      else rs1F = rs1DEC; // default
+    if (rdEXE == addr1DEC && rdEXE != 0 && WregEXE) rs1F = resultEXE;  // checks execute
+    else if (rdMEM == addr1DEC && WregMEM && rdMEM != 0) rs1F = WdataMEM;  // checks memory
+    else if (rdWB == addr1DEC && WregWB && rdWB != 0) rs1F = WdataWB;  // checks write back
+    else rs1F = rs1DEC;  // default
 
+    // address 2
 
-      // address 2
-
-      if (rdEXE == addr2DEC && rdEXE != 0 && WregEXE) rs2F = resultEXE; // checks execute
-      else if (rdMEM == addr2DEC && WregMEM && rdMEM != 0) rs2F = WdataMEM; // checks memory
-      else rs2F = rs2DEC;
+    if (rdEXE == addr2DEC && rdEXE != 0 && WregEXE) rs2F = resultEXE;  // checks execute
+    else if (rdMEM == addr2DEC && WregMEM && rdMEM != 0) rs2F = WdataMEM;  // checks memory
+    else if (rdWB == addr2DEC && WregWB && rdWB != 0) rs2F = WdataWB;  // check write back
+    else rs2F = rs2DEC;
 
   end : main
 
