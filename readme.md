@@ -13,3 +13,7 @@ compatable with RV32I instructions.
 - Dynamic branch prediction
 
 ### Verification
+
+## Single stage
+
+![Architecutre Diagram](single_cycle/diagrams/single_cycle.svg)
