@@ -5,7 +5,7 @@ compatable with RV32I instructions.
 
 ## Pipelined 
 
-![Architecture Diagram][pipeline/diagrams/pipelined.png]
+![Architecture Diagram](pipeline/diagrams/pipelined.png)
 
 ### Feature list
 
