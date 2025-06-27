@@ -90,10 +90,10 @@ module branching (
           unique case ({
             predictionReg, branchConfirmed
           })
-            00: begin  // predicted flase, actually false
+            2'b00: begin  // predicted flase, actually false
               prediction = predictionReg;
             end
-            01: begin  // predicted flase, actually true
+            2'b01: begin  // predicted flase, actually true
               branching_out.flush = 1;
               flush_internal = 1;
               branching_out.branch = 1;
@@ -101,7 +101,7 @@ module branching (
               branching_out.PCcurrent = PCDEC;
               prediction = !predictionReg;
             end
-            10: begin  // predicted true, actually false
+            2'b10: begin  // predicted true, actually false
               branching_out.flush = 1;
               flush_internal = 1;
               branching_out.branch = 1;
@@ -109,7 +109,7 @@ module branching (
               branching_out.PCcurrent = PCDEC;
               prediction = !predictionReg;
             end
-            11: begin  // predicted true, actually true
+            2'b11: begin  // predicted true, actually true
               prediction = predictionReg;
             end
           endcase
