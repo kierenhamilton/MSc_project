@@ -26,9 +26,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="3.0199726"
-     inkscape:cx="654.47614"
-     inkscape:cy="390.56646"
+     inkscape:zoom="7.7424092"
+     inkscape:cx="804.40078"
+     inkscape:cy="542.27307"
      inkscape:window-width="5688"
      inkscape:window-height="2366"
      inkscape:window-x="3829"
@@ -159,13 +159,13 @@
        xml:space="preserve"
        style="font-size:3.51617px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.346291;stroke-linecap:round"
        x="256.5455"
-       y="151.45801"
+       y="146"
        id="text3-7"><tspan
          sodipodi:role="line"
          id="tspan3-2"
          style="fill:#000000;stroke:none;stroke-width:0.346291"
          x="256.5455"
-         y="151.45801">[RegMem]</tspan></text>
+         y="146">[RegMem]</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:2.26742px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.223308;stroke-linecap:round"
@@ -1221,21 +1221,21 @@
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.346291;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect113"
-       width="46.172001"
-       height="17.314501"
+       width="49.620796"
+       height="19.200623"
        x="175.3792"
        y="140.79938" />
     <text
        xml:space="preserve"
        style="font-size:3.51617px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.346291;stroke-linecap:round"
-       x="203.0824"
-       y="156.95958"
+       x="190"
+       y="157"
        id="text114"><tspan
          sodipodi:role="line"
          id="tspan114"
          style="fill:#000000;stroke:none;stroke-width:0.346291"
-         x="203.0824"
-         y="156.95958">Forwarding</tspan></text>
+         x="190"
+         y="157">Forwarding</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:1.98378px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.195372;stroke-linecap:round"
@@ -1325,6 +1325,40 @@
          x="211.16251"
          y="150.04172"
          id="tspan124">result.MEM</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:1.75288px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.172632;stroke-linecap:round"
+       x="215.58264"
+       y="155"
+       id="text120-7"><tspan
+         sodipodi:role="line"
+         style="fill:#000000;stroke:none;stroke-width:0.172632"
+         x="215.58264"
+         y="155"
+         id="tspan120-5"
+         rotate="0 0 0">rd.WB</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:1.72827px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.173145;stroke-linecap:round;stroke-dasharray:none"
+       x="215.58264"
+       y="156.88693"
+       id="text122-0"><tspan
+         sodipodi:role="line"
+         style="fill:#000000;stroke:none;stroke-width:0.173145;stroke-dasharray:none"
+         x="215.58264"
+         y="156.88693"
+         id="tspan122-1">Wreg.WB</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:1.61656px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.123444;stroke-linecap:round;stroke-dasharray:none"
+       x="215.62683"
+       y="158.70995"
+       id="text124-1"><tspan
+         sodipodi:role="line"
+         style="fill:#000000;stroke:none;stroke-width:0.123444;stroke-dasharray:none"
+         x="215.62683"
+         y="158.70995"
+         id="tspan124-6">Wdata.WB</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:2.26742px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.223308;stroke-linecap:round"
@@ -1495,7 +1529,7 @@
          id="tspan149">rd</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.57715;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#ArrowWideRounded)"
-       d="m 279.63151,77.312863 v 73.259587 h -5.7715"
+       d="m 279.63151,77.312863 0,67.687137 h -5.7715"
        id="path150"
        sodipodi:nodetypes="ccc" />
     <path
@@ -2316,6 +2350,54 @@
        d="m 42.691387,123 -15.691388,0"
        id="path50"
        sodipodi:nodetypes="cc" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round;stroke-dasharray:none"
+       id="rect2"
+       width="9.9999933"
+       height="10"
+       x="235"
+       y="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round;stroke-dasharray:none;marker-end:url(#ArrowWideRounded-8)"
+       d="m 279.63151,145 v 11 l -34.63152,0"
+       id="path3"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round;stroke-dasharray:none;marker-end:url(#ArrowWideRounded-8)"
+       d="m 234.99999,156 h -10"
+       id="path4" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.51617px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.346291;stroke-linecap:round"
+       x="237"
+       y="148.72662"
+       id="text20"><tspan
+         sodipodi:role="line"
+         id="tspan20"
+         style="fill:#000000;stroke:none;stroke-width:0.346291"
+         x="237"
+         y="148.72662">WB</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.26742px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.223308;stroke-linecap:round"
+       x="236.68512"
+       y="152.58092"
+       id="text22"><tspan
+         sodipodi:role="line"
+         style="fill:#000000;stroke:none;stroke-width:0.223308"
+         x="236.68512"
+         y="152.58092"
+         id="tspan22">rd</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#000000;stroke:none;stroke-width:0.223308"
+         x="236.68512"
+         y="155.41519"
+         id="tspan23">Wdata</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#000000;stroke:none;stroke-width:0.223308"
+         x="236.68512"
+         y="158.24947"
+         id="tspan24">Wreg</tspan></text>
   </g>
   <text
      xml:space="preserve"
