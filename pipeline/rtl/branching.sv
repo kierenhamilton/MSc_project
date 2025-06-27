@@ -29,7 +29,6 @@ module branching (
   logic predictionReg;
   logic prediction;
   logic branchConfirmed;
-  logic correctPrediction;
   branch_type_t branchTypeEXE;
   logic isBranchEXE;
   logic flush_internal;
@@ -61,7 +60,6 @@ module branching (
     branching_out.bypass = 0;
 
     branchConfirmed = 0;
-    correctPrediction = 0;
     flush_internal = 0;
     prediction = predictionReg;
 
@@ -93,7 +91,7 @@ module branching (
             prediction, branchConfirmed
           })
             00: begin  // predicted flase, actually false
-              correctPrediction = 1;
+              prediction = predictionReg;
             end
             01: begin  // predicted flase, actually true
               branching_out.flush = 1;
@@ -101,6 +99,7 @@ module branching (
               branching_out.branch = 1;
               branching_out.PCnext = immDEC;
               branching_out.PCcurrent = PCDEC;
+              prediction = !predictionReg;
             end
             10: begin  // predicted true, actually false
               branching_out.flush = 1;
@@ -108,14 +107,13 @@ module branching (
               branching_out.branch = 1;
               branching_out.PCnext = 4;
               branching_out.PCcurrent = PCDEC;
+              prediction = !predictionReg;
             end
             11: begin  // predicted true, actually true
-              correctPrediction = 1;
+              prediction = predictionReg;
             end
           endcase
 
-          if (correctPrediction) prediction = predictionReg;
-          else prediction = !predictionReg;
         end
       endcase
 
