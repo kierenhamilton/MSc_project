@@ -40,7 +40,7 @@ module branching (
       isBranchEXE   <= 0;
     end else begin
 
-      if (branchType != NON_TYPE) isBranchEXE <= 1;
+      if (branchType != NON_TYPE && !flush_internal) isBranchEXE <= 1;
       else isBranchEXE <= 0;
 
       branchTypeEXE <= branchType;
