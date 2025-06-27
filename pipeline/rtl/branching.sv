@@ -88,7 +88,7 @@ module branching (
           endcase
 
           unique case ({
-            prediction, branchConfirmed
+            predictionReg, branchConfirmed
           })
             00: begin  // predicted flase, actually false
               prediction = predictionReg;
