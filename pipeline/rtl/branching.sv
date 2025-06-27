@@ -114,7 +114,7 @@ module branching (
             end
           endcase
 
-          if (correctPrediction == prediction) prediction = predictionReg;
+          if (correctPrediction) prediction = predictionReg;
           else prediction = !predictionReg;
         end
       endcase
