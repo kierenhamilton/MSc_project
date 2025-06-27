@@ -38,7 +38,7 @@ module branching (
     if (!nReset) begin
       branchTypeEXE <= NON_TYPE;
       predictionReg <= 0;
-      isBranchEXE <= 0;
+      isBranchEXE   <= 0;
     end else begin
 
       if (branchType != NON_TYPE) isBranchEXE <= 1;
@@ -73,7 +73,7 @@ module branching (
         JAL_TYPE: begin
         end
         JALR_TYPE: begin
-          branching_out.flush  = 1;
+          branching_out.flush = 1;
           flush_internal = 1;
           branching_out.bypass = 1;
           branching_out.PCnext = aluOut;
@@ -114,7 +114,7 @@ module branching (
             end
           endcase
 
-          if (correctPrediction) prediction = predictionReg;
+          if (correctPrediction == prediction) prediction = predictionReg;
           else prediction = !predictionReg;
         end
       endcase
