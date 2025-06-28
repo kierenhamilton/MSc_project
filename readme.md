@@ -1,4 +1,4 @@
-# RiscV labs for education
+# RiscV processor designs
 
 This repository includes the design for a single stage and pipelined RiscV processor 
 compatable with RV32I instructions.
