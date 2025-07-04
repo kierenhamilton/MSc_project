@@ -1,0 +1,105 @@
+show-today: true
+# Either month or day
+viewport-snap: day
+# Can include `year`, `month`, `week`, or `day`
+headers:
+  - month
+# A start date. Not required.
+# An end date. Not required.
+taskgroups:
+  - name: Research
+    tasks:
+      - name: Read papers
+        start: 2025-06-01
+        end: 2025-06-25
+        done: 2025-06-30
+
+  - name: Researching pico mips
+    tasks:
+      - name: Understand simulations
+        start: 2025-06-01
+        end: 2025-06-15
+        done: 2025-06-20
+
+  - name: Building labs
+    tasks:
+      - name: single cycle RISCV
+        start: 2025-06-01
+        end: 2025-06-15
+      - name: pipelined RISCV 
+        start: 2025-06-16
+        end: 2025-07-01
+      - name: convert to labs
+        start: 2025-06-27
+        end: 2025-07-20
+
+  - name: 32 bit picoMIPS 
+    tasks:
+      - name: research repository
+        start: 2025-06-01
+        end: 2025-06-20
+      
+      - name: modify processor
+        start: 2025-06-21
+        end: 2025-07-15
+  - name: Verification and tooling
+    tasks:
+      - name: Automatic verification for single cycle
+        start: 2025-06-10
+        end: 2025-07-10
+      - name: pipeline verification tooling
+        start: 2025-06-20
+        end: 2025-07-10
+      - name: Custom tooling for 32-bit
+        start: 2025-06-20
+        end: 2025-07-25
+
+  - name: Running labs
+    tasks:
+      - name: Ethics applications and legal prep
+        start: 2025-06-20
+        end: 2025-07-10
+      - name: Preperation of labs
+        start: 2025:06-15
+        end: 2025-07-28
+      - name: Finding students
+        start: 2025-07-10
+        end: 2025-08-01
+      - name: Running the labs
+        start: 2025-08-01
+        end: 2025-08-25
+
+      - name: Statisticl analysis
+        start: 2025-08-26
+        end: 2025-09-05
+  - name: Write thesis 
+    tasks:
+      - name: Mind map
+        start: 2025-07-01
+        end: 2025-07-20
+      - name: Finalize structure
+        start: 2025-07-20
+        end: 2025-08-01
+      - name: Write body
+        start: 2025-07-20
+        end: 2025-09-01
+        done: 2025-09-10
+      - name: Conclusion and introduction
+        start: 2025-08-20
+        end: 2025-09-01
+        done: 2025-09-10
+      
+
+milestones:
+  - name: 8-bit RISC lab
+    date: 2025-06-23
+  - name: Ethics applications
+    date: 2025-06-10
+  - name: 32-bit processor
+    date: 2025-07-10
+  - name: Final deadline
+    date: 2025-09-10
+  - name: Start of labs
+    date: 2025-08-01
+  
+

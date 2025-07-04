@@ -1,3 +1,5 @@
+
+#import "@preview/gantty:0.2.0": gantt
 #set text(font: "Calibri", size: 12pt)
 #text("Developing RISC-V Educational Labs to Support ZPD-Based Scaffolding in Processor Education (MSc project)", size: 20pt, weight: "bold")
 
@@ -73,6 +75,7 @@ After completion of the labs, and when sensitive data is aliased, data
 collected from both labs will be analyzed and compared to measure the effect of ZPD
 scaffolding on learning outcomes and student satisfaction.
 
+#pagebreak()
 = Data protection plan
 
 #underline[*Type of Data Collected*]
@@ -102,8 +105,13 @@ scaffolding on learning outcomes and student satisfaction.
 )
 #align(center)[*Table 2:* Ethical considerations for RISC-V laboratory]
 
+#pagebreak()
 = Timeline and Key Milestone
+#set text(size: 9pt)
+#gantt(yaml("./include/gantt.yaml"))
 
+
+#set text(size: 11pt)
 = Bibliography
 #set text(size: 9pt)
 #bibliography("./include/ethics_application_refs.bib", title: none)
