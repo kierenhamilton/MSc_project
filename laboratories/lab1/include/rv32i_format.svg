@@ -1,0 +1,862 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="164mm"
+   height="59mm"
+   viewBox="0 0 164 59"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="rv32i_format.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="3.9565552"
+     inkscape:cx="292.29973"
+     inkscape:cy="98.949712"
+     inkscape:window-width="2955"
+     inkscape:window-height="2344"
+     inkscape:window-x="3846"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g137">
+    <inkscape:grid
+       id="grid1"
+       units="mm"
+       originx="0"
+       originy="0"
+       spacingx="0.99999998"
+       spacingy="1"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       dotted="false"
+       gridanglex="30"
+       gridanglez="30"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="hidden" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g137">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round"
+         id="rect1"
+         width="143"
+         height="5.0352116"
+         x="5.2374721"
+         y="7.4556236" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="8.2374763"
+         y="11.000004"
+         id="text1-6"><tspan
+           sodipodi:role="line"
+           id="tspan1-9"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="8.2374763"
+           y="11.000004">funct7</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="39.646912"
+         y="11.000004"
+         id="text2"><tspan
+           sodipodi:role="line"
+           id="tspan2"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="39.646912"
+           y="11.000004">rs2</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="63.227554"
+         y="11.000004"
+         id="text3"><tspan
+           sodipodi:role="line"
+           id="tspan3"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="63.227554"
+           y="11.000004">rs1</tspan></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round"
+         d="M 36.646915,7.4556294 V 12.455627"
+         id="path4" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round"
+         d="M 59.227561,7.4556294 V 12.455627"
+         id="path5" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="85.102654"
+         y="11.000004"
+         id="text5"><tspan
+           sodipodi:role="line"
+           id="tspan5"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="85.102654"
+           y="11.000004">funct3</tspan></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round"
+         d="M 81.876842,7.4556294 V 12.455627"
+         id="path6" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="105.99594"
+         y="11.000004"
+         id="text6"><tspan
+           sodipodi:role="line"
+           id="tspan6"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="105.99594"
+           y="11.000004">rd</tspan></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round"
+         d="M 95.425232,7.4556294 V 12.455627"
+         id="path7" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="131.23747"
+         y="11.000004"
+         id="text7"><tspan
+           sodipodi:role="line"
+           id="tspan7"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="131.23747"
+           y="11.000004">opcode</tspan></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round"
+         d="M 118.23747,7.4556244 V 12.455622"
+         id="path8" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="150.23747"
+         y="11.000004"
+         id="text137"><tspan
+           sodipodi:role="line"
+           id="tspan137"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="150.23747"
+           y="11.000004">R-type</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="150.23747"
+         y="19.996731"
+         id="text138"><tspan
+           sodipodi:role="line"
+           id="tspan138"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="150.23747"
+           y="19.996731">I-type</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="150.23747"
+         y="28.993458"
+         id="text139"><tspan
+           sodipodi:role="line"
+           id="tspan139"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="150.23747"
+           y="28.993458">S-type</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="150.23747"
+         y="37.990192"
+         id="text140"><tspan
+           sodipodi:role="line"
+           id="tspan140"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="150.23747"
+           y="37.990192">B-type</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="150.23747"
+         y="46.986919"
+         id="text141"><tspan
+           sodipodi:role="line"
+           id="tspan141"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="150.23747"
+           y="46.986919">U-type</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="150.23747"
+         y="55.983646"
+         id="text142"><tspan
+           sodipodi:role="line"
+           id="tspan142"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="150.23747"
+           y="55.983646">J-type</tspan></text>
+    </g>
+    <text
+       x="146.59442"
+       y="6.2488751"
+       style="font-size:2.3125px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.227746;stroke-linecap:round"
+       id="text68"><tspan
+         x="146.59442"
+         y="6.2488751"
+         id="tspan68">0</tspan></text>
+    <text
+       x="141.91875"
+       y="6.2488751"
+       style="font-size:2.3125px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.227746;stroke-linecap:round"
+       id="text69"><tspan
+         x="141.91875"
+         y="6.2488751"
+         id="tspan69">1</tspan></text>
+    <text
+       x="137.80046"
+       y="6.2488751"
+       style="font-size:2.3125px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.227746;stroke-linecap:round"
+       id="text70"><tspan
+         x="137.80046"
+         y="6.2488751"
+         id="tspan70">2</tspan></text>
+    <text
+       x="133.08096"
+       y="6.2488751"
+       style="font-size:2.3125px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.227746;stroke-linecap:round"
+       id="text71"><tspan
+         x="133.08096"
+         y="6.2488751"
+         id="tspan71">3</tspan></text>
+    <text
+       x="128.39984"
+       y="6.2488751"
+       style="font-size:2.3125px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.227746;stroke-linecap:round"
+       id="text72"><tspan
+         x="128.39984"
+         y="6.2488751"
+         id="tspan72">4</tspan></text>
+    <text
+       x="124.23175"
+       y="6.2488751"
+       style="font-size:2.3125px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.227746;stroke-linecap:round"
+       id="text73"><tspan
+         x="124.23175"
+         y="6.2488751"
+         id="tspan73">5</tspan></text>
+    <text
+       x="119.29944"
+       y="6.2488751"
+       style="font-size:2.3125px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.227746;stroke-linecap:round"
+       id="text74"><tspan
+         x="119.29944"
+         y="6.2488751"
+         id="tspan74">6</tspan></text>
+    <text
+       x="115.19272"
+       y="6.2488751"
+       style="font-size:2.3125px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.227746;stroke-linecap:round"
+       id="text75"><tspan
+         x="115.19272"
+         y="6.2488751"
+         id="tspan75">7</tspan></text>
+    <text
+       x="110.38112"
+       y="6.2488751"
+       style="font-size:2.3125px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.227746;stroke-linecap:round"
+       id="text76"><tspan
+         x="110.38112"
+         y="6.2488751"
+         id="tspan76">8</tspan></text>
+    <text
+       x="106.16724"
+       y="6.2488751"
+       style="font-size:2.3125px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.227746;stroke-linecap:round"
+       id="text77"><tspan
+         x="106.16724"
+         y="6.2488751"
+         id="tspan77">9</tspan></text>
+    <text
+       x="100.87695"
+       y="6.2488751"
+       style="font-size:2.3125px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.227746;stroke-linecap:round"
+       id="text78"><tspan
+         x="100.87695"
+         y="6.2488751"
+         id="tspan78">10</tspan></text>
+    <text
+       x="96.467072"
+       y="6.2488751"
+       style="font-size:2.3125px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.227746;stroke-linecap:round"
+       id="text79"><tspan
+         x="96.467072"
+         y="6.2488751"
+         id="tspan79">11</tspan></text>
+    <text
+       x="91.756836"
+       y="6.2488751"
+       style="font-size:2.3125px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.227746;stroke-linecap:round"
+       id="text80"><tspan
+         x="91.756836"
+         y="6.2488751"
+         id="tspan80">12</tspan></text>
+    <text
+       x="87.027405"
+       y="6.2488751"
+       style="font-size:2.3125px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.227746;stroke-linecap:round"
+       id="text81"><tspan
+         x="87.027405"
+         y="6.2488751"
+         id="tspan81">13</tspan></text>
+    <text
+       x="82.661514"
+       y="6.2488751"
+       style="font-size:2.3125px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.227746;stroke-linecap:round"
+       id="text82"><tspan
+         x="82.661514"
+         y="6.2488751"
+         id="tspan82">14</tspan></text>
+    <text
+       x="78.280945"
+       y="6.2488751"
+       style="font-size:2.3125px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.227746;stroke-linecap:round"
+       id="text83"><tspan
+         x="78.280945"
+         y="6.2488751"
+         id="tspan83">15</tspan></text>
+    <text
+       x="73.270309"
+       y="6.2488751"
+       style="font-size:2.3125px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.227746;stroke-linecap:round"
+       id="text84"><tspan
+         x="73.270309"
+         y="6.2488751"
+         id="tspan84">16</tspan></text>
+    <text
+       x="68.929276"
+       y="6.2488751"
+       style="font-size:2.3125px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.227746;stroke-linecap:round"
+       id="text85"><tspan
+         x="68.929276"
+         y="6.2488751"
+         id="tspan85">17</tspan></text>
+    <text
+       x="60.218704"
+       y="6.2488751"
+       style="font-size:2.3125px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.227746;stroke-linecap:round"
+       id="text86"><tspan
+         x="60.218704"
+         y="6.2488751"
+         id="tspan86">19</tspan></text>
+    <text
+       x="64.581444"
+       y="6.2488751"
+       style="font-size:2.3125px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.227746;stroke-linecap:round"
+       id="text87"><tspan
+         x="64.581444"
+         y="6.2488751"
+         id="tspan87">18</tspan></text>
+    <text
+       x="55.790291"
+       y="6.2488751"
+       style="font-size:2.3125px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.227746;stroke-linecap:round"
+       id="text89"><tspan
+         x="55.790291"
+         y="6.2488751"
+         id="tspan89">20</tspan></text>
+    <text
+       x="51.432419"
+       y="6.2488751"
+       style="font-size:2.3125px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.227746;stroke-linecap:round"
+       id="text90"><tspan
+         x="51.432419"
+         y="6.2488751"
+         id="tspan90">21</tspan></text>
+    <text
+       x="46.774193"
+       y="6.2488751"
+       style="font-size:2.3125px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.227746;stroke-linecap:round"
+       id="text91"><tspan
+         x="46.774193"
+         y="6.2488751"
+         id="tspan91">22</tspan></text>
+    <text
+       x="42.096771"
+       y="6.2488751"
+       style="font-size:2.3125px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.227746;stroke-linecap:round"
+       id="text92"><tspan
+         x="42.096771"
+         y="6.2488751"
+         id="tspan92">23</tspan></text>
+    <text
+       x="37.427254"
+       y="6.2488751"
+       style="font-size:2.3125px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.227746;stroke-linecap:round"
+       id="text93"><tspan
+         x="37.427254"
+         y="6.2488751"
+         id="tspan93">24</tspan></text>
+    <text
+       x="33.058868"
+       y="6.2488751"
+       style="font-size:2.3125px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.227746;stroke-linecap:round"
+       id="text94"><tspan
+         x="33.058868"
+         y="6.2488751"
+         id="tspan94">25</tspan></text>
+    <text
+       x="28.544998"
+       y="6.2488751"
+       style="font-size:2.3125px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.227746;stroke-linecap:round"
+       id="text95"><tspan
+         x="28.544998"
+         y="6.2488751"
+         id="tspan95">26</tspan></text>
+    <text
+       x="24.33226"
+       y="6.2488751"
+       style="font-size:2.3125px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.227746;stroke-linecap:round"
+       id="text96"><tspan
+         x="24.33226"
+         y="6.2488751"
+         id="tspan96">27</tspan></text>
+    <text
+       x="19.662743"
+       y="6.2488751"
+       style="font-size:2.3125px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.227746;stroke-linecap:round"
+       id="text97"><tspan
+         x="19.662743"
+         y="6.2488751"
+         id="tspan97">28</tspan></text>
+    <text
+       x="15"
+       y="6.2488751"
+       style="font-size:2.3125px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.227746;stroke-linecap:round"
+       id="text98"><tspan
+         x="15"
+         y="6.2488751"
+         id="tspan98">29</tspan></text>
+    <text
+       x="10.630608"
+       y="6.2488751"
+       style="font-size:2.3125px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.227746;stroke-linecap:round"
+       id="text99"><tspan
+         x="10.630608"
+         y="6.2488751"
+         id="tspan99">30</tspan></text>
+    <text
+       x="6.1100154"
+       y="6.2488751"
+       style="font-size:2.3125px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.227746;stroke-linecap:round"
+       id="text100"><tspan
+         x="6.1100154"
+         y="6.2488751"
+         id="tspan100">31</tspan></text>
+    <g
+       id="g135"
+       transform="translate(-37.762528,-74.544382)">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round"
+         id="rect107"
+         width="143"
+         height="5.0352116"
+         x="43"
+         y="100" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="46.000004"
+         y="103.54438"
+         id="text107"><tspan
+           sodipodi:role="line"
+           id="tspan107"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="46.000004"
+           y="103.54438">imm[11:5]</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="77.409439"
+         y="103.54438"
+         id="text108"><tspan
+           sodipodi:role="line"
+           id="tspan108"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="77.409439"
+           y="103.54438">rs2</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="100.99008"
+         y="103.54438"
+         id="text109"><tspan
+           sodipodi:role="line"
+           id="tspan109"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="100.99008"
+           y="103.54438">rs1</tspan></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round"
+         d="m 74.409443,100 v 5"
+         id="path109" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round"
+         d="m 96.990089,100 v 5"
+         id="path110" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="122.86518"
+         y="103.54438"
+         id="text110"><tspan
+           sodipodi:role="line"
+           id="tspan110"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="122.86518"
+           y="103.54438">funct3</tspan></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round"
+         d="m 119.63937,100 v 5"
+         id="path111" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="139.26361"
+         y="103.54438"
+         id="text111"><tspan
+           sodipodi:role="line"
+           id="tspan111"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="139.26361"
+           y="103.54438">imm[4:0]</tspan></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round"
+         d="m 133.18776,100 v 5"
+         id="path112" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="169"
+         y="103.54438"
+         id="text112"><tspan
+           sodipodi:role="line"
+           id="tspan112"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="169"
+           y="103.54438">opcode</tspan></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round"
+         d="m 156,99.999995 v 4.999995"
+         id="path113" />
+    </g>
+    <g
+       id="g136"
+       transform="translate(-37.762528,-73.544381)">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round"
+         id="rect100"
+         width="143"
+         height="5.0352116"
+         x="43"
+         y="90" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="46.000004"
+         y="93.54438"
+         id="text101"><tspan
+           sodipodi:role="line"
+           id="tspan101"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="46.000004"
+           y="93.54438">imm[11:0]</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="100.99008"
+         y="93.54438"
+         id="text103"><tspan
+           sodipodi:role="line"
+           id="tspan103"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="100.99008"
+           y="93.54438">rs1</tspan></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round"
+         d="m 96.990089,90.000003 v 4.999998"
+         id="path104" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="122.86518"
+         y="93.54438"
+         id="text104"><tspan
+           sodipodi:role="line"
+           id="tspan104"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="122.86518"
+           y="93.54438">funct3</tspan></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round"
+         d="m 119.63937,90.000003 v 4.999998"
+         id="path105" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round"
+         d="m 133.18776,90.000003 v 4.999998"
+         id="path106" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="169"
+         y="93.54438"
+         id="text106"><tspan
+           sodipodi:role="line"
+           id="tspan106"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="169"
+           y="93.54438">opcode</tspan></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round"
+         d="m 156,89.999998 v 4.999998"
+         id="path107" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="143.75847"
+         y="93.571655"
+         id="text113"><tspan
+           sodipodi:role="line"
+           id="tspan113"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="143.75847"
+           y="93.571655">rd</tspan></text>
+    </g>
+    <g
+       id="g134"
+       transform="translate(-37.762528,-75.544379)">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round"
+         id="rect113"
+         width="143"
+         height="5.0352116"
+         x="43"
+         y="110" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="45.817055"
+         y="113.54438"
+         id="text114"><tspan
+           sodipodi:role="line"
+           id="tspan114"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="45.817055"
+           y="113.54438">imm[12, 10:5]</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="77.409439"
+         y="113.54438"
+         id="text115"><tspan
+           sodipodi:role="line"
+           id="tspan115"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="77.409439"
+           y="113.54438">rs2</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="100.99008"
+         y="113.54438"
+         id="text116"><tspan
+           sodipodi:role="line"
+           id="tspan116"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="100.99008"
+           y="113.54438">rs1</tspan></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round"
+         d="m 74.409443,110 v 5"
+         id="path116" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round"
+         d="m 96.990089,110 v 5"
+         id="path117" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="122.86518"
+         y="113.54438"
+         id="text117"><tspan
+           sodipodi:role="line"
+           id="tspan117"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="122.86518"
+           y="113.54438">funct3</tspan></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round"
+         d="m 119.63937,110 v 5"
+         id="path118" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="136.74176"
+         y="113.54438"
+         id="text118"><tspan
+           sodipodi:role="line"
+           id="tspan118"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="136.74176"
+           y="113.54438">imm[4:1, 11]</tspan></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round"
+         d="m 133.18776,110 v 5"
+         id="path119" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="169"
+         y="113.54438"
+         id="text119"><tspan
+           sodipodi:role="line"
+           id="tspan119"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="169"
+           y="113.54438">opcode</tspan></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round"
+         d="m 156,109.99999 v 5"
+         id="path120" />
+    </g>
+    <g
+       id="g133"
+       transform="translate(-37.762528,-76.544375)">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round"
+         id="rect120"
+         width="143"
+         height="5.0352116"
+         x="43"
+         y="120" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="46.000004"
+         y="123.54438"
+         id="text120"><tspan
+           sodipodi:role="line"
+           id="tspan120"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="46.000004"
+           y="123.54438">imm[31:12]</tspan></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round"
+         d="m 133.18776,120 v 5"
+         id="path123" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="169"
+         y="123.54438"
+         id="text123"><tspan
+           sodipodi:role="line"
+           id="tspan123"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="169"
+           y="123.54438">opcode</tspan></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round"
+         d="m 156,119.99999 v 5"
+         id="path124" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="143.75847"
+         y="123.57166"
+         id="text124"><tspan
+           sodipodi:role="line"
+           id="tspan124"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="143.75847"
+           y="123.57166">rd</tspan></text>
+    </g>
+    <g
+       id="g132"
+       transform="translate(-37.762528,-77.544372)">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round"
+         id="rect124"
+         width="143"
+         height="5.0352116"
+         x="43"
+         y="130" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="70.612099"
+         y="133.54437"
+         id="text125"><tspan
+           sodipodi:role="line"
+           id="tspan125"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="70.612099"
+           y="133.54437">imm[20, 10:1, 11, 19:12]</tspan></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round"
+         d="m 133.18776,130 v 5"
+         id="path130" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="169"
+         y="133.54437"
+         id="text130"><tspan
+           sodipodi:role="line"
+           id="tspan130"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="169"
+           y="133.54437">opcode</tspan></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round"
+         d="m 156,129.99999 v 5"
+         id="path131" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round"
+         x="143.75847"
+         y="133.49368"
+         id="text131"><tspan
+           sodipodi:role="line"
+           id="tspan131"
+           style="fill:#000000;stroke:none;stroke-width:0.3"
+           x="143.75847"
+           y="133.49368">rd</tspan></text>
+    </g>
+  </g>
+</svg>
