@@ -234,13 +234,13 @@ multiplier.
       2 | Load multiplier from MEM[4];
       3 | result = 0;           // initialize result to 0
       4 | While (multiplier > 0) {
-      5 |   if (multiplicand LSB == 1) then result += multiplicand;
+      5 |   if (multiplier LSB == 1) then result += multiplicand;
       6 |   multiplicand << 1;  // left shift
       7 |   multiplier >>> 1;   // logical right shift 
-      8 |    }
-      9 |    If (signs of multiplicand
-        |      and multiplier differ) then result = ~result;
-      10|    Store result in MEM[8];
+      8 |    } // while
+      9 | If (signs of multiplicand
+        |   and multiplier differ) then result = ~result;
+      10| Store result in MEM[8];
       ```
     ]
   ]

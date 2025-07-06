@@ -1,0 +1,34 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+/home/kh5u24/summer/MSc_project/single_cycle/include/codes.sv
+/home/kh5u24/summer/MSc_project/single_cycle/testbench/lab1_tb.sv
+/home/kh5u24/summer/MSc_project/single_cycle/rtl/alu.sv
+/home/kh5u24/summer/MSc_project/single_cycle/rtl/B_m.sv
+/home/kh5u24/summer/MSc_project/single_cycle/rtl/branLog.sv
+/home/kh5u24/summer/MSc_project/single_cycle/rtl/C_m.sv
+/home/kh5u24/summer/MSc_project/single_cycle/rtl/decoder.sv
+/home/kh5u24/summer/MSc_project/single_cycle/rtl/D_m.sv
+/home/kh5u24/summer/MSc_project/single_cycle/rtl/E_m.sv
+/home/kh5u24/summer/MSc_project/single_cycle/rtl/F_m.sv
+/home/kh5u24/summer/MSc_project/single_cycle/rtl/G_m.sv
+/home/kh5u24/summer/MSc_project/single_cycle/rtl/netlist.sv
+/home/kh5u24/summer/MSc_project/single_cycle/rtl/progCounter.sv
+/home/kh5u24/summer/MSc_project/single_cycle/rtl/progMem.sv
+/home/kh5u24/summer/MSc_project/single_cycle/rtl/ram.sv
+/home/kh5u24/summer/MSc_project/single_cycle/rtl/regMem.sv
+/home/kh5u24/summer/MSc_project/single_cycle/rtl/alu.sv
+/home/kh5u24/summer/MSc_project/single_cycle/rtl/B_m.sv
+/home/kh5u24/summer/MSc_project/single_cycle/rtl/branLog.sv
+/home/kh5u24/summer/MSc_project/single_cycle/rtl/C_m.sv
+/home/kh5u24/summer/MSc_project/single_cycle/rtl/decoder.sv
+/home/kh5u24/summer/MSc_project/single_cycle/rtl/D_m.sv
+/home/kh5u24/summer/MSc_project/single_cycle/rtl/E_m.sv
+/home/kh5u24/summer/MSc_project/single_cycle/rtl/F_m.sv
+/home/kh5u24/summer/MSc_project/single_cycle/rtl/G_m.sv
+/home/kh5u24/summer/MSc_project/single_cycle/rtl/netlist.sv
+/home/kh5u24/summer/MSc_project/single_cycle/rtl/progCounter.sv
+/home/kh5u24/summer/MSc_project/single_cycle/rtl/progMem.sv
+/home/kh5u24/summer/MSc_project/single_cycle/rtl/ram.sv
+/home/kh5u24/summer/MSc_project/single_cycle/rtl/regMem.sv

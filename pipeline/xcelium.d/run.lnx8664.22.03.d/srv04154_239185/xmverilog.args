@@ -1,0 +1,24 @@
+//
+// File created by:  xmverilog
+// Do not modify this file
+//
+-sv
++gui
++access+r
+./include/coreUtils.sv
+./include/core_types_pkg.sv
+./testbench/core_stim.sv
+./rtl/alu.sv
+./rtl/branching.sv
+./rtl/core.sv
+./rtl/dataMem.sv
+./rtl/decoder.sv
+./rtl/DEC.sv
+./rtl/EXE.sv
+./rtl/forwarding.sv
+./rtl/IF.sv
+./rtl/MEM.sv
+./rtl/progCount.sv
+./rtl/progMem.sv
+./rtl/regMem.sv
+./rtl/write_back.sv

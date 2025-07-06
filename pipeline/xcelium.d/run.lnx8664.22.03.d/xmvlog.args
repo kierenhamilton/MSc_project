@@ -1,0 +1,34 @@
+//
+// File created by:  xmverilog
+// Do not modify this file
+//
+-XLMODE
+./xcelium.d/run.lnx8664.22.03.d
+-RUNMODE
+-sv
+./include/coreUtils.sv
+./include/core_types_pkg.sv
+./testbench/core_stim.sv
+./rtl/alu.sv
+./rtl/branching.sv
+./rtl/core.sv
+./rtl/dataMem.sv
+./rtl/decoder.sv
+./rtl/DEC.sv
+./rtl/EXE.sv
+./rtl/forwarding.sv
+./rtl/IF.sv
+./rtl/MEM.sv
+./rtl/progCount.sv
+./rtl/progMem.sv
+./rtl/regMem.sv
+./rtl/write_back.sv
+-CDSLIB
+./xcelium.d/run.lnx8664.22.03.d/cdsrun.lib
+-HDLVAR
+./xcelium.d/run.lnx8664.22.03.d/hdlrun.var
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./xcelium.d/run.lnx8664.22.03.d/xllibs
+-ALLOWUNBOUND

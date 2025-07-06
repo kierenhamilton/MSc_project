@@ -6,7 +6,7 @@ uint32_t factorial(uint32_t n) {
 }
 
 void main() {
-    uint32_t result = factorial(11);
+    int a = factorial(11);
     while (1);
 }
 

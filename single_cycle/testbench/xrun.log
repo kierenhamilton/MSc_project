@@ -1,0 +1,53 @@
+xrun(64): 22.03-s005: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.03-s005: Started on Jul 06, 2025 at 17:33:09 BST
+xrun
+	-seed random
+	lab1_tb.sv
+Recompiling... reason: file './lab1_tb.sv' is newer than expected.
+	expected: Sun Jul  6 17:29:35 2025
+	actual:   Sun Jul  6 17:33:06 2025
+file: lab1_tb.sv
+	module worklib.lab1_tb:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		$unit_0x53ae9999
+		lab1_tb
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.lab1_tb:sv <0x548e4b17>
+			streams:   3, words:  4900
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                       Instances  Unique
+		Modules:                       1       1
+		Registers:                    11      13
+		Always blocks:                 1       1
+		Initial blocks:                2       2
+		Compilation units:             1       1
+		SV Class declarations:         1       1
+		SV Class specializations:      1       1
+		Simulation timescale:      100ps
+	Writing initial simulation snapshot: worklib.lab1_tb:sv
+Loading snapshot worklib.lab1_tb:sv .................... Done
+SVSEED set randomly from command line: 1655577439
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /eda/cadence/xcelium/tools/xcelium/files/xmsimrc
+xcelium> run
+a=22949, b=28356, result= 650741844
+a=54979, b=63935, result=3515082365
+a= 5052, b=56847, result= 287191044
+a=36221, b= 6884, result= 249345364
+a= 6906, b=59649, result= 411935994
+a= 5278, b=28541, result= 150639398
+a=22677, b=24054, result= 545472558
+a=64169, b=38168, result=2449202392
+a=15705, b=30546, result= 479724930
+a=46094, b=41227, result=1900317338
+Simulation complete via $finish(1) at time 103 US + 0
+./lab1_tb.sv:49 		$finish;
+xcelium> exit
+TOOL:	xrun(64)	22.03-s005: Exiting on Jul 06, 2025 at 17:33:10 BST  (total: 00:00:01)

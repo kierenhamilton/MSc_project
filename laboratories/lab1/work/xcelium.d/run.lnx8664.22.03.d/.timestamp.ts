@@ -1,0 +1,16 @@
+1750787981 /home/kh5u24/summer/MSc_project/single_cycle/rtl/E_m.sv
+1750787981 /home/kh5u24/summer/MSc_project/single_cycle/rtl/netlist.sv
+1750787981 /home/kh5u24/summer/MSc_project/single_cycle/rtl/decoder.sv
+1750787981 /home/kh5u24/summer/MSc_project/single_cycle/rtl/F_m.sv
+1750787981 /home/kh5u24/summer/MSc_project/single_cycle/rtl/progCounter.sv
+1750787981 /home/kh5u24/summer/MSc_project/single_cycle/rtl/B_m.sv
+1751826659 /home/kh5u24/summer/MSc_project/single_cycle/testbench/lab1_tb.sv
+1750787981 /home/kh5u24/summer/MSc_project/single_cycle/include/codes.sv
+1750787981 /home/kh5u24/summer/MSc_project/single_cycle/rtl/G_m.sv
+1750787981 /home/kh5u24/summer/MSc_project/single_cycle/rtl/C_m.sv
+1751819793 /home/kh5u24/summer/MSc_project/single_cycle/rtl/ram.sv
+1750787981 /home/kh5u24/summer/MSc_project/single_cycle/rtl/D_m.sv
+1751820129 /home/kh5u24/summer/MSc_project/single_cycle/rtl/progMem.sv
+1750787981 /home/kh5u24/summer/MSc_project/single_cycle/rtl/regMem.sv
+1750787981 /home/kh5u24/summer/MSc_project/single_cycle/rtl/alu.sv
+1750787981 /home/kh5u24/summer/MSc_project/single_cycle/rtl/branLog.sv

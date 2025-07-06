@@ -1,0 +1,103 @@
+*** Message Type: info ***
+When: Wed Jun 25 16:08:49 BST 2025
+SimVision started.
+Version: TOOL:  simvision(64)   22.03-s005
+User: kh5u24
+Host: srv04154.soton.ac.uk
+Platform: Linux/x86_64/4.18.0-553.53.1.el8_10.x86_64
+Started: Wed Jun 25 16:08:49 BST 2025
+Command: /eda/cadence/xcelium/tools.lnx86/simvision/bin/64bit/simvision.exe -connect dc:srv04154.soton.ac.uk:57905 -64BIT -nocopyright
+Work Directory: /home/kh5u24/summer/MSc_project/pipeline
+ 
+*** Message Type: info ***
+When: Wed Jun 25 16:08:50 BST 2025
+Create browser window: "Design Browser 1"
+ 
+*** Message Type: info ***
+When: Wed Jun 25 16:08:51 BST 2025
+Create console window: "Console"
+ 
+*** Message Type: info ***
+When: Wed Jun 25 16:08:52 BST 2025
+Connect to Simulator
+      Design: worklib.core_stim:sv
+   Languages: verilog
+   Simulator: XM-Sim
+     Version: TOOL:       xmsim(64)       22.03-s005
+        User: kh5u24
+        Host: srv04154.soton.ac.uk
+Time Started: Wed Jun 25 16:08:48 BST 2025
+  Process ID: 88030
+   Directory: /home/kh5u24/summer/MSc_project/pipeline
+     Command: xmverilog -sv +gui +access+r ./include/coreUtils.sv ./include/core_types_pkg.sv ./testbench/core_stim.sv ./rtl/alu.sv ./rtl/branching.sv ./rtl/core.sv ./rtl/dataMem.sv ./rtl/decoder.sv ./rtl/DEC.sv ./rtl/EXE.sv ./rtl/forwarding.sv ./rtl/IF.sv ./rtl/MEM.sv ./rtl/progCount.sv ./rtl/progMem.sv ./rtl/regMem.sv ./rtl/write_back.sv
+
+ 
+*** Message Type: info ***
+When: Wed Jun 25 16:08:54 BST 2025
+Create utility window: "Properties"
+ 
+*** Message Type: info ***
+When: Wed Jun 25 16:09:36 BST 2025
+Create waveform window: "Waveform 1"
+ 
+*** Message Type: info ***
+When: Wed Jun 25 16:09:47 BST 2025
+Delete waveform window: "Waveform 1"
+ 
+*** Message Type: info ***
+When: Wed Jun 25 16:09:54 BST 2025
+Create waveform window: "Waveform 2"
+ 
+*** Message Type: info ***
+When: Wed Jun 25 16:43:01 BST 2025
+Create memviewer window: "Memory Viewer 1"
+ 
+*** Message Type: info ***
+When: Wed Jun 25 16:44:00 BST 2025
+Create memviewer window: "Memory Viewer 2"
+ 
+*** Message Type: info ***
+When: Wed Jun 25 16:51:11 BST 2025
+Delete memviewer window: "Memory Viewer 1"
+ 
+*** Message Type: info ***
+When: Wed Jun 25 16:55:50 BST 2025
+Delete memviewer window: "Memory Viewer 2"
+ 
+*** Message Type: info ***
+When: Wed Jun 25 16:56:13 BST 2025
+Create memviewer window: "Memory Viewer 3"
+ 
+*** Message Type: error ***
+When: Wed Jun 25 17:19:43 BST 2025
+can't read "state(state)": no such element in array
+can't read "state(state)": no such element in array
+    while executing
+"if { $state(state) == "running" } {
+           _clearValueChanges
+         }"
+    ("!state.kernel" arm line 6)
+    invoked from within
+"switch $info(event) {
+ !state.kernel {
+            # When we start running, clear the value change colors in
+      # the memory viewer widget, in preparation ..."
+    (object "::.memViewer2" method "::MemViewer::_stateEventCB" body line 7)
+    invoked from within
+"::.memViewer2 _stateEventCB event !state.kernel handle @public@7b state idle kernel digital"
+    (in namespace inscope "::MemViewer" script line 1)
+    invoked from within
+"namespace inscope ::MemViewer {::.memViewer2 _stateEventCB} event !state.kernel handle @public@7b state idle kernel digital"
+ 
+*** Message Type: info ***
+When: Wed Jun 25 17:25:15 BST 2025
+Create memviewer window: "Memory Viewer 4"
+ 
+*** Message Type: info ***
+When: Wed Jun 25 17:54:48 BST 2025
+Create source window: "Source Browser 1"
+ 
+*** Message Type: info ***
+When: Wed Jun 25 18:00:40 BST 2025
+SimVision Exit.
+ 

@@ -1,0 +1,17 @@
+1750864046 /home/kh5u24/summer/MSc_project/pipeline/include/coreUtils.sv
+1750968678 /home/kh5u24/summer/MSc_project/pipeline/include/core_types_pkg.sv
+1750864046 /home/kh5u24/summer/MSc_project/pipeline/testbench/core_stim.sv
+1750861562 /home/kh5u24/summer/MSc_project/pipeline/rtl/alu.sv
+1751040728 /home/kh5u24/summer/MSc_project/pipeline/rtl/branching.sv
+1750969102 /home/kh5u24/summer/MSc_project/pipeline/rtl/core.sv
+1750871682 /home/kh5u24/summer/MSc_project/pipeline/rtl/dataMem.sv
+1750868375 /home/kh5u24/summer/MSc_project/pipeline/rtl/decoder.sv
+1750861562 /home/kh5u24/summer/MSc_project/pipeline/rtl/DEC.sv
+1750861562 /home/kh5u24/summer/MSc_project/pipeline/rtl/EXE.sv
+1750968678 /home/kh5u24/summer/MSc_project/pipeline/rtl/forwarding.sv
+1750861562 /home/kh5u24/summer/MSc_project/pipeline/rtl/IF.sv
+1750861562 /home/kh5u24/summer/MSc_project/pipeline/rtl/MEM.sv
+1750861562 /home/kh5u24/summer/MSc_project/pipeline/rtl/progCount.sv
+1750862515 /home/kh5u24/summer/MSc_project/pipeline/rtl/progMem.sv
+1750861562 /home/kh5u24/summer/MSc_project/pipeline/rtl/regMem.sv
+1750969798 /home/kh5u24/summer/MSc_project/pipeline/rtl/write_back.sv

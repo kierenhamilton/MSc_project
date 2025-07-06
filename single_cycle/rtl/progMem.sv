@@ -6,11 +6,11 @@ module progMem (
   timeunit 1ns; timeprecision 100ps;
   logic [7:0] programMemory[0:500];
 
-  initial begin
-    //foreach (programMemory[i]) programMemory[i] = 0;
-    $readmemh("../../scripts/inst_mem.hex", programMemory);
-    foreach (programMemory[i]) $display("%d: %h", i, programMemory[i]);
-  end
+// initial begin
+//   //foreach (programMemory[i]) programMemory[i] = 0;
+//   $readmemh("../../scripts/inst_mem.hex", programMemory);
+//   foreach (programMemory[i]) $display("%d: %h", i, programMemory[i]);
+// end
 
   always_comb begin
     instruction[7:0]   = programMemory[PC+3];

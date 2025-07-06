@@ -1,0 +1,21 @@
+//
+// File created by:  xmverilog
+// Do not modify this file
+//
+/home/kh5u24/summer/MSc_project/pipeline/include/coreUtils.sv
+/home/kh5u24/summer/MSc_project/pipeline/include/core_types_pkg.sv
+/home/kh5u24/summer/MSc_project/pipeline/testbench/core_stim.sv
+/home/kh5u24/summer/MSc_project/pipeline/rtl/alu.sv
+/home/kh5u24/summer/MSc_project/pipeline/rtl/branching.sv
+/home/kh5u24/summer/MSc_project/pipeline/rtl/core.sv
+/home/kh5u24/summer/MSc_project/pipeline/rtl/dataMem.sv
+/home/kh5u24/summer/MSc_project/pipeline/rtl/decoder.sv
+/home/kh5u24/summer/MSc_project/pipeline/rtl/DEC.sv
+/home/kh5u24/summer/MSc_project/pipeline/rtl/EXE.sv
+/home/kh5u24/summer/MSc_project/pipeline/rtl/forwarding.sv
+/home/kh5u24/summer/MSc_project/pipeline/rtl/IF.sv
+/home/kh5u24/summer/MSc_project/pipeline/rtl/MEM.sv
+/home/kh5u24/summer/MSc_project/pipeline/rtl/progCount.sv
+/home/kh5u24/summer/MSc_project/pipeline/rtl/progMem.sv
+/home/kh5u24/summer/MSc_project/pipeline/rtl/regMem.sv
+/home/kh5u24/summer/MSc_project/pipeline/rtl/write_back.sv

@@ -12,7 +12,6 @@ module ram (
 
   always_ff @(posedge Clock, negedge nReset) begin
     if (!nReset) begin
-      ramMemory[0] <= 0;
     end else if (writeRam)
       case (ctrl)
         3'b000: ramMemory[address] <= wData[7:0];

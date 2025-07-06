@@ -1,0 +1,90 @@
+xmverilog(64): 22.03-s005: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xmverilog	22.03-s005: Started on Jun 27, 2025 at 17:12:25 BST
+xmverilog
+	-sv
+	+gui
+	+access+r
+	./include/coreUtils.sv
+	./include/core_types_pkg.sv
+	./testbench/core_stim.sv
+	./rtl/alu.sv
+	./rtl/branching.sv
+	./rtl/core.sv
+	./rtl/dataMem.sv
+	./rtl/decoder.sv
+	./rtl/DEC.sv
+	./rtl/EXE.sv
+	./rtl/forwarding.sv
+	./rtl/IF.sv
+	./rtl/MEM.sv
+	./rtl/progCount.sv
+	./rtl/progMem.sv
+	./rtl/regMem.sv
+	./rtl/write_back.sv
+	-s
+Recompiling... reason: file './rtl/branching.sv' is newer than expected.
+	expected: Fri Jun 27 17:00:34 2025
+	actual:   Fri Jun 27 17:12:08 2025
+file: ./rtl/branching.sv
+	module worklib.branching:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+      .aluCode(DEC_out.aluCode),
+                             |
+xmelab: *W,ENUMERR (./rtl/core.sv,120|29): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+      .f3DEC(DEC_out.func3),
+                         |
+xmelab: *W,ENUMERR (./rtl/core.sv,134|25): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+      .opcode(inst_IF[6:2])
+                    |
+xmelab: *W,ENUMERR (./rtl/core.sv,165|20): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.branching:sv <0x21f80cd9>
+			streams:   8, words: 17507
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                   Instances  Unique
+		Modules:                  15      15
+		Verilog packages:          2       2
+		Registers:                63      63
+		Scalar wires:             39       -
+		Expanded wires:           32       1
+		Vectored wires:           59       -
+		Always blocks:            19      19
+		Initial blocks:            3       3
+		Pseudo assignments:       14      14
+		Compilation units:         1       1
+		Simulation timescale:  100ps
+	Writing initial simulation snapshot: worklib.core_stim:sv
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> 
+xcelium> source /eda/cadence/xcelium/tools/xcelium/files/xmsimrc
+xcelium> 
+-------------------------------------
+Relinquished control to SimVision...
+# Restoring simulation environment...
+xcelium> input -quiet .reinvoke.sim
+xcelium> file delete .reinvoke.sim
+xcelium> run
+Simulation complete via $finish(1) at time 100 US + 0
+./testbench/core_stim.sv:18   #100000 $finish;
+xcelium> reset
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+Loaded snapshot worklib.core_stim:sv
+xcelium> run
+Simulation complete via $finish(1) at time 100 US + 0
+./testbench/core_stim.sv:18   #100000 $finish;
+xcelium> reset
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+Loaded snapshot worklib.core_stim:sv
+xcelium> run
+Simulation complete via $finish(1) at time 100 US + 0
+./testbench/core_stim.sv:18   #100000 $finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xmverilog	22.03-s005: Exiting on Jun 28, 2025 at 13:05:32 BST  (total: 19:53:07)
