@@ -34,5 +34,3 @@ random
 ../../../single_cycle/rtl/progMem.sv
 ../../../single_cycle/rtl/ram.sv
 ../../../single_cycle/rtl/regMem.sv
-+access+rwc
-+gui

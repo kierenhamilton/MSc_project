@@ -12,7 +12,9 @@ module lab1_tb;
 	logic [31:0] a;
 	logic [31:0] b;
 	logic [31:0] result;
+	logic [31:0] measured_result;
 	logic [0:7]  mem [0:490];
+	string pass_or_fail;
 	Random_value rv = new;
 	
 	netlist dut (.Clock(Clock), .nReset(nReset));
@@ -29,31 +31,28 @@ module lab1_tb;
 		
 		void'(rv.randomize());
 		
-		result = rv.a * rv.b;
-		
-		$display ("a=%d, b=%d, result=%d", rv.a, rv.b, result); 
-		
-		
-		end
-		repeat(10) begin
-			
-			// set new random values in the prog_mem
+			{dut.ram0.ramMemory[0], dut.ram0.ramMemory[1],
+				dut.ram0.ramMemory[2], dut.ram0.ramMemory[3]} = { 16'b0, rv.a };
+				
+			{dut.ram0.ramMemory[4], dut.ram0.ramMemory[5],
+				dut.ram0.ramMemory[6], dut.ram0.ramMemory[7]} = { 16'b0, rv.b };
+
+		  result = rv.a * rv.b;
 		
 	  	nReset = 1;
 			@(posedge Clock) nReset = 0;
 			@(posedge Clock) nReset = 1;
 			repeat(300) @(posedge Clock);
+
+			measured_result = {dut.ram0.ramMemory[8], dut.ram0.ramMemory[9], 
+				dut.ram0.ramMemory[10], dut.ram0.ramMemory[11]};
 			
-			{dut.ram0.ramMemory[0], dut.ram0.ramMemory[1],
-				dut.ram0.ramMemory[2], dut.ram0.ramMemory[3]} = { rv.a };
-				
-			{dut.ram0.ramMemory[4], dut.ram0.ramMemory[5],
-				dut.ram0.ramMemory[6], dut.ram0.ramMemory[7]} = { rv.b };
-			
-			
-			
-			// check to see if MEM[8] = rand(a) * rand(b)
-			
+			pass_or_fail = (measured_result == result) ?
+					"PASS" : "FAIL";
+
+			$display("A=%d, B=%d, A*B=%d, measured=%d, %s",
+				rv.a, rv.b, result, measured_result, pass_or_fail); 
+
 			@(posedge Clock);
 			
 		end

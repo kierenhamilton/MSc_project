@@ -11,6 +11,6 @@
 1750787981 /home/kh5u24/summer/MSc_project/single_cycle/rtl/netlist.sv
 1750787981 /home/kh5u24/summer/MSc_project/single_cycle/rtl/progCounter.sv
 1751820129 /home/kh5u24/summer/MSc_project/single_cycle/rtl/progMem.sv
-1751819793 /home/kh5u24/summer/MSc_project/single_cycle/rtl/ram.sv
+1751901290 /home/kh5u24/summer/MSc_project/single_cycle/rtl/ram.sv
 1750787981 /home/kh5u24/summer/MSc_project/single_cycle/rtl/regMem.sv
-1751826659 /home/kh5u24/summer/MSc_project/single_cycle/testbench/lab1_tb.sv
+1751905432 /home/kh5u24/summer/MSc_project/single_cycle/testbench/lab1_tb.sv
