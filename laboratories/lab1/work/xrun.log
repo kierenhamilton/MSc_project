@@ -1,5 +1,5 @@
 xrun(64): 22.03-s005: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	22.03-s005: Started on Jul 06, 2025 at 19:31:52 BST
+TOOL:	xrun(64)	22.03-s005: Started on Jul 07, 2025 at 17:23:56 BST
 xrun
 	-seed random
 	../../../single_cycle/include/codes.sv
@@ -32,11 +32,9 @@ xrun
 	../../../single_cycle/rtl/progMem.sv
 	../../../single_cycle/rtl/ram.sv
 	../../../single_cycle/rtl/regMem.sv
-	+access+rwc
-	+gui
 Recompiling... reason: file '/home/kh5u24/summer/MSc_project/single_cycle/testbench/lab1_tb.sv' is newer than expected.
-	expected: Sun Jul  6 18:27:56 2025
-	actual:   Sun Jul  6 19:30:59 2025
+	expected: Mon Jul  7 17:23:21 2025
+	actual:   Mon Jul  7 17:23:52 2025
 file: ../../../single_cycle/testbench/lab1_tb.sv
 	module worklib.lab1_tb:sv
 		errors: 0, warnings: 0
@@ -122,92 +120,42 @@ xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-
 xmelab: *W,ENUMERR (/home/kh5u24/summer/MSc_project/single_cycle/rtl/netlist.sv,92|21): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.lab1_tb:sv <0x6c54bc82>
-			streams:   6, words:  8844
+		worklib.lab1_tb:sv <0x0536064e>
+			streams:   5, words:  8961
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
 		                       Instances  Unique
 		Modules:                      15      15
 		Verilog packages:              1       1
-		Registers:                    45      47
+		Registers:                    47      49
 		Scalar wires:                 16       -
 		Vectored wires:               31       -
 		Always blocks:                12      12
 		Initial blocks:                3       3
 		Cont. assignments:             5       5
-		Pseudo assignments:            3       3
+		Pseudo assignments:            2       2
 		Compilation units:             1       1
 		SV Class declarations:         1       1
 		SV Class specializations:      1       1
 		Simulation timescale:      100ps
 	Writing initial simulation snapshot: worklib.lab1_tb:sv
-xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
-SVSEED set randomly from command line: 76073196
+Loading snapshot worklib.lab1_tb:sv .................... Done
+SVSEED set randomly from command line: -1188940964
 xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
-
--------------------------------------
-Relinquished control to SimVision...
-xcelium> 
 xcelium> source /eda/cadence/xcelium/tools/xcelium/files/xmsimrc
-xcelium> database -open waves -into waves.shm -default
-Created default SHM database waves
-xcelium> probe -create -shm lab1_tb.dut.ram0.ramMemory
-Created probe 1
 xcelium> run
-stop -create -name Randomize -randomize
-Created stop Randomize
-
-a= 3531, b=55279, result= 195190149
-a=28769, b=45549, result=1310399181
-a=22581, b=59836, result=1351156716
-a=64490, b=54211, result=3496067390
-a=51184, b=26793, result=1371372912
-a=20108, b= 3645, result=  73293660
-a=24834, b= 3800, result=  94369200
-a=44844, b=36404, result=1632500976
-a=56335, b= 3627, result= 204327045
-a=50796, b=29556, result=1501326576
+A=60906, B=31898, A*B=1942779588, measured=1942779588, PASS
+A= 7903, B=52649, A*B= 416085047, measured= 416085047, PASS
+A= 1743, B=10714, A*B=  18674502, measured=  18674502, PASS
+A=21401, B=46328, A*B= 991465528, measured= 991465528, PASS
+A=11813, B=32059, A*B= 378712967, measured= 378712967, PASS
+A=32485, B=63850, A*B=2074167250, measured=2074167250, PASS
+A=49489, B=47957, A*B=2373343973, measured=2373343973, PASS
+A= 2865, B=30618, A*B=  87720570, measured=  87720570, PASS
+A=46331, B=15119, A*B= 700478389, measured= 700478389, PASS
+A=11164, B=36182, A*B= 403935848, measured= 403935848, PASS
 Simulation complete via $finish(1) at time 303 US + 0
-/home/kh5u24/summer/MSc_project/single_cycle/testbench/lab1_tb.sv:60 		$finish;
-xcelium> probe -create -shm lab1_tb.dut.decoder0.A lab1_tb.dut.decoder0.B lab1_tb.dut.decoder0.C lab1_tb.dut.decoder0.D lab1_tb.dut.decoder0.E lab1_tb.dut.decoder0.F lab1_tb.dut.decoder0.G lab1_tb.dut.decoder0.H lab1_tb.dut.decoder0.aluCode lab1_tb.dut.decoder0.branch lab1_tb.dut.decoder0.ctrl lab1_tb.dut.decoder0.immSample lab1_tb.dut.decoder0.opcode lab1_tb.dut.decoder0.writeRam lab1_tb.dut.decoder0.writeReg
-Created probe 2
-xcelium> reset
-SVSEED set randomly from command line: -208053963
-xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
-Loaded snapshot worklib.lab1_tb:sv
-xcelium> run
-a=63630, b=22233, result=1414685790
-a=40001, b=61704, result=2468221704
-a=27912, b=53063, result=1481094456
-a=64071, b=44074, result=2823865254
-a= 6026, b=49797, result= 300076722
-a=40056, b=59693, result=2391062808
-a=17307, b=63609, result=1100880963
-a=59966, b=38978, result=2337354748
-a=54682, b=65162, result=3563188484
-a=52129, b=14036, result= 731682644
-Simulation complete via $finish(1) at time 303 US + 0
-/home/kh5u24/summer/MSc_project/single_cycle/testbench/lab1_tb.sv:60 		$finish;
-xcelium> probe -create -shm lab1_tb.dut.regMem0.Clock lab1_tb.dut.regMem0.addr1 lab1_tb.dut.regMem0.addr2 lab1_tb.dut.regMem0.dataIn lab1_tb.dut.regMem0.nReset lab1_tb.dut.regMem0.rd lab1_tb.dut.regMem0.regMemory lab1_tb.dut.regMem0.rs1 lab1_tb.dut.regMem0.rs2 lab1_tb.dut.regMem0.writeRegMem
-Created probe 3
-xcelium> reset
-SVSEED set randomly from command line: 1958378116
-xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
-Loaded snapshot worklib.lab1_tb:sv
-xcelium> run
-a=39680, b=43980, result=1745126400
-a=36491, b=51927, result=1894868157
-a=45985, b=42103, result=1936106455
-a=41250, b=14732, result= 607695000
-a=50787, b=42053, result=2135745711
-a=49672, b=48550, result=2411575600
-a=10791, b=42259, result= 456016869
-a=57638, b=11598, result= 668485524
-a=15867, b= 3165, result=  50219055
-a=44583, b=38991, result=1738335753
-Simulation complete via $finish(1) at time 303 US + 0
-/home/kh5u24/summer/MSc_project/single_cycle/testbench/lab1_tb.sv:60 		$finish;
-xcelium> ^C
+/home/kh5u24/summer/MSc_project/single_cycle/testbench/lab1_tb.sv:59 		$finish;
 xcelium> exit
-TOOL:	xrun(64)	22.03-s005: Exiting on Jul 06, 2025 at 19:45:41 BST  (total: 00:13:49)
+TOOL:	xrun(64)	22.03-s005: Exiting on Jul 07, 2025 at 17:23:57 BST  (total: 00:00:01)
