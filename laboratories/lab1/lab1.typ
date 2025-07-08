@@ -218,7 +218,7 @@ binaries.
 
 This will lab requires an implementation of MULSI3#footnote[
   MULSI3 is code for mul(Multiply), s(signed), i(integer), 3(32-bit).
-] in RV32I binaries.
+] in RV32I binaries. 
 
 Mulsi3 is an algorithm used by compilers to perform multiplication of
 two numbers without a dedicated hardware
@@ -260,10 +260,12 @@ be found inside lab1/work/submission.hex.
     #align(left)[
       ```
       // These are comments and will be ignored 
-      AAAAAAAA // Instruction 1
-      BBBBBBBB // all 32 bit instructions consist of 8 hexadecimal characters
-      CCCCCCCC // Each instruction should have its own line
+      AA AA AA AA // Instruction 1
+      BB BB BB BB // all 32 bit instructions consist of 8 hexadecimal characters
+      CC CC CC CC // Each instruction should have its own line
+      00 00 00 6F // It is good practice to end with JAL x0, 0
       ```
     ]
   ]
 ]
+To test your design, run  the command ```./simulate``` inside the work directory.
