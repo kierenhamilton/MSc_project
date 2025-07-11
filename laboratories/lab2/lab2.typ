@@ -11,7 +11,7 @@
 The datapath is a diagram that describes how signals inside the core propagate. They are broken down into
 5 main sections, *Program Counter*, *Program Memory*, *Decoder*, *Register Memory*, *ALU*, and *Data Memory*.
 
-#figure(image("./include/single_cycle.svg", width: 90%), caption: "Single Cycle RISC-V Data-path")
+#figure(image("./include/single_cycle_annotated.svg", width: 90%), caption: "Single Cycle RISC-V Data-path")
 
 #table(
   columns: 2,
@@ -276,7 +276,106 @@ to test your design.
 
 #pagebreak()
 
-== Exercise 4: Implementing the decoder
+== Exercise 4: Branching Logic
+
+#align(center)[
+  #box(stroke: black, inset: 4pt, width: 100%)[
+    #underline([*Branch logic specification*])\
+    #align(left)[
+      Branch logic is responsible for passing signals to the program counter - It uses control signals to
+      see if it is meant to jump and
+    ]
+    #table(
+      columns: 2,
+      inset: 10pt,
+      stroke: none,
+      [
+        #box(stroke: black, inset: 4pt, radius: 4pt)[
+          #align(center)[#underline()[SystemVerilog branch logic Header]]
+          ```systemverilog
+        module(
+          output logic [31:0] pc_next,
+          input [31:0] pc_in,
+          input [31:0] alu_result,
+          input [31:0] imm_in,
+          input [2:0] func3,
+          input [1:0] branch_type,
+          input neg_flag,
+          input carry_flag,
+          input zero_flag
+        )
+          ```
+        ]
+      ], [
+        #table(
+          columns: 2,
+          [*func3*], [*description*],
+          [000],     [BEQ],
+          [001],     [BNE],
+          [010],     [BLT],
+          [100],     [BGE],
+          [101],     [BLTU],
+          [111],     [BGEU],
+        )
+        Table 3: branch_type key
+      ],
+      [
+
+        #box(stroke: black, inset: 4pt, radius: 4pt)[
+          #align(center)[#underline()[Algorithm]]
+          ```
+        switch (branch_type){
+        case NONE: pc_next = pc_in + 4;
+        case JAL: pc_next = pc_in + imm;
+        case JALR: pc_next = pc_in + alu_result;
+        case BRANCH:
+          switch (func3){
+          case BEQ: pc_next = 
+            pc_in + ((zero_flag) ? alu_result : 4);
+          case BNE: // Your algorithm
+          case BLT: // Your algorithm
+          case GBE: // Your algorithm
+          case BLTU: // Your algorithm
+          case BGEU: // Your algorithm
+          }
+        }
+          ```
+        ]
+      ], [
+        #table(
+          columns: 2,
+          [*branch_type*], [*Description*],
+          [00],            [NONE],
+          [01],            [JAL],
+          [10],            [JALR],
+          [11],            [BRANCH],
+        )
+        Table 4: branch_type key
+      ],
+    )
+
+    #align(left)[
+    ]
+
+    #align(left)[
+
+      *Important Notes:*
+      - The carry flag can be used to detect when the subraction of unsigned numbers would
+        be negative.
+    ]
+  ]
+]
+#underline()[#align(center)[*Submission instructions*]]
+This exercise requires the completion of a ``` branchLog.sv``` file,
+which can be found inside\
+``` lab2/work/exercise_4/```.
+
+Run the command ```./simulate.sh``` inside the ``` exercise_4``` directory
+to test your design.
+
+#pagebreak()
+
+== Exercise 5: Implementing the decoder
 
 The decoder is the brain of the CPU, and is responsible for setting all of the control signals depending on the
 instruction.
@@ -284,7 +383,7 @@ It is also responsible for extracting the immediate from the instruction formats
 
 *STEP 1* -- Extracting the immediate
 
-Many times, we want to specify values inside the instruction itself to be passed into the program. This is the 
+Many times, we want to specify values inside the instruction itself to be passed into the program. This is the
 function of immediate values. They are stored in different ways depending on the instruction type
 inside the RV32I specification _Figure 2_.
 
@@ -300,25 +399,46 @@ encapsulate many different instructions, using function 7 or function 3 to diffe
     [*Name*],   [LUI],   [AUIPC], [OPIMM], [OP],    [LOAD],  [STORE], [JAL],   [JALR],  [BRANCH],
     [*Opcode*], [01101], [00101], [00100], [01100], [00000], [01000], [11011], [11001], [11000],
     [*Type*],   [U],     [U],     [I],     [R],     [I],     [S],     [J],     [I],     [B],
-  ) 
+  )
   Table 2: OPcodes and values
 ]
 
-Given the instruction as an input, 
+Given the instruction as an input,
 differentiate inputs by their opcodes and return their corresponding 32-bit immediate.
 
 Complete the function "get\_immediate" inside of ``` work/exercise_4/core_pkg.sv```.
 
 *Important notes*\
+- Ensure that there is a default case, returning 0.
+- Ensure that all immediate values are sign extended.
+#pagebreak()
 
 *STEP 2* -- Setting the control signals
 
 The control signals include the multiplexer
 signals *A* through *G*, *writeMem*, *writeReg*, *branch*, and *aluCode*.
 
+With the exception of aluCode#footnote[Sometimes relying on func7 to differentiate between addition and subtraction and between
+arithmetic shifts and logical shifts.], the control signals are the same for each opcode. by reference to the
+datapath _Figure 1_, whether the core branches, stores data, collects from ram,
+writes to the register memory, or calculates is decided by the control signals and multiplexers.
 
+#align(center)[
+  #table(
+    columns: 11,
+    align: left,
+    [*OpCode*], [*writeMem*], [*writeReg*], [*branch_type*], [*A*], [*B*], [*C*], [*D*], [*E*], [*G*], [*alu_code*],
+    [*LUI*],    [0],          [1],          [NONE],          [1],   [0],   [0],   [0],   [0],   [0],   [ADD],
+    [*AUIPC*],  [0],          [1],          [NONE],          [1],   [0],   [0],   [0],   [0],   [0],   [ADD],
+    [*OPIMM*],  [0],          [1],          [NONE],          [1],   [1],   [0],   [1],   [1],   [0],   [\*],
+    [*OP*],     [0],          [1],          [NONE],          [1],   [1],   [1],   [1],   [1],   [0],   [{f7, func3}],
+    [*LOAD*],   [0],          [1],          [NONE],          [1],   [1],   [0],   [1],   [1],   [1],   [ADD],
+    [*STORE*],  [1],          [0],          [NONE],          [0],   [0],   [0],   [1],   [1],   [0],   [ADD],
+    [*JAL*],    [0],          [1],          [JAL],           [0],   [1],   [0],   [0],   [1],   [0],   [ADD],
+    [*JALR*],   [0],          [1],          [JALR],          [0],   [1],   [0],   [0],   [1],   [0],   [ADD],
+    [*BRANCH*], [0],          [0],          [BRANCH],        [0],   [0],   [0],   [1],   [1],   [0],   [SUB],
+  )
+  Table 4: Control signals for each opcode
+]
 
-
-
-
-
+#figure(image("./include/single_cycle_annotated.svg", width: 80%), caption: "Annotated datapath")
