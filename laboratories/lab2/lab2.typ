@@ -441,4 +441,30 @@ writes to the register memory, or calculates is decided by the control signals a
   Table 4: Control signals for each opcode
 ]
 
+\**alucode* for opImm -- Instructions SRAI and SRLI are differentiated using func7, while other
+instructions use this space for more immediate. This is a one off quirk with the RV32I specification,
+and needs to be handled here.
+
+#align(center)[
+  #box(stroke: black, inset: 4pt, radius: 4pt)[
+    #align(center)[#underline()[Handling the OPIMM case]]
+    ```systemverilog
+    OPIMM: 
+    if (func3 == 3'b101) 
+      alucode = (f7) ? SRLI : SRAI;
+    else 
+      alucode = {1'b0, func3};
+    ```
+  ]
+]
+
+Using the datapath diagram _Figure 3_, the value tables, and with reference to the instructions - a comprehensive
+list of instructions can be found in the appendix - complete
+_Table 4_ and implement this module in SystemVerilog 
+in ``` lab2/work/exercise_5/decoder.sv```
+
+To test your design, run command ```./simulate``` inside ``` lab2/work/exercise_5```.
+
 #figure(image("./include/single_cycle_annotated.svg", width: 80%), caption: "Annotated datapath")
+
+
