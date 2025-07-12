@@ -28,17 +28,17 @@ module alu (
     {zero_flag, neg_flag, carry_flag} = 0;
 
     case (control_signals)
-      ADD:  // YOUR CODE HERE
-      SUB:  // YOUR CODE HERE
-      SLL:  // YOUR CODE HERE
-      SLT:  // YOUR CODE HERE
-      SLTU: // YOUR CODE HERE
-      XOR:  // YOUR CODE HERE
-      SRL:  // YOUR CODE HERE
-      SRA:  // YOUR CODE HERE
-      OR:   // YOUR CODE HERE
-      AND:  // YOUR CODE HERE
-      default: result = 0;
+      ADD:  alu_result = a + b;
+      SUB:  alu_result = a + ~b + 1;
+      SLL:  alu_result = a << b;
+      SLT:  alu_result =  ($signed(a) < $signed(b)) ? 1 : 0;
+      SLTU: alu_result = ($unsigned(a) < $unsigned(b)) ? 1 : 0;
+      XOR:  alu_result = a ^ b;
+      SRL:  alu_result = a >>> b;
+      SRA:  alu_result = a >> b;
+      OR:   alu_result = a | b;
+      AND:  alu_result = a & b;
+      default: alu_result = 0;
     endcase
   end
 endmodule
