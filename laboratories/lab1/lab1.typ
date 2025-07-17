@@ -238,9 +238,7 @@ multiplier.
       6 |   multiplicand << 1;  // left shift
       7 |   multiplier >>> 1;   // logical right shift 
       8 |    } // while
-      9 | If (signs of multiplicand
-        |   and multiplier differ) then result = ~result;
-      10| Store result in MEM[8];
+      9 | store result in MEM[8]
       ```
     ]
   ]
@@ -249,9 +247,15 @@ multiplier.
 Only the final answer inside of MEM[8] will be checked at the end of each test,
 and implementation decisions like which registers to use are left open.
 
+*\*\*Extension*\
+The current algorithm can only multiply two unsigned integers. Change, or add onto, this 
+algorithm to handle signed integers inside MEM[0] and MEM[4] and output their 
+multiplication to MEM[8].
+
 == Submission instructions
 The final submission should be in the form of a submission.hex file, which can
-be found inside lab1/work/submission.hex.
+be found inside lab1/work/submission.hex. In addition, a readme.txt file stating whether 
+the design is compatible with unsigned or signed integers.
 
 #align(center)[
 
@@ -268,4 +272,5 @@ be found inside lab1/work/submission.hex.
     ]
   ]
 ]
-To test your design, run  the command ```./simulate``` inside the work directory.
+To test your design, run  the command ``` <./simulate -unsigned>``` or 
+``` <./simulate -signed>``` inside the ``` lab1/work``` directory.

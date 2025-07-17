@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="56.950699mm"
+   height="24.31768mm"
+   viewBox="0 0 56.950699 24.31768"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="forwarding_diagram.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="11.721996"
+     inkscape:cx="424.24515"
+     inkscape:cy="295.47016"
+     inkscape:window-width="5688"
+     inkscape:window-height="2366"
+     inkscape:window-x="3829"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       id="grid1"
+       units="mm"
+       originx="-82.615507"
+       originy="-65.782321"
+       spacingx="1"
+       spacingy="0.99999998"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       dotted="false"
+       gridanglex="30"
+       gridanglez="30"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="ArrowWide"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Wide arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
+         d="M 3,-3 0,0 3,3"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc"
+         id="path1" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-82.615507,-65.78232)">
+    <text
+       style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';stroke-width:0.4;stroke-linecap:round"
+       x="100.42352"
+       y="68"
+       id="text33">1</text>
+    <text
+       style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';stroke-width:0.4;stroke-linecap:round"
+       x="105.45735"
+       y="68"
+       id="text32">2</text>
+    <text
+       style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';stroke-width:0.4;stroke-linecap:round"
+       x="110.84666"
+       y="68"
+       id="text31">3</text>
+    <text
+       style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';stroke-width:0.4;stroke-linecap:round"
+       x="116.34902"
+       y="68"
+       id="text30">4</text>
+    <text
+       style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';stroke-width:0.4;stroke-linecap:round"
+       x="121.75916"
+       y="68"
+       id="text29">5</text>
+    <text
+       style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';stroke-width:0.4;stroke-linecap:round"
+       x="127.17972"
+       y="68"
+       id="text28">6</text>
+    <text
+       style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';stroke-width:0.4;stroke-linecap:round"
+       x="132.58539"
+       y="68"
+       id="text27">7</text>
+    <text
+       style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';stroke-width:0.4;stroke-linecap:round"
+       x="138"
+       y="68"
+       id="text26">8</text>
+    <text
+       style="font-size:3.04615px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';stroke-width:0.4;stroke-linecap:round"
+       x="95.213524"
+       y="68"
+       id="text25">0</text>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0"
+       d="m 95.999997,69.000001 v 21"
+       id="path43" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0"
+       d="m 101.36842,69.000001 v 21"
+       id="path64" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0"
+       d="m 106.73684,69.000001 v 21"
+       id="path65" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0"
+       d="m 112.10526,69.000001 v 21"
+       id="path66" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0"
+       d="m 117.47368,69.000001 v 21"
+       id="path67" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0"
+       d="m 122.8421,69.000001 v 21"
+       id="path68" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0"
+       d="m 128.21052,69.000001 v 21"
+       id="path69" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0"
+       d="m 133.57894,69.000001 v 21"
+       id="path70" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0"
+       d="m 138.94736,69.000001 v 21"
+       id="path71" />
+    <text
+       style="font-size:2.46625px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';stroke-width:0.323851;stroke-linecap:round"
+       x="98"
+       y="73.30098"
+       id="text83">F</text>
+    <text
+       style="font-size:2.46625px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';stroke-width:0.323851;stroke-linecap:round"
+       x="103.131"
+       y="73.30098"
+       id="text86">D</text>
+    <text
+       style="font-size:2.46625px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';stroke-width:0.323851;stroke-linecap:round"
+       x="108.57826"
+       y="73.30098"
+       id="text87">E</text>
+    <text
+       style="font-size:2.46625px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';stroke-width:0.323851;stroke-linecap:round"
+       x="114"
+       y="73.30098"
+       id="text88">M</text>
+    <text
+       style="font-size:2.46625px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';stroke-width:0.323851;stroke-linecap:round"
+       x="119.19679"
+       y="73.30098"
+       id="text89">W</text>
+    <text
+       style="font-size:2.46625px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';stroke-width:0.323851;stroke-linecap:round"
+       x="103.42174"
+       y="78.300972"
+       id="text90">F</text>
+    <text
+       style="font-size:2.46625px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';stroke-width:0.323851;stroke-linecap:round"
+       x="108.55273"
+       y="78.300972"
+       id="text91">D</text>
+    <text
+       style="font-size:2.46625px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';stroke-width:0.323851;stroke-linecap:round"
+       x="114"
+       y="78.300972"
+       id="text92">E</text>
+    <text
+       style="font-size:2.46625px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';stroke-width:0.323851;stroke-linecap:round"
+       x="119.42174"
+       y="78.300972"
+       id="text93">M</text>
+    <text
+       style="font-size:2.46625px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';stroke-width:0.323851;stroke-linecap:round"
+       x="124.51394"
+       y="78.300972"
+       id="text94">W</text>
+    <text
+       style="font-size:2.46625px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';stroke-width:0.323851;stroke-linecap:round"
+       x="108.70454"
+       y="83.301849"
+       id="text95">F</text>
+    <text
+       style="font-size:2.46625px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';stroke-width:0.323851;stroke-linecap:round"
+       x="114.13099"
+       y="83.301849"
+       id="text96">D</text>
+    <text
+       style="font-size:2.46625px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';stroke-width:0.323851;stroke-linecap:round"
+       x="119.57826"
+       y="83.301849"
+       id="text97">E</text>
+    <text
+       style="font-size:2.46625px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';stroke-width:0.323851;stroke-linecap:round"
+       x="124.60254"
+       y="83.301849"
+       id="text98">M</text>
+    <text
+       style="font-size:2.46625px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';stroke-width:0.323851;stroke-linecap:round"
+       x="130"
+       y="83.301849"
+       id="text99">W</text>
+    <text
+       style="font-size:1.55946px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';stroke-width:0.204778;stroke-linecap:round"
+       x="82.506348"
+       y="73"
+       id="text100"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.55946px;font-family:'0xProto Nerd Font Mono';-inkscape-font-specification:'0xProto Nerd Font Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.204778"
+         id="tspan100">addi x1,x0,10</tspan></text>
+    <text
+       style="font-size:1.55946px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';stroke-width:0.204778;stroke-linecap:round"
+       x="82.506348"
+       y="78"
+       id="text101"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.55946px;font-family:'0xProto Nerd Font Mono';-inkscape-font-specification:'0xProto Nerd Font Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.204778"
+         id="tspan101">addi x2,x1,1</tspan></text>
+    <text
+       style="font-size:1.55946px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';stroke-width:0.204778;stroke-linecap:round"
+       x="82.506348"
+       y="83.000877"
+       id="text102"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.55946px;font-family:'0xProto Nerd Font Mono';-inkscape-font-specification:'0xProto Nerd Font Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.204778"
+         id="tspan102">addi x3,x1,2</tspan></text>
+    <text
+       style="font-size:1.55946px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';stroke-width:0.204778;stroke-linecap:round"
+       x="82.506348"
+       y="88"
+       id="text103"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.55946px;font-family:'0xProto Nerd Font Mono';-inkscape-font-specification:'0xProto Nerd Font Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.204778"
+         id="tspan103">addi x4,x1,3</tspan></text>
+    <text
+       style="font-size:2.46625px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';stroke-width:0.323851;stroke-linecap:round"
+       x="114"
+       y="88.300972"
+       id="text104">F</text>
+    <text
+       style="font-size:2.46625px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';stroke-width:0.323851;stroke-linecap:round"
+       x="119.13099"
+       y="88.300972"
+       id="text105">D</text>
+    <text
+       style="font-size:2.46625px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';stroke-width:0.323851;stroke-linecap:round"
+       x="124.57826"
+       y="88.300972"
+       id="text106">E</text>
+    <text
+       style="font-size:2.46625px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';stroke-width:0.323851;stroke-linecap:round"
+       x="129.99998"
+       y="88.300972"
+       id="text107">M</text>
+    <text
+       style="font-size:2.46625px;font-family:'Microsoft Sans Serif';-inkscape-font-specification:'Microsoft Sans Serif, Normal';stroke-width:0.323851;stroke-linecap:round"
+       x="135.19678"
+       y="88.300972"
+       id="text108">W</text>
+    <path
+       style="fill:none;stroke:#225500;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#ArrowWide)"
+       d="m 112.11685,72.000002 2.03095,4"
+       id="path108"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000080;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#ArrowWide)"
+       d="m 117.47368,72.128534 2.28801,8.557026"
+       id="path109"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#800000;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#ArrowWide)"
+       d="M 122.85599,72.128534 C 130.64058,75.065084 132,79.564458 126,86.000002"
+       id="path110"
+       sodipodi:nodetypes="cc" />
+  </g>
+</svg>
