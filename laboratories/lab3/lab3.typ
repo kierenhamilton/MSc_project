@@ -72,33 +72,58 @@ If they are successes, then there is nothing to do. If they fail, then the
 loaded instructions need to be flushed and the correct instructions loaded in.
 
 = Exercises
-This labs aims to take you through the implementation of forwarding and branching in in RISC-V cores.
-Partial complete code can be found inside of ``` lab3/work```. Completion of a fully functional processor
-will be the output for this lab.
+This labs aims to take you through the implementation of forwarding and branching in RISC-V cores.
 
-Forwarding occurs in the Execute stage, and requires 6 overall forwarding paths
-for the 3 possible values to rs1F and rs2F.
+*Learning objectives:*
+- Understanding of the hazards of a 5-stage pipeline.
+- Understanding of how data is forwarded in a 5 stage-pipeline.
+- Understanding of why branch prediction is used.
+- Implementation of forwarding.
+- Implementation of branch prediction.
+- Understanding of some of the branch prediction methods used.
 
-== Forwarding module
-There is a module ``` lab3/work/forwarding.sv``` which takes inputs :
-
+== Exercise 1: Forwarding module
 #align(center)[
-  #box(stroke: black, radius: 10pt, inset: 5pt)[
-    #underline[#align(center)[Forwarding header]]
-    ```systemverilog
-    module forwarding(
-      output logic [31:0] rs1F, rs2F,
-      input [31:0] rs1, rs2,
-      input [4:0] rd_EXE, rd_MEM, rd_WB,
-      input [31:0] data_EXE, data_MEM, data_WB,
-      input Wreg_EXE, Wreg_MEM, Wreg_WB
-    );
-    timeunit 1ns; timeprecision 100ps;
-    // Your code here
-    endmodule
-    ```
+  #box(stroke: 1pt, inset: 4pt, width: 100%)[
+    #underline([Forwarding Specification])
+    #align(center)[
+      #box(stroke: black, radius: 10pt, inset: 5pt)[
+        #underline[#align(center)[Forwarding header]]
+        ```systemverilog
+        module forwarding(
+        output logic [31:0] rs1F, rs2F,
+        input [31:0] rs1, rs2,
+        input [4:0] addr1, addr2,
+        input [4:0] rd_EXE, rd_MEM, rd_WB,
+        input [31:0] data_EXE, data_MEM, data_WB,
+        input Wreg_EXE, Wreg_MEM, Wreg_WB
+        );
+        timeunit 1ns; timeprecision 100ps;
+        // Your code here
+        endmodule
+        ```
+      ]
+    ]
+    #align(left)[
+      Addr1 and Addr2 are the source addresses for the current instruction. 
+      rs1 and rs2 are the data read from regMem. Forwarding should occur if and only if:
+      1. The source address equals destination addresses in rd_EXE, rd_MEM, rd_WB *and*
+      2. The corresponding Wreg is 1 *and*
+      3. The destination address is not zero.
+
+      *Important notes*
+      - For store word, the correct forwarding value will be inside Wdata_WB.
+      - Check EXE, MEM, then WB are checked in that order to ensure most recent value is forwarded. 
+      - If a match is not found, use values from rs1 and rs2 (no forwarding).
+      - The forwarding lines for rs1 and rs2 should be done separately.
+    ]
   ]
 ]
+
+Complete the module found in ``` lab3/work/forwarding.sv```.
+The forwarding module should be compatible with the following specification. 
+
+#pagebreak()
 
 == Simple branch prediction
 The simplest form of prediction is to always predict a fail, and load instructions
@@ -106,79 +131,89 @@ assuming the condition will be false, achieving a 50% success rate.
 
 Other methods exist, though this exercise will be graded based on the success rate of the
 implementation.
+  #box(stroke: 1pt, inset: 4pt, width: 100%)[
 
-#table(
-  columns: 2,
-  [
-    #align(center)[
-      #box(stroke: black, radius: 10pt, inset: 5pt)[
-        #underline[#align(center)[Branching header]]
-        ```systemverilog
-      module forwarding(
-      output logic PC,
-      output logic branch,
-      output logic hold,
-      output logic [31:0] PCnext,
-      input [2:0] func3,
-      input [31:0] PC_IF,
-      input [31:0] PC_DEC,
-      input is_load,
-      input [2:0] branch_type,
-      input [31:0] imm,
-      input [31:0] aluOut,
-      input zeroFlag,
-      input negFlag,
-      input neguFlag
-      );
-        timeunit 1ns; timeprecision 100ps;
-        // Your code here
-      endmodule
-      ```
+  #align(center)[
+    #underline([Branching Specification])
+    #table(
+      columns: 2,
+      stroke: none,
+      align: left,
+      [
+      #align(center)[
+        #box(stroke: black, radius: 10pt, inset: 5pt)[
+          #underline[#align(center)[Branching header]]
+          ```systemverilog
+          module forwarding(
+          output logic PC,
+          output logic branch,
+          output logic hold,
+          output logic [31:0] PCnext,
+          input [2:0] func3,
+          input [31:0] PC_IF,
+          input [31:0] PC_DEC,
+          input is_load,
+          input [2:0] branch_type,
+          input [31:0] imm,
+          input [31:0] aluOut,
+          input zeroFlag,
+          input negFlag,
+          input neguFlag
+          );
+          timeunit 1ns; timeprecision 100ps;
+          // Your code here
+          endmodule
+          ```
+        ]
       ]
-    ]
-  ], [
-    #table(
-      columns: 2,
-      [*branch_type*], [*Description*],
-      [00],            [NONE],
-      [01],            [JAL],
-      [10],            [JALR],
-      [11],            [CONDITIONAL],
+    ], [
+      #table(
+        columns: 2,
+        [*branch_type*], [*Description*],
+        [00],            [NONE],
+        [01],            [JAL],
+        [10],            [JALR],
+        [11],            [CONDITIONAL],
+      )
+      #table(
+        columns: 2,
+        [*func3*], [*Conditional type*],
+        [000],     [BGE],
+        [001],     [BNE],
+        [100],     [BLT],
+        [101],     [BGE],
+        [110],     [BLTU],
+        [111],     [BGEU],
+      )
+    ],
     )
-    #table(
-      columns: 2,
-      [*func3*], [*Conditional type*],
-      [000],     [BGE],
-      [001],     [BNE],
-      [100],     [BLT],
-      [101],     [BGE],
-      [110],     [BLTU],
-      [111],     [BGEU],
-    )
-  ],
+  ]
+  - NONE instructions should update PC = PC+4 as well as set the control signals.
+    In the event of a Load, denoted by a high is_load signal, A stall of 1 is required to ensure the next instruction can
+    access data loaded from the memory.
+  - JAL instructions are guaranteed to branch. The relative offset is given in the instruction, in the
+    form of immediate.
+  - JALR is guaranteed to branch. The destination is calculated in the execute stage, and
+    can be accessed through alu_out.
+  - CONDITIONAL instructions are not guaranteed. It is the main challenge of this exercise to
+    handle this case.
+  *Important notes*
+  - Flushing or stalling will produce addi x0 x0 0 instructions,
+    passing through the CPU with no effect.
+  - The branch predictor works over the decode and execute phase, and is a pipelined process itself.
+]
+
+#figure(
+  image("./include/branching_diagram.svg", width: 80%),
+  caption: "Branching module datapath"
 )
 
-Specification:
+The branch module itself is pipelined since it acts in the decode and the execute stage.
+To control the branching, it uses hold, flush, and PCnext.
 
-- NONE instructions should update PC = PC+4 as well as set the control signals.
-  In the event of a Load, A stall of 1 is required to ensure the next instruction can 
-  access data loaded from the memory.
-- JAL instructions are guaranteed to branch. The relative offset is given in the instruction, in the 
-  form of immediate.
-- JALR is guaranteed to branch. The destination is calculated in the execute stage, and 
-  can be accessed through alu_out.
-- CONDITIONAL instructions are not guaranteed. It is the main challenge of this exercise to 
-  handle this case.
+*Step 1*
+``` lab3/work/branching.sv``` has a case statement based on the branch_type.
 
-Conditional branching:\
-*Level 1:*  Stall until the execute phase, making a functional processor.\
-*Level 2:*  Implement a predict Fail branch predictor that will flush the pipeline should it be incorrect.\
-*Level 4:* Implement a flip on miss branch predictor, that will change its prediction upon failure.\
-*Level 5:* Research your own algorithm for branch prediction and implement it.\
-Marks will be awarded for the least cycles taken for numerous C test programs.
 
-*Important notes*
-- Flushing or stalling will produce addi x0 x0 0 instructions,
-  passing through the CPU with no effect.
 
 

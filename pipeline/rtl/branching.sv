@@ -49,7 +49,6 @@ module branching (
 
     end
 
-
   always_comb begin
 
     branching_out.flush = 0;

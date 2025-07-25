@@ -47,94 +47,147 @@ for testing.
 #pagebreak()
 
 #set text(size: 10pt)
+
 == Basic structures
-Most simple program: 
-```systemverilog
-// hello_world.sv
-module hello_world; 
-  initial begin
-    $display("Hello World!");
-  end
-endmodule
-```
+#align(center)[
+  #box(stroke: black, inset: 4pt, radius: 4pt)[
+    #underline([Hello World program])\
+    #align(left)[
+      ```systemverilog
+      // hello_world.sv
+      module hello_world; 
+        initial begin
+          $display("Hello World!");
+        end
+      endmodule
+      ```
+    ]
+  ]
+]
 Run ``` <xmverilog hello_world.sv>```\
-Synthesizable designs and non-synthesizable tests are split into separate files asa follows.
-```SystemVerilog
-// counter.sv
+Synthesizable designs and non-synthesizable tests are split into separate files as follows.
+#align(center)[
+  #box(stroke: black, width: 100%,  inset: 4pt, radius: 4pt)[
+    #underline([Counter.sv: Counter example])\
+    #align(left)[
+      ```SystemVerilog
 module counter (
   input Clock, // is actually input wire Clock, though wire can be left out
   input nReset,
   output logic [7:0] counter, // counter is now an 8 bit register
   output logic is_even
-);
-timeunit 1ns; timeprecision 100ps;
+  );
+  timeunit 1ns; timeprecision 100ps;
 
-always_ff @(posedge Clock, negedge nReset) // Sequential, meaning updated at the rising edge of Clock. 
-  if (!nReset) counter <= 0; // Asynchronous reset, meaning always runs at the falling edge of nReset. 
-  else counter <= counter + 1; 
+  always_ff @(posedge Clock, negedge nReset) // Sequential, meaning updated at the rising edge of Clock. 
+    if (!nReset) counter <= 0; // Asynchronous reset, meaning always runs at the falling edge of nReset. 
+    else counter <= counter + 1; 
 
-always_comb begin
-  is_even = counter[0];
-end
-endmodule
-```
-
-Modules cannot be run without stimulus, where non-synthesizable testbenches are used.
-
-```SystemVerilog
-// counter_tb.sv
-module counter_tb;
-timeunit 1ns; timeprecision 100ps;
-logic Clock; // Use logic when the signal is driven from this module
-logic nReset; // Use wire when the signal is passed into this module
-wire [7:0] counter;
-wire is_even;
-
-initial begin nReset = 1; #10 nReset = 0; #10 nReset = 1; end // Pulses nReset
-always begin Clock = 1; #50 Clock = 0; #50 Clock = 1; end // Starts a Clock that runs forever
-
-test dut(.Clock(Clock), .nReset(nReset), .counter(counter), .is_even(is_even));
-// Used to create an instance of our design under test (DUT is test.sv) inside this testbench.
-
-initial begin 
-  repeat(150) begin
-    @(posedge Clock); 
-    $display("counter=%d, is_even=%b", counter, is_even);
+  always_comb begin
+    is_even = counter[0];
   end
-  $finish;
-end
 endmodule
-```
+      ```
+    ]
+  ]
+]
+
+
+#align(center)[
+  #box(width: 100%, stroke: black, inset: 4pt, radius: 4pt)[
+    #underline([counter_tb.sv -- This is non-synthesizable stimulus for counter.sv])
+    #align(left)[
+      ```SystemVerilog
+module counter_tb;
+  timeunit 1ns; timeprecision 100ps;
+  logic Clock; // Use logic when the signal is driven from this module
+  logic nReset; // Use wire when the signal is passed into this module
+  wire [7:0] counter;
+  wire is_even;
+
+  initial begin nReset = 1; #10 nReset = 0; #10 nReset = 1; end // Pulses nReset
+  always begin Clock = 1; #50 Clock = 0; #50 Clock = 1; end // Starts a Clock that runs forever
+
+  test dut(.Clock(Clock), .nReset(nReset), .counter(counter), .is_even(is_even));
+  // Used to create an instance of our design under test (DUT is test.sv) inside this testbench.
+  initial begin 
+    repeat(150) begin
+      @(posedge Clock); 
+      $display("counter=%d, is_even=%b", counter, is_even);
+    end
+    $finish;
+  end
+endmodule
+      ```
+    ]
+  ]
+]
 
 Inside of cadteaching8, copy these two files into a directory of your choosing.
 1. run ``` <xmverilog counter_tb.sv counter.sv>```
 2. To see the individual signals use ``` <xmv_gui counter_tb.sv counter.sv>```
 
-#pagebreak()
 
-Basic design patterns:
-
-```systemverilog
-// case_example.sv
+== Design patterns
+#align(center)[
+  #box(stroke: black, width: 100%,  inset: 4pt, radius: 4pt)[
+    #underline([case-example.sv -- This details the ])\
+    #align(left)[
+      ```systemverilog
 typedef enum logic [2:0] { // enumeration links names to numbers for convenience
   ADAM = 3'd0,
   BILL = 3'd1,
   CONNOR = 3'd2,
   DENVER = 3'd3,
 } people_e;
-  
+
 module case_example; 
   people_e people = ADAM;
   logic [7:0] favourite_number;
 
   case (people)
-    ADAM: favourite_number = 8'd10;
-    BILL: favourite_number = 8'd20;
-    CONNOR: favourite_number = 8'd1;
-    DENVER: favourite_number = 8'd1;
+    ADAM:    favourite_number = 8'd10;
+    BILL:    favourite_number = 8'd20;
+    CONNOR:  favourite_number = 8'd1;
+    DENVER:  favourite_number = 8'd1;
     default: favourite_number = 8'd0;
   endcase
   $display("person=%s, favourite number=%d", people.name(), favourite_number);
 endmodule
-```
+      ```
+    ]
+  ]
+]
+This file shows how enums can  be defined and used in place of logic, which is useful for debugging inside of the 
+waveform viewer. 
+#align(center)[
+  #box(stroke: black, width: 100%,  inset: 4pt, radius: 4pt)[
+    #underline([case-example.sv -- This details the ])\
+    #align(left)[
+      ```systemverilog
+typedef enum logic [2:0] { // enumeration links names to numbers for convenience
+  ADAM = 3'd0,
+  BILL = 3'd1,
+  CONNOR = 3'd2,
+  DENVER = 3'd3,
+} people_e;
 
+module case_example; 
+  people_e people = ADAM;
+  logic [7:0] favourite_number;
+
+  case (people)
+    ADAM:    favourite_number = 8'd10;
+    BILL:    favourite_number = 8'd20;
+    CONNOR:  favourite_number = 8'd1;
+    DENVER:  favourite_number = 8'd1;
+    default: favourite_number = 8'd0;
+  endcase
+  $display("person=%s, favourite number=%d", people.name(), favourite_number);
+endmodule
+      ```
+    ]
+  ]
+]
+
+ 

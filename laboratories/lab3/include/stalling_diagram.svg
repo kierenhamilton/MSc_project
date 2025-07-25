@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="146mm"
+   height="100mm"
+   viewBox="0 0 146 99.999998"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="stalling_diagram.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="5.0767542"
+     inkscape:cx="279.70628"
+     inkscape:cy="147.83068"
+     inkscape:window-width="2476"
+     inkscape:window-height="1566"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       id="grid1"
+       units="mm"
+       originx="-82.615509"
+       originy="-65.782318"
+       spacingx="1"
+       spacingy="0.99999998"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       dotted="false"
+       gridanglex="30"
+       gridanglez="30"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="ArrowWide"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Wide arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
+         d="M 3,-3 0,0 3,3"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc"
+         id="path1" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-82.6155, -65.7823)">
+    <text
+       xml:space="preserve"
+       style="font-size:3.04615px;font-family:'Back Button Icons';-inkscape-font-specification:'Back Button Icons, Normal';fill:#000000;stroke:none;stroke-width:0.2;stroke-linecap:round"
+       x="152"
+       y="90"
+       id="text3"
+       inkscape:export-filename="decoding_diagram.svg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan3"
+         style="fill:#000000;stroke:none;stroke-width:0.2"
+         x="152"
+         y="90">DEC</tspan></text>
+    <rect
+       style="fill:#d5f6ff;stroke:#000000;stroke-width:0.2;stroke-linecap:round"
+       id="rect3"
+       width="15.127457"
+       height="20"
+       x="124.87254"
+       y="105.00001" />
+    <rect
+       style="fill:#d7f4d7;stroke:#000000;stroke-width:0.2;stroke-linecap:round"
+       id="rect4"
+       width="15.105869"
+       height="20"
+       x="169.89413"
+       y="105.00001" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.38567px;font-family:'Back Button Icons';-inkscape-font-specification:'Back Button Icons, Normal';fill:#000000;stroke:none;stroke-width:0.156635;stroke-linecap:round"
+       x="125.87253"
+       y="123.48405"
+       id="text4"><tspan
+         sodipodi:role="line"
+         id="tspan4"
+         style="fill:#000000;stroke:none;stroke-width:0.156635"
+         x="125.87253"
+         y="123.48405">Decode</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.38567px;font-family:'Back Button Icons';-inkscape-font-specification:'Back Button Icons, Normal';fill:#000000;stroke:none;stroke-width:0.156635;stroke-linecap:round"
+       x="173.71126"
+       y="123.44444"
+       id="text5"><tspan
+         sodipodi:role="line"
+         id="tspan5"
+         style="fill:#000000;stroke:none;stroke-width:0.156635"
+         x="173.71126"
+         y="123.44444">Execute</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;marker-end:url(#ArrowWide)"
+       d="M 150,123.48055 H 140"
+       id="path28"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:1.33085px;font-family:'Back Button Icons';-inkscape-font-specification:'Back Button Icons, Normal';fill:#000000;stroke:none;stroke-width:0.0873789;stroke-linecap:round"
+       x="140.56279"
+       y="122.64716"
+       id="text28"><tspan
+         sodipodi:role="line"
+         id="tspan28"
+         style="fill:#000000;stroke:none;stroke-width:0.0873789"
+         x="140.56279"
+         y="122.64716">flush_internal</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;marker-end:url(#ArrowWide)"
+       d="m 190,97.074834 h 7"
+       id="path29" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;marker-end:url(#ArrowWide)"
+       d="m 190,101 h 7"
+       id="path30" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;marker-end:url(#ArrowWide)"
+       d="M 184.99999,106.99998 H 197"
+       id="path31"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.38567px;font-family:'Back Button Icons';-inkscape-font-specification:'Back Button Icons, Normal';fill:#000000;stroke:none;stroke-width:0.156635;stroke-linecap:round"
+       x="198.24835"
+       y="97.999985"
+       id="text41"><tspan
+         sodipodi:role="line"
+         style="fill:#000000;stroke:none;stroke-width:0.156635"
+         x="198.24835"
+         y="97.999985"
+         id="tspan51">hold</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#000000;stroke:none;stroke-width:0.156635"
+         x="198.24835"
+         y="101.01183"
+         id="tspan52" /></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round"
+       d="m 129.94189,105 v -7.925166 l 20.05811,0"
+       id="path52"
+       sodipodi:nodetypes="ccc" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round"
+       id="rect67"
+       width="10"
+       height="38.986507"
+       x="150"
+       y="91" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:1.60000002,0.80000001;stroke-dashoffset:0"
+       d="m 150,97.074834 h 10"
+       id="path67" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round"
+       d="M 190,97.074834 H 160"
+       id="path68" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:1.6, 0.799999;stroke-dashoffset:0"
+       d="m 150,123.48055 c 0,0 10,0 10,0"
+       id="path69" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0"
+       d="m 160,123.48055 h 9.89413"
+       id="path70" />
+    <text
+       xml:space="preserve"
+       style="font-size:1.84029px;font-family:'Back Button Icons';-inkscape-font-specification:'Back Button Icons, Normal';fill:#000000;stroke:none;stroke-width:0.120827;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0"
+       x="150.55788"
+       y="106.6907"
+       id="text70"><tspan
+         sodipodi:role="line"
+         id="tspan70"
+         style="fill:#000000;stroke:none;stroke-width:0.120827"
+         x="150.55788"
+         y="106.6907">Prediction</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:1.84029px;font-family:'Back Button Icons';-inkscape-font-specification:'Back Button Icons, Normal';fill:#000000;stroke:none;stroke-width:0.120827;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0"
+       x="151"
+       y="111"
+       id="text71"><tspan
+         sodipodi:role="line"
+         id="tspan71"
+         style="fill:#000000;stroke:none;stroke-width:0.120827"
+         x="151"
+         y="111">isBranch</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:1.47199px;font-family:'Back Button Icons';-inkscape-font-specification:'Back Button Icons, Normal';fill:#000000;stroke:none;stroke-width:0.096645;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0"
+       x="150.69804"
+       y="115.34769"
+       id="text72"><tspan
+         sodipodi:role="line"
+         id="tspan72"
+         style="fill:#000000;stroke:none;stroke-width:0.096645"
+         x="150.69804"
+         y="115.34769">branchType</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#ArrowWide)"
+       d="m 140,106.33401 10,0"
+       id="path72"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#ArrowWide)"
+       d="m 140,110.25043 10,0"
+       id="path73"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#ArrowWide)"
+       d="m 140,114.73145 10,0"
+       id="path74"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#ArrowWide)"
+       d="m 160,106.31009 h 9.89413"
+       id="path75" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#ArrowWide)"
+       d="m 160,110.63206 h 9.89413"
+       id="path76" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#ArrowWide)"
+       d="m 160,115 h 9.89413"
+       id="path77" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round"
+       d="m 136.94189,105.00001 v -4.87337 l 12.67274,0"
+       id="path78"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:1.6, 0.8;stroke-dashoffset:0"
+       d="m 150,100.12664 h 10"
+       id="path79"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;marker-start:url(#ArrowWide)"
+       d="m 176.32743,100.12664 -16.32743,0"
+       id="path80"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#f4d7d7;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0"
+       d="m 176.32743,98.419511 v 4.999999 L 178,102.45386 v -2.907712 z"
+       id="path81" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#ArrowWide)"
+       d="m 173.32499,105.00001 v -2.65263 h 3.00244"
+       id="path82" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0"
+       d="m 178,101 h 12"
+       id="path83" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.38567px;font-family:'Back Button Icons';-inkscape-font-specification:'Back Button Icons, Normal';fill:#000000;stroke:none;stroke-width:0.156635;stroke-linecap:round"
+       x="198.29623"
+       y="101.6577"
+       id="text90"><tspan
+         sodipodi:role="line"
+         style="fill:#000000;stroke:none;stroke-width:0.156635"
+         x="198.29623"
+         y="101.6577"
+         id="tspan89">PCnext</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#000000;stroke:none;stroke-width:0.156635"
+         x="198.29623"
+         y="104.66955"
+         id="tspan90" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.38567px;font-family:'Back Button Icons';-inkscape-font-specification:'Back Button Icons, Normal';fill:#000000;stroke:none;stroke-width:0.156635;stroke-linecap:round"
+       x="198.37646"
+       y="107.99998"
+       id="text92"><tspan
+         sodipodi:role="line"
+         style="fill:#000000;stroke:none;stroke-width:0.156635"
+         x="198.37646"
+         y="107.99998"
+         id="tspan91">flush</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#000000;stroke:none;stroke-width:0.156635"
+         x="198.37646"
+         y="111.01183"
+         id="tspan92" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:1.5106px;font-family:'Back Button Icons';-inkscape-font-specification:'Back Button Icons, Normal';fill:#000000;stroke:none;stroke-width:0.0991807;stroke-linecap:round"
+       x="178"
+       y="98.999985"
+       id="text93"><tspan
+         sodipodi:role="line"
+         id="tspan93"
+         style="fill:#000000;stroke:none;stroke-width:0.0991807"
+         x="178"
+         y="98.999985">flush_internal</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:1.43807px;font-family:'Back Button Icons';-inkscape-font-specification:'Back Button Icons, Normal';fill:#1a1a1a;stroke:none;stroke-width:0.0944185;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0"
+       x="176.75739"
+       y="100.61425"
+       id="text94"><tspan
+         sodipodi:role="line"
+         id="tspan94"
+         style="fill:#1a1a1a;stroke:none;stroke-width:0.0944185"
+         x="176.75739"
+         y="100.61425">0</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:1.43807px;font-family:'Back Button Icons';-inkscape-font-specification:'Back Button Icons, Normal';fill:#1a1a1a;stroke:none;stroke-width:0.0944185;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0"
+       x="176.75739"
+       y="102.42366"
+       id="text95"><tspan
+         sodipodi:role="line"
+         id="tspan95"
+         style="fill:#1a1a1a;stroke:none;stroke-width:0.0944185"
+         x="176.75739"
+         y="102.42366">1</tspan></text>
+    <text
+       x="187.93631"
+       y="114.28028"
+       style="font-size:1.50858px;font-family:'Back Button Icons';-inkscape-font-specification:'Back Button Icons, Normal';fill:#000000;stroke:none;stroke-width:0;stroke-linecap:round;stroke-dasharray:none"
+       id="text96"><tspan
+         x="187.93631"
+         y="114.28028"
+         id="tspan96"
+         style="stroke-width:0;stroke-dasharray:none">neguFlag</tspan></text>
+    <text
+       x="187.93631"
+       y="110.24872"
+       style="font-size:1.50858px;font-family:'Back Button Icons';-inkscape-font-specification:'Back Button Icons, Normal';fill:#000000;stroke:none;stroke-width:0;stroke-linecap:round;stroke-dasharray:none"
+       id="text97"><tspan
+         x="187.93631"
+         y="110.24872"
+         id="tspan97"
+         style="stroke-width:0;stroke-dasharray:none">negFlag</tspan></text>
+    <text
+       x="188.00407"
+       y="112.2645"
+       style="font-size:1.50858px;font-family:'Back Button Icons';-inkscape-font-specification:'Back Button Icons, Normal';fill:#000000;stroke:none;stroke-width:0;stroke-linecap:round;stroke-dasharray:none"
+       id="text98"><tspan
+         x="188.00407"
+         y="112.2645"
+         id="tspan98"
+         style="stroke-width:0;stroke-dasharray:none">zeroFlag</tspan></text>
+    <text
+       x="187.933"
+       y="118.31185"
+       style="font-size:1.42939px;font-family:'Back Button Icons';-inkscape-font-specification:'Back Button Icons, Normal';fill:#000000;stroke:none;stroke-width:0;stroke-linecap:round;stroke-dasharray:none"
+       id="text102"><tspan
+         x="187.933"
+         y="118.31185"
+         id="tspan102"
+         style="stroke-width:0;stroke-dasharray:none">PCDEC</tspan></text>
+    <g
+       id="g116">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;marker-end:url(#ArrowWide)"
+         d="m 121.57988,114.99998 h 3.29265"
+         id="path19"
+         sodipodi:nodetypes="cc" />
+      <text
+         x="117.22697"
+         y="115.81009"
+         style="font-size:1.6761px;font-family:'Back Button Icons';-inkscape-font-specification:'Back Button Icons, Normal';fill:#000000;stroke:none;stroke-width:0;stroke-linecap:round;stroke-dasharray:none"
+         id="text103"><tspan
+           x="117.22697"
+           y="115.81009"
+           id="tspan103"
+           style="stroke-width:0;stroke-dasharray:none">PCIF</tspan></text>
+    </g>
+    <g
+       id="g115"
+       transform="translate(0,0.45840343)">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;marker-end:url(#ArrowWide)"
+         d="m 121.67564,111.99998 h 3.29265"
+         id="path22"
+         sodipodi:nodetypes="cc" />
+      <text
+         x="111.59798"
+         y="112.495"
+         style="font-size:1.6761px;font-family:'Back Button Icons';-inkscape-font-specification:'Back Button Icons, Normal';fill:#000000;stroke:none;stroke-width:0;stroke-linecap:round;stroke-dasharray:none"
+         id="text104"><tspan
+           x="111.59798"
+           y="112.495"
+           id="tspan104"
+           style="stroke-width:0;stroke-dasharray:none">branchType</tspan></text>
+    </g>
+    <text
+       x="188.02512"
+       y="116.29607"
+       style="font-size:1.42939px;font-family:'Back Button Icons';-inkscape-font-specification:'Back Button Icons, Normal';fill:#000000;stroke:none;stroke-width:0;stroke-linecap:round;stroke-dasharray:none"
+       id="text105"><tspan
+         x="188.02512"
+         y="116.29607"
+         id="tspan105"
+         style="stroke-width:0;stroke-dasharray:none">f3DEC</tspan></text>
+    <g
+       id="g114">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;marker-end:url(#ArrowWide)"
+         d="m 121.57988,109.80908 h 3.29265"
+         id="path17"
+         sodipodi:nodetypes="cc" />
+      <text
+         x="115.87253"
+         y="110.61591"
+         style="font-size:1.6761px;font-family:'Back Button Icons';-inkscape-font-specification:'Back Button Icons, Normal';fill:#000000;stroke:none;stroke-width:0;stroke-linecap:round;stroke-dasharray:none"
+         id="text106"><tspan
+           x="115.87253"
+           y="110.61591"
+           id="tspan106"
+           style="stroke-width:0;stroke-dasharray:none">isLoad</tspan></text>
+    </g>
+    <text
+       x="188"
+       y="120.32764"
+       style="font-size:1.42939px;font-family:'Back Button Icons';-inkscape-font-specification:'Back Button Icons, Normal';fill:#000000;stroke:none;stroke-width:0;stroke-linecap:round;stroke-dasharray:none"
+       id="text107"><tspan
+         x="188"
+         y="120.32764"
+         id="tspan107"
+         style="stroke-width:0;stroke-dasharray:none">aluOut</tspan></text>
+    <text
+       x="187.95044"
+       y="122.34342"
+       style="font-size:1.42939px;font-family:'Back Button Icons';-inkscape-font-specification:'Back Button Icons, Normal';fill:#000000;stroke:none;stroke-width:0;stroke-linecap:round;stroke-dasharray:none"
+       id="text108"><tspan
+         x="187.95044"
+         y="122.34342"
+         id="tspan108"
+         style="stroke-width:0;stroke-dasharray:none">immDEC</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#ArrowWide)"
+       d="m 187.31045,109.8798 -2.21904,0"
+       id="path108"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#ArrowWide)"
+       d="m 187.31045,111.87133 h -2.21904"
+       id="path109"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#ArrowWide)"
+       d="m 187.31045,113.86286 h -2.21904"
+       id="path110"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#ArrowWide)"
+       d="m 187.31045,115.85439 h -2.21904"
+       id="path111"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#ArrowWide)"
+       d="m 187.31045,117.84592 h -2.21904"
+       id="path112"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#ArrowWide)"
+       d="m 187.31045,119.83745 h -2.21904"
+       id="path113"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#ArrowWide)"
+       d="m 187.31045,121.82898 h -2.21904"
+       id="path114"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;marker-end:url(#ArrowWide)"
+       d="M 150,119.24028 H 140"
+       id="path2"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:1.33085px;font-family:'Back Button Icons';-inkscape-font-specification:'Back Button Icons, Normal';fill:#000000;stroke:none;stroke-width:0.0873789;stroke-linecap:round"
+       x="141.40279"
+       y="118.40689"
+       id="text2"><tspan
+         sodipodi:role="line"
+         id="tspan2"
+         style="fill:#000000;stroke:none;stroke-width:0.0873789"
+         x="141.40279"
+         y="118.40689">prediction</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:1.6, 0.799999;stroke-dashoffset:0"
+       d="m 150,119.24028 c 0,0 10,0 10,0"
+       id="path3" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0"
+       d="m 160,119.24028 h 9.89413"
+       id="path4"
+       inkscape:export-filename="branching_diagram.svg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+  </g>
+</svg>
