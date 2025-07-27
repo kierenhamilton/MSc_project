@@ -14,7 +14,7 @@ class Rv;
     addr1 != rd_MEM;
     addr1 != rd_WB;
   }
-  constraint forwarding_path_1 {
+  constraint forwarding_path_3 {
     rd_WB == addr1;
     rd_WB == addr2;
   }
@@ -22,10 +22,14 @@ class Rv;
     rd_MEM == addr1;
     rd_MEM == addr2;
   }
-  constraint forwarding_path_3 {
+  constraint forwarding_path_1 {
     rd_EXE == addr1;
     rd_EXE == addr2;
   }
+	constraint zero {
+		addr1 == 0;
+		addr2 == 0;
+	}
 
 endclass
 
@@ -34,7 +38,7 @@ module forwarding_tb;
   timeunit 1ns; timeprecision 100ps;
 
   Rv rv;
-  logic [31:0] rs1F, rs2F;
+  wire [31:0] rs1F, rs2F;
   logic [31:0] rs1, rs2;
   logic [4:0] addr1, addr2;
   logic [4:0] rd_EXE, rd_MEM, rd_WB;
@@ -65,49 +69,68 @@ module forwarding_tb;
     rv.forwarding_path_2.constraint_mode(0);
     rv.forwarding_path_3.constraint_mode(0);
     rv.no_forwarding.constraint_mode(1);
-    void'(rv.randomize());
-    rs1 = rv.rs1;
-    rs2 = rv.rs2;
-    addr1 = rv.addr1;
-    addr2 = rv.addr2;
-    rd_EXE = rv.rd_EXE;
-    rd_MEM = rv.rd_MEM;
-    rd_WB = rv.rd_WB;
-    data_EXE = rv.data_EXE;
-    data_MEM = rv.data_MEM;
-    data_WB = rv.data_WB;
-    Wreg_EXE = rv.Wreg_EXE;
-    Wreg_MEM = rv.Wreg_MEM;
-    Wreg_WB = rv.Wreg_WB;
-    repeat (5) begin
+		rv.zero.constraint_mode(1);
+		$display("Test 1: no forwarding");
+		repeat (5) begin
+			void'(rv.randomize());
+			rv.zero.constraint_mode(0);
+			rs1 = rv.rs1;
+			rs2 = rv.rs2;
+			addr1 = rv.addr1;
+			addr2 = rv.addr2;
+			rd_EXE = rv.rd_EXE;
+			rd_MEM = rv.rd_MEM;
+			rd_WB = rv.rd_WB;
+			data_EXE = rv.data_EXE;
+			data_MEM = rv.data_MEM;
+			data_WB = rv.data_WB;
+			Wreg_EXE = rv.Wreg_EXE;
+			Wreg_MEM = rv.Wreg_MEM;
+			Wreg_WB = rv.Wreg_WB;
+    	//$display("rs1F=%d, rs2F=%d, rs1=%d, rs2=%d, addr1=%d, addr2=%d",
+				//rs1F, rs2F, rs1, rs2, addr1, addr2);
       #10;
-      rs1_no_forwarding : assert (rs1 == rs1f);
-      rs2_no_forwarding : assert (rs2 == rs2f);
+			if (addr1 == 0)zero_test_rs1 : assert(rs1F == 0);
+			else rs1_no_forwarding : assert (rs1 == rs1F);
+			if (addr2 == 0)zero_test_rs2 : assert(rs2F == 0);
+			else rs2_no_forwarding : assert (rs2 == rs2F);
+      
+      
+			 
+			 
     end
 
     rv.forwarding_path_1.constraint_mode(0);
     rv.forwarding_path_2.constraint_mode(0);
     rv.forwarding_path_3.constraint_mode(1);
     rv.no_forwarding.constraint_mode(0);
-    void'(rv.randomize());
-    rs1 = rv.rs1;
-    rs2 = rv.rs2;
-    addr1 = rv.addr1;
-    addr2 = rv.addr2;
-    rd_EXE = rv.rd_EXE;
-    rd_MEM = rv.rd_MEM;
-    rd_WB = rv.rd_WB;
-    data_EXE = rv.data_EXE;
-    data_MEM = rv.data_MEM;
-    data_WB = rv.data_WB;
-    Wreg_EXE = rv.Wreg_EXE;
-    Wreg_MEM = rv.Wreg_MEM;
-    Wreg_WB = rv.Wreg_WB;
-
+		rv.zero.constraint_mode(1);
+		$display("Test 2: WB forwarding");
     repeat (5) begin
+						void'(rv.randomize());
+						rv.zero.constraint_mode(0);
+						rs1 = rv.rs1;
+						rs2 = rv.rs2;
+						addr1 = rv.addr1;
+						addr2 = rv.addr2;
+						rd_EXE = rv.rd_EXE;
+						rd_MEM = rv.rd_MEM;
+						rd_WB = rv.rd_WB;
+						data_EXE = rv.data_EXE;
+						data_MEM = rv.data_MEM;
+						data_WB = rv.data_WB;
+						Wreg_EXE = rv.Wreg_EXE;
+						Wreg_MEM = rv.Wreg_MEM;
+						Wreg_WB = rv.Wreg_WB;
       #10;
-      rs1F_forwarding_path_WB : assert (rs1F == (Wdreg_WB) ? rs1 : data_WB);
-      rs2F_forwarding_path_WB : assert (rs2F == (Wdreg_WB) ? rs2 : data_WB);
+			   //	$display("rs1F=%d, rs2F=%d, rs1=%d, rs2=%d, addr1=%d, addr2=%d, rd_WB=%d, data_WB=%d, Wreg_WB=%d",
+				//rs1F, rs2F, rs1, rs2, addr1, addr2, rd_WB, data_WB, Wreg_WB);
+      
+      
+			if (addr1 == 0) zero_test_rs1_WB : assert(rs1F == 0);
+			else rs1F_forwarding_path_WB : assert (rs1F == ((Wreg_WB) ? data_WB : rs1));
+			if (addr2 == 0) zero_test_rs2_WB : assert(rs2F == 0);
+			else rs2F_forwarding_path_WB : assert (rs2F == ((Wreg_WB) ? data_WB : rs2));
 
     end
 
@@ -115,49 +138,65 @@ module forwarding_tb;
     rv.forwarding_path_2.constraint_mode(1);
     rv.forwarding_path_3.constraint_mode(1);
     rv.no_forwarding.constraint_mode(0);
-    void'(rv.randomize());
-    rs1 = rv.rs1;
-    rs2 = rv.rs2;
-    addr1 = rv.addr1;
-    addr2 = rv.addr2;
-    rd_EXE = rv.rd_EXE;
-    rd_MEM = rv.rd_MEM;
-    rd_WB = rv.rd_WB;
-    data_EXE = rv.data_EXE;
-    data_MEM = rv.data_MEM;
-    data_WB = rv.data_WB;
-    Wreg_EXE = rv.Wreg_EXE;
-    Wreg_MEM = rv.Wreg_MEM;
-    Wreg_WB = rv.Wreg_WB;
-
+		rv.zero.constraint_mode(1);
+		$display("Test 3: MEM forwarding");
     repeat (5) begin
-      rs1F_forwarding_path_MEM : assert (rs1F == (Wdreg_MEM) ? rs1 : data_MEM);
-      rs2F_forwarding_path_MEM : assert (rs2F == (Wdreg_MEM) ? rs2 : data_MEM);
+						void'(rv.randomize());
+						rv.zero.constraint_mode(0);
+						rs1 = rv.rs1;
+						rs2 = rv.rs2;
+						addr1 = rv.addr1;
+						addr2 = rv.addr2;
+						rd_EXE = rv.rd_EXE;
+						rd_MEM = rv.rd_MEM;
+						rd_WB = rv.rd_WB;
+						data_EXE = rv.data_EXE;
+						data_MEM = rv.data_MEM;
+						data_WB = rv.data_WB;
+						Wreg_EXE = rv.Wreg_EXE;
+						Wreg_MEM = rv.Wreg_MEM;
+						Wreg_WB = rv.Wreg_WB;
+			#10;
+      
+    
+			if (addr1 == 0) zero_test_rs1_MEM : assert(rs1F == 0);
+			else rs1F_forwarding_path_MEM : assert (rs1F == ((Wreg_MEM) ? data_MEM : ((Wreg_WB) ? data_WB : rs1)));
+			if (addr2 == 0) zero_test_rs2_MEM : assert(rs2F == 0);
+			else  rs2F_forwarding_path_MEM : assert (rs2F == ((Wreg_MEM) ? data_MEM : ((Wreg_WB) ? data_WB : rs2)));
     end
 
     rv.forwarding_path_1.constraint_mode(1);
     rv.forwarding_path_2.constraint_mode(1);
     rv.forwarding_path_3.constraint_mode(1);
     rv.no_forwarding.constraint_mode(0);
-    void'(rv.randomize());
-    rs1 = rv.rs1;
-    rs2 = rv.rs2;
-    addr1 = rv.addr1;
-    addr2 = rv.addr2;
-    rd_EXE = rv.rd_EXE;
-    rd_MEM = rv.rd_MEM;
-    rd_WB = rv.rd_WB;
-    data_EXE = rv.data_EXE;
-    data_MEM = rv.data_MEM;
-    data_WB = rv.data_WB;
-    Wreg_EXE = rv.Wreg_EXE;
-    Wreg_MEM = rv.Wreg_MEM;
-    Wreg_WB = rv.Wreg_WB;
-
+		rv.zero.constraint_mode(1);
+		$display("Test 4: EXE forwarding");
     repeat (5) begin
-      rs1F_forwarding_path_EXE : assert (rs1F == (Wdreg_EXE) ? rs1 : data_EXE);
-      rs2F_forwarding_path_EXE : assert (rs2F == (Wdreg_EXE) ? rs2 : data_EXE);
+						void'(rv.randomize());
+						rv.zero.constraint_mode(0);
+						rs1 = rv.rs1;
+						rs2 = rv.rs2;
+						addr1 = rv.addr1;
+						addr2 = rv.addr2;
+						rd_EXE = rv.rd_EXE;
+						rd_MEM = rv.rd_MEM;
+						rd_WB = rv.rd_WB;
+						data_EXE = rv.data_EXE;
+						data_MEM = rv.data_MEM;
+						data_WB = rv.data_WB;
+						Wreg_EXE = rv.Wreg_EXE;
+						Wreg_MEM = rv.Wreg_MEM;
+						Wreg_WB = rv.Wreg_WB;
+      #10
+			
+      
+			if (addr1 == 0) zero_test_rs1_EXE : assert(rs1F == 0);
+			else rs1F_forwarding_path_EXE : assert (rs1F == ((Wreg_EXE) ? data_EXE : ((Wreg_MEM) ? data_MEM : ((Wreg_WB) ? data_WB : rs1))));
+			if (addr2 == 0) zero_test_rs2_EXE : assert(rs2F == 0);
+			else rs2F_forwarding_path_EXE : assert (rs2F == ((Wreg_EXE) ? data_EXE : ((Wreg_MEM) ? data_MEM : ((Wreg_WB) ? data_WB : rs2))));
     end
+		
+		$finish;
 
   end
 
