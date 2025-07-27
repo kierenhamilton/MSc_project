@@ -105,7 +105,7 @@ This labs aims to take you through the implementation of forwarding and branchin
       ]
     ]
     #align(left)[
-      Addr1 and Addr2 are the source addresses for the current instruction. 
+      Addr1 and Addr2 are the source addresses for the current instruction.
       rs1 and rs2 are the data read from regMem. Forwarding should occur if and only if:
       1. The source address equals destination addresses in rd_EXE, rd_MEM, rd_WB *and*
       2. The corresponding Wreg is 1 *and*
@@ -113,7 +113,7 @@ This labs aims to take you through the implementation of forwarding and branchin
 
       *Important notes*
       - For store word, the correct forwarding value will be inside Wdata_WB.
-      - Check EXE, MEM, then WB are checked in that order to ensure most recent value is forwarded. 
+      - Check EXE, MEM, then WB are checked in that order to ensure most recent value is forwarded.
       - If a match is not found, use values from rs1 and rs2 (no forwarding).
       - The forwarding lines for rs1 and rs2 should be done separately.
     ]
@@ -121,17 +121,17 @@ This labs aims to take you through the implementation of forwarding and branchin
 ]
 
 Complete the module found in ``` lab3/work/forwarding.sv```.
-The forwarding module should be compatible with the following specification. 
+The forwarding module should be compatible with the following specification.
 
 #pagebreak()
 
-== Simple branch prediction
+== Exercise 2: Branch prediction
 The simplest form of prediction is to always predict a fail, and load instructions
 assuming the condition will be false, achieving a 50% success rate.
 
 Other methods exist, though this exercise will be graded based on the success rate of the
 implementation.
-  #box(stroke: 1pt, inset: 4pt, width: 100%)[
+#box(stroke: 1pt, inset: 4pt, width: 100%)[
 
   #align(center)[
     #underline([Branching Specification])
@@ -140,10 +140,10 @@ implementation.
       stroke: none,
       align: left,
       [
-      #align(center)[
-        #box(stroke: black, radius: 10pt, inset: 5pt)[
-          #underline[#align(center)[Branching header]]
-          ```systemverilog
+        #align(center)[
+          #box(stroke: black, radius: 10pt, inset: 5pt)[
+            #underline[#align(center)[Branching header]]
+            ```systemverilog
           module forwarding(
           output logic PC,
           output logic branch,
@@ -164,28 +164,28 @@ implementation.
           // Your code here
           endmodule
           ```
+          ]
         ]
-      ]
-    ], [
-      #table(
-        columns: 2,
-        [*branch_type*], [*Description*],
-        [00],            [NONE],
-        [01],            [JAL],
-        [10],            [JALR],
-        [11],            [CONDITIONAL],
-      )
-      #table(
-        columns: 2,
-        [*func3*], [*Conditional type*],
-        [000],     [BGE],
-        [001],     [BNE],
-        [100],     [BLT],
-        [101],     [BGE],
-        [110],     [BLTU],
-        [111],     [BGEU],
-      )
-    ],
+      ], [
+        #table(
+          columns: 2,
+          [*branch_type*], [*Description*],
+          [00],            [NONE],
+          [01],            [JAL],
+          [10],            [JALR],
+          [11],            [CONDITIONAL],
+        )
+        #table(
+          columns: 2,
+          [*func3*], [*Conditional type*],
+          [000],     [BGE],
+          [001],     [BNE],
+          [100],     [BLT],
+          [101],     [BGE],
+          [110],     [BLTU],
+          [111],     [BGEU],
+        )
+      ],
     )
   ]
   - NONE instructions should update PC = PC+4 as well as set the control signals.
@@ -198,22 +198,107 @@ implementation.
   - CONDITIONAL instructions are not guaranteed. It is the main challenge of this exercise to
     handle this case.
   *Important notes*
-  - Flushing or stalling will produce addi x0 x0 0 instructions,
+  - Flushing or stalling will produce ``` <addi x0 x0 0>``` instructions,
     passing through the CPU with no effect.
   - The branch predictor works over the decode and execute phase, and is a pipelined process itself.
 ]
 
-#figure(
-  image("./include/branching_diagram.svg", width: 80%),
-  caption: "Branching module datapath"
-)
+#figure(image("./include/branching_diagram.svg", width: 100%), caption: "Branching module datapath")
 
-The branch module itself is pipelined since it acts in the decode and the execute stage.
-To control the branching, it uses hold, flush, and PCnext.
+The branching module itself is pipelined. It is split into its functions inside the Decode and Execute stage
+_Figure 3_. Prediction is used to determine if it should branch or not.
 
-*Step 1*
-``` lab3/work/branching.sv``` has a case statement based on the branch_type.
+#set text(size: 11pt)
+#align(center)[#table(
+  columns: 2,
+  // stroke: none,
+  align: left,
+  inset: 4pt,
+  [
+    *Step 1:* NONE type\
+  ], [
+    #align(center)[
+      #box(stroke: 1pt, inset: 4pt, radius: 4pt)[
+        #align(left)[
+          #underline([Decode stage])
+          ```c
+        if (isLoad) hold = 1; 
+        PCnext = PC + 4;
+        ```
+        ]
+      ]
+    ]
+  ],
+  [
+    *Step 2:* JAL type\
+  ], [
+    #align(center)[
+      #box(stroke: 1pt, inset: 4pt, radius: 4pt)[
+        #align(left)[
+          #underline([Decode stage])
+          ```c
+        hold = 1;
+        PCnext = PCIF+imm;
+          ```
+        ]
+      ]
+    ]
+  ],
+  [
+    *Step 3:* JALR type
+  ], [
+    #align(center)[
+      #box(stroke: 1pt, inset: 4pt, radius: 4pt)[
+        #align(left)[
+          #underline([Decode stage])
+          ```c
+          isBranch = 1;
+          ```
+          #underline([Execute stage])
+          ```c
+          PCnext = aluOut
+          flush = 1
+          ```
+        ]
+      ]
+    ]
+  ],
+  [
+    *Step 3* Conditional
+  ], [
+    #align(center)[
+      #box(stroke: 1pt, inset: 4pt, radius: 4pt)[
+        #align(left)[
+          #underline([Decode stage])
+          ```systemverilog
+          if (prediction_new) 
+            PCnext = PCIF + imm;
+          else PCnext = PC + 4;
 
-
+          isBranch = 1;
+          ```
+          #underline([Execute stage])
+          ```systemverilog
+          if (branch_confirmed) 
+            case ({prediction, branch_confirmed}) 
+              2'b00: // predicted flase, actually false
+                prediction_new = prediction;
+              2'b01: // predicted false, actually true
+                prediction_new = !prediction;
+              2'b10: // predicted true, actually false
+                flush = 1;
+                prediction_new = !prediction;
+              2'b11: // predicted true, actually true
+                begin
+                  flush = 1;
+                  prediction_new = prediction;
+                end
+            endcase
+          ```
+        ]
+      ]
+    ]
+  ],
+)]
 
 

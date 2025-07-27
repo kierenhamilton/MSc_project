@@ -119,14 +119,12 @@ module branching (
     end
 
     if (!flush_internal) begin : decode_stage
-
       branching_out.flush = 0;
       branching_out.hold = 0;
       branching_out.PCnext = 0;
       branching_out.PCcurrent = 0;
       branching_out.branch = 0;
       branching_out.bypass = 0;
-
       unique case (branchType)
         NON_TYPE: if (isLoad) branching_out.hold = 1;
         JAL_TYPE: begin
@@ -150,6 +148,5 @@ module branching (
       endcase
     end : decode_stage
   end
-
 endmodule
 
