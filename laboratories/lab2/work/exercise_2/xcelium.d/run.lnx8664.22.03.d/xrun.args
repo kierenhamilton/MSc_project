@@ -1,0 +1,8 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-seed
+random
+../../../../testbenches/exercise_2_tb.sv
+./regMem.sv

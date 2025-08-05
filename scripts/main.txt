@@ -9,45 +9,52 @@ Disassembly of section .text:
    4:	00112623          	sw	ra,12(sp)
    8:	00812423          	sw	s0,8(sp)
    c:	01010413          	addi	s0,sp,16
-  10:	00b00513          	li	a0,11
-  14:	010000ef          	jal	ra,24 <factorial>
-  18:	00050793          	mv	a5,a0
-  1c:	fef42a23          	sw	a5,-12(s0)
-  20:	0000006f          	j	20 <main+0x20>
+  10:	fe042a23          	sw	zero,-12(s0)
+  14:	01100593          	li	a1,17
+  18:	01400513          	li	a0,20
+  1c:	010000ef          	jal	ra,2c <binomialCoeff>
+  20:	00050793          	mv	a5,a0
+  24:	fef42a23          	sw	a5,-12(s0)
+  28:	0000006f          	j	28 <main+0x28>
 
-00000024 <factorial>:
-  24:	ff010113          	addi	sp,sp,-16
-  28:	00112623          	sw	ra,12(sp)
-  2c:	00812423          	sw	s0,8(sp)
-  30:	01010413          	addi	s0,sp,16
-  34:	fea42a23          	sw	a0,-12(s0)
-  38:	ff442703          	lw	a4,-12(s0)
-  3c:	00100793          	li	a5,1
-  40:	00e7e663          	bltu	a5,a4,4c <factorial+0x28>
-  44:	00100793          	li	a5,1
-  48:	0280006f          	j	70 <factorial+0x4c>
-  4c:	ff442783          	lw	a5,-12(s0)
-  50:	fff78793          	addi	a5,a5,-1
-  54:	00078513          	mv	a0,a5
-  58:	fcdff0ef          	jal	ra,24 <factorial>
-  5c:	00050793          	mv	a5,a0
-  60:	ff442583          	lw	a1,-12(s0)
-  64:	00078513          	mv	a0,a5
-  68:	01c000ef          	jal	ra,84 <__mulsi3>
-  6c:	00050793          	mv	a5,a0
-  70:	00078513          	mv	a0,a5
-  74:	00c12083          	lw	ra,12(sp)
-  78:	00812403          	lw	s0,8(sp)
-  7c:	01010113          	addi	sp,sp,16
-  80:	00008067          	ret
-
-00000084 <__mulsi3>:
-  84:	00050613          	mv	a2,a0
-  88:	00000513          	li	a0,0
-  8c:	0015f693          	andi	a3,a1,1
-  90:	00068463          	beqz	a3,98 <__mulsi3+0x14>
-  94:	00c50533          	add	a0,a0,a2
-  98:	0015d593          	srli	a1,a1,0x1
-  9c:	00161613          	slli	a2,a2,0x1
-  a0:	fe0596e3          	bnez	a1,8c <__mulsi3+0x8>
-  a4:	00008067          	ret
+0000002c <binomialCoeff>:
+  2c:	fe810113          	addi	sp,sp,-24
+  30:	00112a23          	sw	ra,20(sp)
+  34:	00812823          	sw	s0,16(sp)
+  38:	00912623          	sw	s1,12(sp)
+  3c:	01810413          	addi	s0,sp,24
+  40:	fea42623          	sw	a0,-20(s0)
+  44:	feb42423          	sw	a1,-24(s0)
+  48:	fe842703          	lw	a4,-24(s0)
+  4c:	fec42783          	lw	a5,-20(s0)
+  50:	00e7d663          	bge	a5,a4,5c <binomialCoeff+0x30>
+  54:	00000793          	li	a5,0
+  58:	05c0006f          	j	b4 <binomialCoeff+0x88>
+  5c:	fe842783          	lw	a5,-24(s0)
+  60:	00078863          	beqz	a5,70 <binomialCoeff+0x44>
+  64:	fe842703          	lw	a4,-24(s0)
+  68:	fec42783          	lw	a5,-20(s0)
+  6c:	00f71663          	bne	a4,a5,78 <binomialCoeff+0x4c>
+  70:	00100793          	li	a5,1
+  74:	0400006f          	j	b4 <binomialCoeff+0x88>
+  78:	fec42783          	lw	a5,-20(s0)
+  7c:	fff78713          	addi	a4,a5,-1
+  80:	fe842783          	lw	a5,-24(s0)
+  84:	fff78793          	addi	a5,a5,-1
+  88:	00078593          	mv	a1,a5
+  8c:	00070513          	mv	a0,a4
+  90:	f9dff0ef          	jal	ra,2c <binomialCoeff>
+  94:	00050493          	mv	s1,a0
+  98:	fec42783          	lw	a5,-20(s0)
+  9c:	fff78793          	addi	a5,a5,-1
+  a0:	fe842583          	lw	a1,-24(s0)
+  a4:	00078513          	mv	a0,a5
+  a8:	f85ff0ef          	jal	ra,2c <binomialCoeff>
+  ac:	00050793          	mv	a5,a0
+  b0:	00f487b3          	add	a5,s1,a5
+  b4:	00078513          	mv	a0,a5
+  b8:	01412083          	lw	ra,20(sp)
+  bc:	01012403          	lw	s0,16(sp)
+  c0:	00c12483          	lw	s1,12(sp)
+  c4:	01810113          	addi	sp,sp,24
+  c8:	00008067          	ret

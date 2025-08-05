@@ -1,0 +1,68 @@
+2025-07-29 18:28:09.101472 (1216930) main____ INFO    ----------------------------------------
+2025-07-29 18:28:09.101546 (1216930) main____ INFO    Jasper version info
+2025-07-29 18:28:09.101553 (1216930) main____ INFO      tool      : Jasper 2023.09
+2025-07-29 18:28:09.101561 (1216930) main____ INFO      version   : 2023.09 FCS 64 bits
+2025-07-29 18:28:09.101565 (1216930) main____ INFO      build date: 2023.09.27 19:40:18 UTC
+2025-07-29 18:28:09.101569 (1216930) main____ INFO    ----------------------------------------
+2025-07-29 18:28:09.101572 (1216930) main____ INFO    Runtime info:
+2025-07-29 18:28:09.101576 (1216930) main____ INFO      platform  : Linux 4.18.0-553.58.1.el8_10.x86_64 x86_64
+2025-07-29 18:28:09.101583 (1216930) main____ INFO      hostname  : srv04154
+2025-07-29 18:28:09.101588 (1216930) main____ INFO      pid       : 1216930
+2025-07-29 18:28:09.101592 (1216930) main____ INFO      arguments : '-style' 'windows' 'run.tcl'
+2025-07-29 18:28:09.101597 (1216930) main____ INFO      locale    : UTF-8
+2025-07-29 18:28:09.101601 (1216930) main____ INFO    ----------------------------------------
+2025-07-29 18:28:09.101604 (1216930) main____ INFO    System resource limits info:
+2025-07-29 18:28:09.101608 (1216930) main____ INFO      virtual memory: unlimited
+2025-07-29 18:28:09.101612 (1216930) main____ INFO      cpu time      : unlimited
+2025-07-29 18:28:09.101621 (1216930) main____ INFO      processes     : 1031471
+2025-07-29 18:28:09.101631 (1216930) main____ INFO      stack size    : 8388608 B
+2025-07-29 18:28:09.101636 (1216930) main____ INFO      core file size: 0 B
+2025-07-29 18:28:09.101640 (1216930) main____ INFO      open files    : 1024
+2025-07-29 18:28:09.101644 (1216930) main____ INFO      file size     : unlimited
+2025-07-29 18:28:09.101647 (1216930) main____ INFO    ----------------------------------------
+2025-07-29 18:28:09.101651 (1216930) main____ INFO    Memory statistics:
+2025-07-29 18:28:09.101655 (1216930) main____ INFO      total physical memory  : 264095156 kB
+2025-07-29 18:28:09.101658 (1216930) main____ INFO      free physical memory   : 237572708 kB
+2025-07-29 18:28:09.101662 (1216930) main____ INFO      committed address space: 40847092 kB
+2025-07-29 18:28:09.101665 (1216930) main____ INFO    ----------------------------------------
+2025-07-29 18:28:09.102494 (1216930) main____ INFO    Important environment variables:
+2025-07-29 18:28:09.102508 (1216930) main____ INFO      CDS_AUTO_64BIT     : 'ALL'
+2025-07-29 18:28:09.102514 (1216930) main____ INFO      CDS_JASPER         : '/eda/cadence/2023-24/RHELx86/JASPER_23.09.000'
+2025-07-29 18:28:09.102523 (1216930) main____ INFO      CDS_LIC_FILE       : '5280@cadencelm.soton.ac.uk:5280@cadencelm3.soton.ac.uk'
+2025-07-29 18:28:09.102528 (1216930) main____ INFO      CDS_XCELIUM        : '/eda/cadence/xcelium'
+2025-07-29 18:28:09.102532 (1216930) main____ INFO      DISPLAY            : ':1004'
+2025-07-29 18:28:09.102536 (1216930) main____ INFO      JASPER_INSTALL_DIR : '/eda/cadence/2023-24/RHELx86/JASPER_23.09.000'
+2025-07-29 18:28:09.102541 (1216930) main____ INFO      JASPER_KERNEL_CHECK: '1'
+2025-07-29 18:28:09.102545 (1216930) main____ INFO      JASPER_OS_CHECK    : '1'
+2025-07-29 18:28:09.102550 (1216930) main____ INFO      LANG               : 'en_GB.UTF-8'
+2025-07-29 18:28:09.102554 (1216930) main____ INFO      TMPDIR             : '/tmp'
+2025-07-29 18:28:09.102557 (1216930) main____ INFO    ----------------------------------------
+2025-07-29 18:28:09.105658 (1216930) lic_core INFO    Initializing license system ...
+2025-07-29 18:28:09.109769 (1216930) lic_core INFO    ... license system initialized.
+2025-07-29 18:28:09.126831 (1216930) lic__man INFO    Claim 'main' for <ui>.
+2025-07-29 18:28:09.126917 (1216930) lic_core INFO    (1) checking out 'jasper_interactive' ...
+2025-07-29 18:28:09.143579 (1216930) lic_core INFO    ... (1) checkout succeeded
+2025-07-29 18:28:09.143649 (1216930) lic__man INFO    Claim 'fpv' for <ui>.
+2025-07-29 18:28:09.143667 (1216930) lic_core INFO    (2) checking out 'jasper_fpv' ...
+2025-07-29 18:28:09.156150 (1216930) lic_core INFO    ... (2) checkout failed (error: -5) ("FLEXnet ERROR(-5, 0, 0): No such feature exists.")
+2025-07-29 18:28:09.156213 (1216930) lic_core INFO    (3) checking out 'jasper_fao' ...
+2025-07-29 18:28:09.175366 (1216930) lic_core INFO    ... (3) checkout succeeded
+2025-07-29 18:28:09.176175 (1216930) main____ INFO    Tool inactivity delay is 480000 ms.
+2025-07-29 18:28:09.801264 (1216930) lic__man INFO    Claim 'fpv' for <ui>.
+2025-07-29 18:28:10.199102 (1216930) lic__man INFO    Unclaim 'fpv' for <ui>.
+2025-07-29 18:28:10.199157 (1216930) lic__man INFO    Claim 'fpv' for <ui>.
+2025-07-29 18:28:10.218470 (1216930) session_ INFO    Starting analysis session with session id 'session_0' (launcher: <local>) ...
+2025-07-29 18:28:10.223615 (1216930) session_ INFO    Analysis session with session id 'session_0' started (pid: 1216956)
+2025-07-29 18:28:11.155998 (1216930) session_ INFO    Analysis session 'session_0' connected to the console (host: 127.0.0.1:43598)
+2025-07-29 18:28:11.611240 (1216930) main____ INFO    Releasing console memory by request of analysis session 'session_0'.
+2025-07-29 18:28:11.612056 (1216930) lic__man INFO    Unclaim everything for 'session_0'.
+2025-07-29 18:28:12.173773 (1216930) lic__man INFO    Unclaim everything for 'session_0'.
+2025-07-29 18:28:12.250733 (1216930) lic__man INFO    Claim 'fpv' for 'session_0'.
+2025-07-29 18:28:12.250782 (1216930) lic__man INFO    Claim 'fpv' for 'session_0/prove-0'.
+2025-07-29 18:28:12.944792 (1216930) lic__man INFO    Unclaim everything for 'session_0/prove-0'.
+2025-07-29 18:36:24.960921 (1216930) lic__man INFO    Entering idle state.
+2025-07-29 18:38:56.484229 (1216930) main____ INFO    About to exit: requested from GUI
+2025-07-29 18:38:56.688545 (1216930) session_ INFO    Analysis session 'session_0' disconnected.
+2025-07-29 18:38:56.701278 (1216930) lic_core INFO    (1) checkin jasper_interactive
+2025-07-29 18:38:56.702544 (1216930) lic_core INFO    (3) checkin jasper_fao
+2025-07-29 18:38:56.706330 (1216930) main____ INFO    Exiting with status 0.

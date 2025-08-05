@@ -1,5 +1,5 @@
 xrun(64): 22.03-s005: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	22.03-s005: Started on Jul 07, 2025 at 17:23:56 BST
+TOOL:	xrun(64)	22.03-s005: Started on Jul 24, 2025 at 14:26:54 BST
 xrun
 	-seed random
 	../../../single_cycle/include/codes.sv
@@ -32,130 +32,22 @@ xrun
 	../../../single_cycle/rtl/progMem.sv
 	../../../single_cycle/rtl/ram.sv
 	../../../single_cycle/rtl/regMem.sv
-Recompiling... reason: file '/home/kh5u24/summer/MSc_project/single_cycle/testbench/lab1_tb.sv' is newer than expected.
-	expected: Mon Jul  7 17:23:21 2025
-	actual:   Mon Jul  7 17:23:52 2025
-file: ../../../single_cycle/testbench/lab1_tb.sv
-	module worklib.lab1_tb:sv
-		errors: 0, warnings: 0
-file: ../../../single_cycle/rtl/alu.sv
-module alu (
-         |
-xmvlog: *W,RECOME (../../../single_cycle/rtl/alu.sv,4|9): recompiling design unit worklib.alu:sv.
-	First compiled from line 4 of ../../../single_cycle/rtl/alu.sv.
-file: ../../../single_cycle/rtl/B_m.sv
-module B_m (
-         |
-xmvlog: *W,RECOME (../../../single_cycle/rtl/B_m.sv,1|9): recompiling design unit worklib.B_m:sv.
-	First compiled from line 1 of ../../../single_cycle/rtl/B_m.sv.
-file: ../../../single_cycle/rtl/branLog.sv
-module branLog (
-             |
-xmvlog: *W,RECOME (../../../single_cycle/rtl/branLog.sv,1|13): recompiling design unit worklib.branLog:sv.
-	First compiled from line 1 of ../../../single_cycle/rtl/branLog.sv.
-file: ../../../single_cycle/rtl/C_m.sv
-module C_m (
-         |
-xmvlog: *W,RECOME (../../../single_cycle/rtl/C_m.sv,1|9): recompiling design unit worklib.C_m:sv.
-	First compiled from line 1 of ../../../single_cycle/rtl/C_m.sv.
-file: ../../../single_cycle/rtl/decoder.sv
-module decoder (
-             |
-xmvlog: *W,RECOME (../../../single_cycle/rtl/decoder.sv,5|13): recompiling design unit worklib.decoder:sv.
-	First compiled from line 5 of ../../../single_cycle/rtl/decoder.sv.
-file: ../../../single_cycle/rtl/D_m.sv
-module D_m (
-         |
-xmvlog: *W,RECOME (../../../single_cycle/rtl/D_m.sv,1|9): recompiling design unit worklib.D_m:sv.
-	First compiled from line 1 of ../../../single_cycle/rtl/D_m.sv.
-file: ../../../single_cycle/rtl/E_m.sv
-module E_m(
-         |
-xmvlog: *W,RECOME (../../../single_cycle/rtl/E_m.sv,1|9): recompiling design unit worklib.E_m:sv.
-	First compiled from line 1 of ../../../single_cycle/rtl/E_m.sv.
-file: ../../../single_cycle/rtl/F_m.sv
-module F_m(
-         |
-xmvlog: *W,RECOME (../../../single_cycle/rtl/F_m.sv,1|9): recompiling design unit worklib.F_m:sv.
-	First compiled from line 1 of ../../../single_cycle/rtl/F_m.sv.
-file: ../../../single_cycle/rtl/G_m.sv
-module G_m(
-         |
-xmvlog: *W,RECOME (../../../single_cycle/rtl/G_m.sv,1|9): recompiling design unit worklib.G_m:sv.
-	First compiled from line 1 of ../../../single_cycle/rtl/G_m.sv.
-file: ../../../single_cycle/rtl/netlist.sv
-module netlist (
-             |
-xmvlog: *W,RECOME (../../../single_cycle/rtl/netlist.sv,1|13): recompiling design unit worklib.netlist:sv.
-	First compiled from line 1 of ../../../single_cycle/rtl/netlist.sv.
-file: ../../../single_cycle/rtl/progCounter.sv
-module progCounter (
-                 |
-xmvlog: *W,RECOME (../../../single_cycle/rtl/progCounter.sv,1|17): recompiling design unit worklib.progCounter:sv.
-	First compiled from line 1 of ../../../single_cycle/rtl/progCounter.sv.
-file: ../../../single_cycle/rtl/progMem.sv
-module progMem (
-             |
-xmvlog: *W,RECOME (../../../single_cycle/rtl/progMem.sv,1|13): recompiling design unit worklib.progMem:sv.
-	First compiled from line 1 of ../../../single_cycle/rtl/progMem.sv.
-file: ../../../single_cycle/rtl/ram.sv
-module ram (
-         |
-xmvlog: *W,RECOME (../../../single_cycle/rtl/ram.sv,1|9): recompiling design unit worklib.ram:sv.
-	First compiled from line 1 of ../../../single_cycle/rtl/ram.sv.
-file: ../../../single_cycle/rtl/regMem.sv
-module regMem (
-            |
-xmvlog: *W,RECOME (../../../single_cycle/rtl/regMem.sv,1|12): recompiling design unit worklib.regMem:sv.
-	First compiled from line 1 of ../../../single_cycle/rtl/regMem.sv.
-		Caching library 'worklib' ....... Done
-	Elaborating the design hierarchy:
-	Top level design units:
-		codes
-		$unit_0x02536ee8
-		lab1_tb
-xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
-      .aluCode(aluCode),
-                     |
-xmelab: *W,ENUMERR (/home/kh5u24/summer/MSc_project/single_cycle/rtl/netlist.sv,92|21): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
-	Building instance overlay tables: .................... Done
-	Generating native compiled code:
-		worklib.lab1_tb:sv <0x0536064e>
-			streams:   5, words:  8961
-	Building instance specific data structures.
-	Loading native compiled code:     .................... Done
-	Design hierarchy summary:
-		                       Instances  Unique
-		Modules:                      15      15
-		Verilog packages:              1       1
-		Registers:                    47      49
-		Scalar wires:                 16       -
-		Vectored wires:               31       -
-		Always blocks:                12      12
-		Initial blocks:                3       3
-		Cont. assignments:             5       5
-		Pseudo assignments:            2       2
-		Compilation units:             1       1
-		SV Class declarations:         1       1
-		SV Class specializations:      1       1
-		Simulation timescale:      100ps
-	Writing initial simulation snapshot: worklib.lab1_tb:sv
 Loading snapshot worklib.lab1_tb:sv .................... Done
-SVSEED set randomly from command line: -1188940964
+SVSEED set randomly from command line: -114812183
 xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
 xcelium> source /eda/cadence/xcelium/tools/xcelium/files/xmsimrc
 xcelium> run
-A=60906, B=31898, A*B=1942779588, measured=1942779588, PASS
-A= 7903, B=52649, A*B= 416085047, measured= 416085047, PASS
-A= 1743, B=10714, A*B=  18674502, measured=  18674502, PASS
-A=21401, B=46328, A*B= 991465528, measured= 991465528, PASS
-A=11813, B=32059, A*B= 378712967, measured= 378712967, PASS
-A=32485, B=63850, A*B=2074167250, measured=2074167250, PASS
-A=49489, B=47957, A*B=2373343973, measured=2373343973, PASS
-A= 2865, B=30618, A*B=  87720570, measured=  87720570, PASS
-A=46331, B=15119, A*B= 700478389, measured= 700478389, PASS
-A=11164, B=36182, A*B= 403935848, measured= 403935848, PASS
+A=17203, B= 5139, A*B=  88406217, measured=  88406217, PASS
+A=41134, B=18382, A*B= 756125188, measured= 756125188, PASS
+A=61778, B=33597, A*B=2075555466, measured=2075555466, PASS
+A= 3559, B=14747, A*B=  52484573, measured=  52484573, PASS
+A=31630, B=34536, A*B=1092373680, measured=1092373680, PASS
+A= 2205, B=38982, A*B=  85955310, measured=  85955310, PASS
+A=35104, B=58966, A*B=2069942464, measured=2069942464, PASS
+A=49994, B=10424, A*B= 521137456, measured= 521137456, PASS
+A=40748, B=45117, A*B=1838427516, measured=1838427516, PASS
+A=41584, B=  852, A*B=  35429568, measured=  35429568, PASS
 Simulation complete via $finish(1) at time 303 US + 0
 /home/kh5u24/summer/MSc_project/single_cycle/testbench/lab1_tb.sv:59 		$finish;
 xcelium> exit
-TOOL:	xrun(64)	22.03-s005: Exiting on Jul 07, 2025 at 17:23:57 BST  (total: 00:00:01)
+TOOL:	xrun(64)	22.03-s005: Exiting on Jul 24, 2025 at 14:26:55 BST  (total: 00:00:01)

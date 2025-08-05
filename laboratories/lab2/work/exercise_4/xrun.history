@@ -1,0 +1,10 @@
+s1(13Jul2025:17:34:58):  xrun exercise_4_tb.sv branchLog.sv 
+s2(13Jul2025:17:35:15):  xrun exercise_4_tb.sv branchLog.sv 
+s3(13Jul2025:17:36:05):  xrun exercise_4_tb.sv branchLog.sv 
+s4(13Jul2025:17:36:29):  xrun exercise_4_tb.sv branchLog.sv 
+s5(13Jul2025:17:37:22):  xrun exercise_4_tb.sv branchLog.sv 
+s6(13Jul2025:17:37:39):  xrun exercise_4_tb.sv branchLog.sv 
+s7(13Jul2025:17:38:30):  xrun exercise_4_tb.sv branchLog.sv 
+s8(13Jul2025:17:39:13):  xrun exercise_4_tb.sv branchLog.sv 
+s9(05Aug2025:14:34:36):  xrun branchLog.sv exercise_4_tb.sv 
+s10(05Aug2025:14:39:13):  xrun -seed random ../../../../testbenches/exercise_4_tb.sv ./branchLog.sv 

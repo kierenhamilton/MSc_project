@@ -1,0 +1,164 @@
+xrun(64): 22.03-s005: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.03-s005: Started on Aug 05, 2025 at 14:24:59 BST
+xrun
+	-seed random
+	../../../../testbenches/exercise_1_tb.sv
+	./alu.sv
+file: ../../../../testbenches/exercise_1_tb.sv
+	module worklib.exercise_1_tb:sv
+		errors: 0, warnings: 0
+file: ./alu.sv
+	module worklib.alu:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		$unit_0x043a6d85
+		exercise_1_tb
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.alu:sv <0x6efd04e9>
+			streams:   1, words:  2775
+		worklib.exercise_1_tb:sv <0x5614a873>
+			streams:   6, words: 15693
+		worklib.\$unit_0x043a6d85 :compilation_unit <0x1b14eba2>
+			streams:   7, words:  2143
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                       Instances  Unique
+		Modules:                       2       2
+		Registers:                    34      37
+		Scalar wires:                  6       -
+		Vectored wires:                5       -
+		Always blocks:                 1       1
+		Initial blocks:                2       2
+		Pseudo assignments:            4       4
+		Compilation units:             1       1
+		SV Class declarations:         1       1
+		SV Class specializations:      1       1
+		Simulation timescale:      100ps
+	Writing initial simulation snapshot: worklib.exercise_1_tb:sv
+Loading snapshot worklib.exercise_1_tb:sv .................... Done
+SVSEED set randomly from command line: 878911582
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /eda/cadence/xcelium/tools/xcelium/files/xmsimrc
+xcelium> run
+a=1311994144, b= 686455030, control=OR, result= 1861974518, measured= 1861974518, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=4036189980, b=1941218987, control=SLT, result=          1, measured=          1, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=1483011827, b=3956573719, control=XOR, result=-1280282396, measured=-1280282396, carry_flag=0, zero_flag=0, neg_flag=1, PASS
+a= 191069957, b= 755788264, control=AND, result=  151021824, measured=  151021824, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=4170451992, b=1332160603, control=SLT, result=          1, measured=          1, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=2930279191, b= 314596177, control=SUB, result=-1679284282, measured=-1679284282, carry_flag=0, zero_flag=0, neg_flag=1, PASS
+a=3569252976, b=4102642074, control=SLT, result=          1, measured=          1, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=1313564839, b=1376669415, control=OR, result= 1582264039, measured= 1582264039, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a= 277830226, b=1859413819, control=OR, result= 2128576379, measured= 2128576379, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=2815539582, b= 308220997, control=ADD, result=-1171206717, measured=-1171206717, carry_flag=0, zero_flag=0, neg_flag=1, PASS
+a=3451775776, b=1523661482, control=AND, result= 1217473056, measured= 1217473056, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=1879262427, b=3661255776, control=SLTU, result=          1, measured=          1, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=2837107098, b=4200131751, control=SLTU, result=          1, measured=          1, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=2142590896, b=4255007163, control=OR, result=   -4237381, measured=   -4237381, carry_flag=0, zero_flag=0, neg_flag=1, PASS
+a=2912022269, b=1656600769, control=ADD, result=  273655742, measured=  273655742, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=4209951315, b= 179788628, control=AND, result=  178668112, measured=  178668112, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=1798178448, b=1824798606, control=OR, result= 1877882782, measured= 1877882782, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=3426786723, b=2049376480, control=SUB, result= 1377410243, measured= 1377410243, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=3969505896, b=1043973110, control=AND, result=  739885664, measured=  739885664, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=3356118637, b=1612285597, control=ADD, result=  673436938, measured=  673436938, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=2432379695, b=2633751279, control=SLTU, result=          1, measured=          1, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=1487085924, b=1249998899, control=SUB, result=  237087025, measured=  237087025, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=3364072016, b=1548844903, control=SLTU, result=          0, measured=          0, carry_flag=0, zero_flag=1, neg_flag=0, PASS
+a=4038546304, b= 295414465, control=SLTU, result=          0, measured=          0, carry_flag=0, zero_flag=1, neg_flag=0, PASS
+a= 581330945, b=3274804775, control=AND, result=   35653633, measured=   35653633, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a= 566803452, b=2691283570, control=OR, result=-1578517506, measured=-1578517506, carry_flag=0, zero_flag=0, neg_flag=1, PASS
+a=3995222661, b=3997720261, control=AND, result= -301972859, measured= -301972859, carry_flag=0, zero_flag=0, neg_flag=1, PASS
+a= 912797446, b=1428464866, control=SLT, result=          1, measured=          1, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a= 731881465, b=2952340877, control=XOR, result=-2073642380, measured=-2073642380, carry_flag=0, zero_flag=0, neg_flag=1, PASS
+a=4032777001, b= 919029833, control=AND, result=  809977865, measured=  809977865, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=2988043643, b=2073357806, control=SLT, result=          1, measured=          1, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=2188114229, b=3263415566, control=OR, result=-1024721601, measured=-1024721601, carry_flag=0, zero_flag=0, neg_flag=1, PASS
+a= 444423905, b=1306457497, control=SLTU, result=          1, measured=          1, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a= 169241272, b=3567850456, control=XOR, result= -557876896, measured= -557876896, carry_flag=0, zero_flag=0, neg_flag=1, PASS
+a=1519901448, b=2664180559, control=AND, result=  444861192, measured=  444861192, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=2363595813, b= 590508173, control=SLT, result=          1, measured=          1, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a= 183854844, b=2665274169, control=SUB, result= 1813547971, measured= 1813547971, carry_flag=1, zero_flag=0, neg_flag=0, PASS
+a= 786761463, b= 457483166, control=SLTU, result=          0, measured=          0, carry_flag=0, zero_flag=1, neg_flag=0, PASS
+a=1552893497, b=2031100663, control=SLTU, result=          1, measured=          1, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=2183545460, b=2014256569, control=ADD, result=  -97165267, measured=  -97165267, carry_flag=0, zero_flag=0, neg_flag=1, PASS
+a=3994613607, b= 993698771, control=SUB, result=-1294052460, measured=-1294052460, carry_flag=0, zero_flag=0, neg_flag=1, PASS
+a=2635645402, b= 818565985, control=SUB, result= 1817079417, measured= 1817079417, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=1911747371, b=2861697013, control=SLTU, result=          1, measured=          1, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=2241952437, b=2846419799, control=XOR, result=  738824674, measured=  738824674, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a= 393512202, b= 179489334, control=SLTU, result=          0, measured=          0, carry_flag=0, zero_flag=1, neg_flag=0, PASS
+a=2371459813, b=1952502212, control=SLT, result=          1, measured=          1, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a= 975599252, b=3606956031, control=SUB, result= 1663610517, measured= 1663610517, carry_flag=1, zero_flag=0, neg_flag=0, PASS
+a=1255624236, b=  18601283, control=SLTU, result=          0, measured=          0, carry_flag=0, zero_flag=1, neg_flag=0, PASS
+a= 728077621, b= 174562040, control=SUB, result=  553515581, measured=  553515581, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=2188188862, b=1404527320, control=AND, result=   35979416, measured=   35979416, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=2037990467, b= 863345389, control=AND, result=  829489217, measured=  829489217, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a= 450491982, b= 794895731, control=ADD, result= 1245387713, measured= 1245387713, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a= 913247068, b= 236128648, control=ADD, result= 1149375716, measured= 1149375716, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=4093183850, b=1354023891, control=XOR, result=-1555184455, measured=-1555184455, carry_flag=0, zero_flag=0, neg_flag=1, PASS
+a=1247545848, b= 959204751, control=ADD, result=-2088216697, measured=-2088216697, carry_flag=0, zero_flag=0, neg_flag=1, PASS
+a=1225277873, b=2193407485, control=XOR, result= -877331380, measured= -877331380, carry_flag=0, zero_flag=0, neg_flag=1, PASS
+a=1294344609, b=1558184667, control=AND, result= 1277165697, measured= 1277165697, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=3725134747, b= 773222801, control=OR, result=  -31491173, measured=  -31491173, carry_flag=0, zero_flag=0, neg_flag=1, PASS
+a=3414005981, b=3222606466, control=ADD, result=-1953322145, measured=-1953322145, carry_flag=0, zero_flag=0, neg_flag=1, PASS
+a= 187027476, b=2513643682, control=SLTU, result=          1, measured=          1, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=1296236960, b=2102339339, control=OR, result= 2102339499, measured= 2102339499, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=4016358981, b=2747645344, control=SUB, result= 1268713637, measured= 1268713637, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=1901904413, b=2902891363, control=SUB, result=-1000986950, measured=-1000986950, carry_flag=1, zero_flag=0, neg_flag=1, PASS
+a= 792283892, b=1434652058, control=AND, result=   83953808, measured=   83953808, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=2224021012, b= 908289699, control=AND, result=   67323392, measured=   67323392, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=2243210842, b=2774957405, control=ADD, result=  723200951, measured=  723200951, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=2828535292, b= 854478910, control=OR, result=-1157736962, measured=-1157736962, carry_flag=0, zero_flag=0, neg_flag=1, PASS
+a=2450369346, b=2868304346, control=AND, result=-2113631934, measured=-2113631934, carry_flag=0, zero_flag=0, neg_flag=1, PASS
+a=2397507346, b=3713104682, control=SUB, result=-1315597336, measured=-1315597336, carry_flag=1, zero_flag=0, neg_flag=1, PASS
+a=2177349413, b= 646862355, control=SUB, result= 1530487058, measured= 1530487058, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=3037282098, b=  74688998, control=ADD, result=-1182996200, measured=-1182996200, carry_flag=0, zero_flag=0, neg_flag=1, PASS
+a=1873601622, b=2800046751, control=XOR, result= -917915959, measured= -917915959, carry_flag=0, zero_flag=0, neg_flag=1, PASS
+a=2677517762, b=1478083613, control=AND, result=  403801088, measured=  403801088, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=1454698950, b=4178726708, control=OR, result=   -4784138, measured=   -4784138, carry_flag=0, zero_flag=0, neg_flag=1, PASS
+a=3147703069, b=1681591804, control=SLT, result=          1, measured=          1, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=1814622781, b= 728306861, control=OR, result= 1869215421, measured= 1869215421, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a= 199411249, b=1231393681, control=AND, result=  157319697, measured=  157319697, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=2325286466, b=1125084629, control=SUB, result= 1200201837, measured= 1200201837, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=2243017910, b=1379619744, control=AND, result=    3215520, measured=    3215520, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=1580575898, b= 749845513, control=SLTU, result=          0, measured=          0, carry_flag=0, zero_flag=1, neg_flag=0, PASS
+a=2234674779, b=1852585414, control=XOR, result= -346137699, measured= -346137699, carry_flag=0, zero_flag=0, neg_flag=1, PASS
+a=3470395112, b=1465777130, control=SLTU, result=          0, measured=          0, carry_flag=0, zero_flag=1, neg_flag=0, PASS
+a=1855767278, b= 957492438, control=OR, result= 2141122302, measured= 2141122302, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=2702111432, b=1679118807, control=SUB, result= 1022992625, measured= 1022992625, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=1753705980, b= 742123428, control=ADD, result=-1799137888, measured=-1799137888, carry_flag=0, zero_flag=0, neg_flag=1, PASS
+a= 838428857, b=1809144548, control=OR, result= 2080209661, measured= 2080209661, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=2130695377, b=1388714878, control=SLT, result=          0, measured=          0, carry_flag=0, zero_flag=1, neg_flag=0, PASS
+a=4273475767, b=3670245489, control=SLTU, result=          0, measured=          0, carry_flag=0, zero_flag=1, neg_flag=0, PASS
+a=2394915756, b=2619786126, control=OR, result=-1631599698, measured=-1631599698, carry_flag=0, zero_flag=0, neg_flag=1, PASS
+a=4133414740, b=2001530712, control=XOR, result=-2129524724, measured=-2129524724, carry_flag=0, zero_flag=0, neg_flag=1, PASS
+a=  36422558, b=2845271612, control=OR, result=-1413486658, measured=-1413486658, carry_flag=0, zero_flag=0, neg_flag=1, PASS
+a= 265725623, b=1146993656, control=AND, result=   72655536, measured=   72655536, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a= 658673829, b=2418356913, control=ADD, result=-1217936554, measured=-1217936554, carry_flag=0, zero_flag=0, neg_flag=1, PASS
+a=3470517480, b= 857958896, control=AND, result=   33775840, measured=   33775840, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=1998964321, b=2075127524, control=OR, result= 2142236389, measured= 2142236389, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=1197890366, b=1710492729, control=XOR, result=  580015879, measured=  580015879, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=2530550310, b= 421416791, control=SUB, result= 2109133519, measured= 2109133519, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=2216543663, b=2012655911, control=SLT, result=          1, measured=          1, carry_flag=0, zero_flag=0, neg_flag=0, PASS
+a=2591794429, b=1478422470, control=ADD, result= -224750397, measured= -224750397, carry_flag=0, zero_flag=0, neg_flag=1, PASS
+a= 785334643, b=3942247702, control=OR, result= -285217417, measured= -285217417, carry_flag=0, zero_flag=0, neg_flag=1, PASS
+------------------ALU REPORT-------------------
+ADD: PASS
+SUB: PASS
+SLL: PASS
+SLT: PASS
+SLTU: PASS
+XOR: PASS
+SRL: PASS
+SRA: PASS
+OR: PASS
+AND: PASS
+zero_flag: PASS
+carry_flag: PASS
+neg_flag: PASS
+xmsim: *W,RNQUIE: Simulation is complete.
+xcelium> exit
+TOOL:	xrun(64)	22.03-s005: Exiting on Aug 05, 2025 at 14:25:00 BST  (total: 00:00:01)

@@ -1,0 +1,74 @@
+xrun(64): 22.03-s005: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.03-s005: Started on Jul 27, 2025 at 17:40:29 BST
+xrun
+	forwarding_tb.sv
+	forwarding.sv
+file: forwarding_tb.sv
+	module worklib.forwarding_tb:sv
+		errors: 0, warnings: 0
+file: forwarding.sv
+	module worklib.forwarding:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		$unit_0x1946a931
+		forwarding_tb
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.forwarding:sv <0x2c72987a>
+			streams:   1, words:   511
+		worklib.forwarding_tb:sv <0x0cf598ea>
+			streams:   1, words: 25301
+		worklib.\$unit_0x1946a931 :compilation_unit <0x23eb896d>
+			streams:   7, words:  2143
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                       Instances  Unique
+		Modules:                       2       2
+		Registers:                    36      49
+		Scalar wires:                  3       -
+		Vectored wires:               12       -
+		Always blocks:                 1       1
+		Initial blocks:                1       1
+		Assertions:                   16      16
+		Compilation units:             1       1
+		SV Class declarations:         1       1
+		SV Class specializations:      1       1
+		Simulation timescale:      100ps
+	Writing initial simulation snapshot: worklib.forwarding_tb:sv
+Loading snapshot worklib.forwarding_tb:sv .................... Done
+SVSEED default: 1
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /eda/cadence/xcelium/tools/xcelium/files/xmsimrc
+xcelium> run
+Test 1: no forwarding
+Test 2: WB forwarding
+xmsim: *E,ASRTST (./forwarding_tb.sv,131): (time 70 NS) Assertion forwarding_tb.rs1F_forwarding_path_WB has failed 
+xmsim: *E,ASRTST (./forwarding_tb.sv,133): (time 70 NS) Assertion forwarding_tb.rs2F_forwarding_path_WB has failed 
+xmsim: *E,ASRTST (./forwarding_tb.sv,131): (time 100 NS) Assertion forwarding_tb.rs1F_forwarding_path_WB has failed 
+xmsim: *E,ASRTST (./forwarding_tb.sv,133): (time 100 NS) Assertion forwarding_tb.rs2F_forwarding_path_WB has failed 
+Test 3: MEM forwarding
+xmsim: *E,ASRTST (./forwarding_tb.sv,163): (time 120 NS) Assertion forwarding_tb.rs1F_forwarding_path_MEM has failed 
+xmsim: *E,ASRTST (./forwarding_tb.sv,165): (time 120 NS) Assertion forwarding_tb.rs2F_forwarding_path_MEM has failed 
+xmsim: *E,ASRTST (./forwarding_tb.sv,163): (time 130 NS) Assertion forwarding_tb.rs1F_forwarding_path_MEM has failed 
+xmsim: *E,ASRTST (./forwarding_tb.sv,165): (time 130 NS) Assertion forwarding_tb.rs2F_forwarding_path_MEM has failed 
+xmsim: *E,ASRTST (./forwarding_tb.sv,163): (time 140 NS) Assertion forwarding_tb.rs1F_forwarding_path_MEM has failed 
+xmsim: *E,ASRTST (./forwarding_tb.sv,165): (time 140 NS) Assertion forwarding_tb.rs2F_forwarding_path_MEM has failed 
+xmsim: *E,ASRTST (./forwarding_tb.sv,163): (time 150 NS) Assertion forwarding_tb.rs1F_forwarding_path_MEM has failed 
+xmsim: *E,ASRTST (./forwarding_tb.sv,165): (time 150 NS) Assertion forwarding_tb.rs2F_forwarding_path_MEM has failed 
+Test 4: EXE forwarding
+xmsim: *E,ASRTST (./forwarding_tb.sv,194): (time 170 NS) Assertion forwarding_tb.rs1F_forwarding_path_EXE has failed 
+xmsim: *E,ASRTST (./forwarding_tb.sv,196): (time 170 NS) Assertion forwarding_tb.rs2F_forwarding_path_EXE has failed 
+xmsim: *E,ASRTST (./forwarding_tb.sv,194): (time 180 NS) Assertion forwarding_tb.rs1F_forwarding_path_EXE has failed 
+xmsim: *E,ASRTST (./forwarding_tb.sv,196): (time 180 NS) Assertion forwarding_tb.rs2F_forwarding_path_EXE has failed 
+xmsim: *E,ASRTST (./forwarding_tb.sv,194): (time 190 NS) Assertion forwarding_tb.rs1F_forwarding_path_EXE has failed 
+xmsim: *E,ASRTST (./forwarding_tb.sv,196): (time 190 NS) Assertion forwarding_tb.rs2F_forwarding_path_EXE has failed 
+xmsim: *E,ASRTST (./forwarding_tb.sv,194): (time 200 NS) Assertion forwarding_tb.rs1F_forwarding_path_EXE has failed 
+xmsim: *E,ASRTST (./forwarding_tb.sv,196): (time 200 NS) Assertion forwarding_tb.rs2F_forwarding_path_EXE has failed 
+Simulation complete via $finish(1) at time 200 NS + 0
+./forwarding_tb.sv:199 		$finish;
+xcelium> exit
+TOOL:	xrun(64)	22.03-s005: Exiting on Jul 27, 2025 at 17:40:30 BST  (total: 00:00:01)

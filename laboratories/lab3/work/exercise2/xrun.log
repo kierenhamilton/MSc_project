@@ -1,0 +1,15 @@
+xrun(64): 22.03-s005: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.03-s005: Started on Jul 29, 2025 at 15:55:37 BST
+xrun
+	branching.sv
+file: branching.sv
+					if (is_store) begin
+					           |
+xmvlog: *E,UNDIDN (branching.sv,88|16): 'is_store': undeclared identifier [12.5(IEEE)].
+	module worklib.branching:sv
+		errors: 1, warnings: 0
+xmvlog: *W,NOTOPL: no top-level unit found, must have recursive instances.
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 1
+xrun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 1).
+TOOL:	xrun(64)	22.03-s005: Exiting on Jul 29, 2025 at 15:55:38 BST  (total: 00:00:01)

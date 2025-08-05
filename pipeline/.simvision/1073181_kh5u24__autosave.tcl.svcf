@@ -1,0 +1,479 @@
+
+#
+# Preferences
+#
+preferences set toolbar-Standard-WatchWindow {
+  usual
+  shown 0
+}
+preferences set plugin-enable-svdatabrowser-new 1
+preferences set toolbar-SimControl-WaveWindow {
+  usual
+  position -pos 0 -anchor e
+}
+preferences set cursorctl-dont-show-sync-warning 1
+preferences set toolbar-CursorControl-WaveWindow {
+  usual
+  position -row 1
+}
+preferences set toolbar-Windows-WatchWindow {
+  usual
+  shown 0
+}
+preferences set toolbar-TimeSearch-WaveWindow {
+  usual
+  position -pos 2
+}
+preferences set waveform-print-paper {A4 (210mm x 297mm)}
+preferences set exportdlg-file simvision.ps
+preferences set toolbar-NavSignalList-WaveWindow {
+  usual
+  position -pos 1
+}
+preferences set toolbar-txe_waveform_toggle-WaveWindow {
+  usual
+  position -pos 1
+}
+preferences set plugin-enable-groupscope 0
+preferences set plugin-enable-interleaveandcompare 0
+preferences set plugin-enable-waveformfrequencyplot 0
+preferences set toolbar-SimControl-WatchWindow {
+  usual
+  shown 0
+}
+preferences set toolbar-Windows-WaveWindow {
+  usual
+  position -pos 2
+}
+preferences set toolbar-WaveZoom-WaveWindow {
+  usual
+  position -pos 1
+}
+preferences set toolbar-TimeSearch-WatchWindow {
+  usual
+  shown 0
+}
+
+#
+# Mnemonic Maps
+#
+mmap new  -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new  -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+#
+# Design Browser windows
+#
+if {[catch {window new WatchList -name "Design Browser 1" -geometry 730x967+903+15}] != ""} {
+    window geometry "Design Browser 1" 730x967+903+15
+}
+window target "Design Browser 1" on
+browser using {Design Browser 1}
+browser set -scope  simulator::core_stim.core_dut.EXE0 
+browser set \
+    -signalsort name
+browser yview see  simulator::core_stim.core_dut.EXE0 
+browser timecontrol set -lock 0
+
+#
+# Waveform windows
+#
+if {[catch {window new WaveWindow -name "Waveform 1" -geometry 1642x967+-9+15}] != ""} {
+    window geometry "Waveform 1" 1642x967+-9+15
+}
+window target "Waveform 1" on
+waveform using {Waveform 1}
+waveform sidebar visibility partial
+waveform set \
+    -primarycursor TimeA \
+    -signalnames name \
+    -signalwidth 175 \
+    -units ps \
+    -valuewidth 75
+waveform baseline set -time 0
+
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.EXE0.Clock
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.EXE0.EXE_out
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.EXE0.Rmem
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.EXE0.Wmem
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.EXE0.Wreg
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.EXE0.func3[2:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.EXE0.nReset
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.EXE0.rd[4:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.EXE0.result[31:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.EXE0.rs2[31:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.IF0.Clock
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.IF0.PC[31:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.IF0.PC_out[31:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.IF0.flush
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.IF0.hold
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.IF0.instruction[31:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.IF0.instruction_out[31:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.IF0.nReset
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.MEM0.Clock
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.MEM0.MEM_out
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.MEM0.Rmem
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.MEM0.Wreg
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.MEM0.memOut[31:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.MEM0.memOut_out[31:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.MEM0.nReset
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.MEM0.rd[4:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.MEM0.result[31:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.alu0.PC[31:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.alu0.PC4[31:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.alu0.aluCode[3:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.alu0.aluImm_m
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.alu0.aluPC_m
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.alu0.aluPC_m_out[31:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.alu0.alu_out
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.alu0.aluin1_m
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.alu0.aluin1_m_out[31:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.alu0.aluin2_m
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.alu0.aluin2_m_out[31:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.alu0.imm[31:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.alu0.rs1F[31:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.alu0.rs2F[31:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.branching0.Clock
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.branching0.PCDEC[31:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.branching0.PCIF[31:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.branching0.aluOut[31:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.branching0.branchConfirmed
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.branching0.branchType[1:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.branching0.branchTypeEXE[1:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.branching0.branching_out
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.branching0.f3DEC[2:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.branching0.flush_internal
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.branching0.imm[31:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.branching0.immDEC[31:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.branching0.isBranchEXE
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.branching0.isLoad
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.branching0.nReset
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.branching0.negFlag
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.branching0.neguFlag
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.branching0.prediction
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.branching0.predictionReg
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.branching0.zeroFlag
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.dataMem0.Clock
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.dataMem0.Rmem
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.dataMem0.Wmem
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.dataMem0.addr[31:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.dataMem0.data[31:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.dataMem0.f3[2:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.dataMem0.mem[0:1023]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.dataMem0.memOut[31:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.decoder0.control_signals
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.decoder0.f7
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.decoder0.func3[2:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.decoder0.immSample[24:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.decoder0.opcode[4:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.forwarding0.WdataMEM[31:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.forwarding0.WdataWB[31:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.forwarding0.WregEXE
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.forwarding0.WregMEM
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.forwarding0.WregWB
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.forwarding0.addr1DEC[4:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.forwarding0.addr2DEC[4:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.forwarding0.rdEXE[4:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.forwarding0.rdMEM[4:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.forwarding0.rdWB[4:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.forwarding0.resultEXE[31:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.forwarding0.rs1DEC[31:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.forwarding0.rs1F[31:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.forwarding0.rs2DEC[31:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.forwarding0.rs2F[31:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.progCount0.Clock
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.progCount0.PC[31:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.progCount0.PCbranch[31:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.progCount0.PCcurrent[31:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.progCount0.branch
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.progCount0.bypass
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.progCount0.hold
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.progCount0.nReset
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.progMem0.Clock
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.progMem0.PC[31:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.progMem0.flush
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.progMem0.hold
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.progMem0.instruction[31:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.progMem0.mem[0:255]}
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.regMem0.Clock
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.regMem0.Wdata[31:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.regMem0.Wreg
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.regMem0.addr1[4:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.regMem0.addr2[4:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.regMem0.flush
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.regMem0.nReset
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.regMem0.rd[4:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.regMem0.regs[0:31]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.regMem0.rs1[31:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.regMem0.rs2[31:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.write_back0.Clock
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.write_back0.Rmem
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.write_back0.Wreg
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.write_back0.memOut[31:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.write_back0.nReset
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.write_back0.rd[4:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::core_stim.core_dut.write_back0.result[31:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::core_stim.core_dut.write_back0.write_back_out
+	} ]
+
+waveform xview limits 4018131000ps 4020274200ps
+
+#
+# Waveform Window Links
+#
+
+#
+# Console windows
+#
+console set -windowname Console
+window geometry Console 730x250+261+564
+
+#
+# Layout selection
+#

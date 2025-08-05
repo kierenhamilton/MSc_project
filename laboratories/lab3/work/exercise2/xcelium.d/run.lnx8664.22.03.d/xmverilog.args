@@ -1,0 +1,8 @@
+//
+// File created by:  xmverilog
+// Do not modify this file
+//
+-sv
++gui
++access+r
+branching.sv

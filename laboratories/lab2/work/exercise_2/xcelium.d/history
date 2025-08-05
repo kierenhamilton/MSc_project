@@ -1,0 +1,16 @@
+//
+// File created by:  xrun
+// Do not modify this file
+
+s1::(12Jul2025:20:49:56):( xrun exercise_2_tb.sv regMem.sv )
+s2::(12Jul2025:20:53:09):( xrun exercise_2_tb.sv regMem.sv )
+s3::(12Jul2025:20:53:20):( xrun exercise_2_tb.sv regMem.sv )
+s4::(12Jul2025:20:53:41):( xrun exercise_2_tb.sv regMem.sv )
+s5::(12Jul2025:20:55:52):( xrun exercise_2_tb.sv regMem.sv )
+s6::(12Jul2025:20:56:03):( xrun exercise_2_tb.sv regMem.sv )
+s7::(13Jul2025:14:56:16):( xrun exercise_2_tb.sv regMem.sv )
+s8::(13Jul2025:14:57:31):( xrun exercise_2_tb.sv regMem.sv )
+s9::(05Aug2025:14:25:57):( xrun exercise_2_tb.sv regMem.sv )
+s10::(05Aug2025:14:26:12):( xrun exercise_2_tb.sv regMem.sv )
+s11::(05Aug2025:14:26:48):( xrun exercise_2_tb.sv regMem.sv )
+s12::(05Aug2025:14:27:56):( xrun -seed random ../../../../testbenches/exercise_2_tb.sv ./regMem.sv )

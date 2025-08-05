@@ -1,0 +1,251 @@
+xrun(64): 22.03-s005: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.03-s005: Started on Aug 05, 2025 at 14:39:13 BST
+xrun
+	-seed random
+	../../../../testbenches/exercise_4_tb.sv
+	./branchLog.sv
+file: ../../../../testbenches/exercise_4_tb.sv
+	module worklib.exercise_4_tb:sv
+		errors: 0, warnings: 0
+file: ./branchLog.sv
+	module worklib.branchLog:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		$unit_0x3cc32ae8
+		exercise_4_tb
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.branchLog:sv <0x4c762ffb>
+			streams:   2, words:  3112
+		worklib.exercise_4_tb:sv <0x2a12a417>
+			streams:   2, words:  2732
+		worklib.\$unit_0x3cc32ae8 :compilation_unit <0x634c74da>
+			streams:   7, words:  2262
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                       Instances  Unique
+		Modules:                       2       2
+		Registers:                    14      22
+		Scalar wires:                  3       -
+		Vectored wires:                6       -
+		Always blocks:                 1       1
+		Initial blocks:                1       1
+		Pseudo assignments:            1       1
+		Compilation units:             1       1
+		SV Class declarations:         1       1
+		SV Class specializations:      1       1
+		Simulation timescale:      100ps
+	Writing initial simulation snapshot: worklib.exercise_4_tb:sv
+Loading snapshot worklib.exercise_4_tb:sv .................... Done
+SVSEED set randomly from command line: 1100202138
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /eda/cadence/xcelium/tools/xcelium/files/xmsimrc
+xcelium> run
+PC=1585755583, pc_next= 518430651
+PC=3155937913, pc_next=2188542079
+PC=3851395600, pc_next=3851395604
+PC=3140385704, pc_next=3140385708
+PC=2218084793, pc_next=2218084797
+PC=4064301761, pc_next=2839113159
+PC= 227110482, pc_next=2387786848
+PC= 384610770, pc_next=2305073475
+PC=4014360452, pc_next=4014360456
+PC=  36943697, pc_next=2602536025
+PC=3718345346, pc_next=3718345350
+PC=1747954428, pc_next=2450462104
+PC=1392227978, pc_next= 845653664
+PC= 473771055, pc_next=2218046081
+PC= 663216491, pc_next= 307737813
+PC=1369566485, pc_next=3157380421
+PC=3170697379, pc_next=3845549434
+PC=1277099715, pc_next=1277099719
+PC=4286642561, pc_next=1572489932
+PC=2438670584, pc_next=3859546501
+PC=3808869746, pc_next=3808869750
+PC= 369469714, pc_next= 225568278
+PC= 836619849, pc_next=3257104673
+PC=2057022612, pc_next=2057022616
+PC=1136298607, pc_next=1136298611
+PC=3489676046, pc_next=1219859877
+PC=3699028757, pc_next=3699028761
+PC=3408498179, pc_next=3408498183
+PC= 394981258, pc_next=2316575865
+PC=3366232327, pc_next=3366232331
+PC=1815220691, pc_next= 242580212
+PC=2960330519, pc_next=2960330523
+PC=1825948874, pc_next=3382878185
+PC=2717007176, pc_next=2717007180
+PC=2657546514, pc_next=2952270805
+PC=4190732733, pc_next=1537220251
+PC=2960812438, pc_next=2960812442
+PC=2336983980, pc_next=1539208693
+PC=1803511176, pc_next=1803511180
+PC=2574998243, pc_next=2568098156
+PC=3369073146, pc_next=3353414865
+PC=2620419806, pc_next=2752065283
+PC=1931054884, pc_next=2026160735
+PC=2474042296, pc_next=3625936563
+PC=1176704041, pc_next=3120274558
+PC=4240151121, pc_next=2582692782
+PC=1881050334, pc_next=3950010833
+PC=2458410011, pc_next=2222285141
+PC=1795518531, pc_next=1521174248
+PC=3285342206, pc_next=3285342210
+PC=2160350837, pc_next=2160350841
+PC=1424584076, pc_next=1261264822
+PC=1082898697, pc_next=1082898701
+PC=3485325230, pc_next=3536775135
+PC=3455225217, pc_next=3522467242
+PC=3174535114, pc_next=1935362055
+PC=3312755977, pc_next=2176713230
+PC=2580671940, pc_next=2580671944
+PC=  99340455, pc_next=1341443069
+PC= 223266795, pc_next= 223266799
+PC=2506891298, pc_next= 779934911
+PC=2909045422, pc_next=1581262925
+PC= 947042732, pc_next=4034881469
+PC=3003501677, pc_next=2913292063
+PC=  58881099, pc_next=  58881103
+PC=1278902608, pc_next=1278902612
+PC= 175084328, pc_next=3663440774
+PC=3463752891, pc_next=3222816798
+PC=3756544378, pc_next=3756544382
+PC= 454767499, pc_next= 454767503
+PC= 136425817, pc_next=1088250822
+PC=2955230460, pc_next=1619747897
+PC=1254461110, pc_next=1254461114
+PC=2776131366, pc_next=2776131370
+PC=1843772677, pc_next=1843772681
+PC=2709231699, pc_next=2709231703
+PC= 156151061, pc_next= 156151065
+PC=2432642236, pc_next=3921177084
+PC=1471661060, pc_next=1852968863
+PC=2329505758, pc_next=2577752131
+PC=3225282472, pc_next=3225282476
+PC=3560486013, pc_next=3560486017
+PC=3483007696, pc_next= 381992783
+PC=  20102236, pc_next=1129536393
+PC=3799565486, pc_next=1300496708
+PC=1065788282, pc_next=1327206757
+PC=4154935861, pc_next=4154935865
+PC=2310664005, pc_next=  82789724
+PC= 758789089, pc_next=1349238474
+PC= 866500188, pc_next=1779197199
+PC=4210877754, pc_next=3006737578
+PC=2295029509, pc_next=1067579431
+PC= 993314476, pc_next=3167354127
+PC=2135186911, pc_next= 505685396
+PC=3406799636, pc_next=3406799640
+PC=1029723343, pc_next=1029723347
+PC=3128633525, pc_next=2599253491
+PC= 247028899, pc_next= 564375234
+PC= 148338793, pc_next= 148338797
+PC=1656066422, pc_next=1656066426
+PC=3322270919, pc_next=1745743209
+PC= 935984852, pc_next=1073162439
+PC=3820257197, pc_next=3965415995
+PC= 378932862, pc_next=4275428481
+PC= 560917244, pc_next= 560917248
+PC=3231863150, pc_next= 180016885
+PC=1387836235, pc_next=1903019236
+PC= 438513849, pc_next=3761150583
+PC=3102856249, pc_next=1548526826
+PC=2628330091, pc_next=2628330095
+PC=3469216454, pc_next=3469216458
+PC= 269555534, pc_next= 269555538
+PC= 617874467, pc_next= 617874471
+PC= 482319206, pc_next=  95465564
+PC= 106768195, pc_next= 106768199
+PC= 921793674, pc_next=1067729966
+PC=3807912056, pc_next=3807912060
+PC=3134371656, pc_next=3077307140
+PC=3951839557, pc_next=3951839561
+PC= 240564748, pc_next= 240564752
+PC=1417626370, pc_next= 925584073
+PC=1636034541, pc_next=3695546573
+PC=3595854357, pc_next=2602137743
+PC=3821397958, pc_next=3821397962
+PC=3301641414, pc_next=3301641418
+PC=3266171955, pc_next=3778326360
+PC=3790062761, pc_next=3790062765
+PC=2528186674, pc_next=3782595904
+PC=1053828463, pc_next=1053828467
+PC=3621113922, pc_next=2760737687
+PC= 582132956, pc_next=3515134502
+PC=1616021080, pc_next= 160897576
+PC=3938143277, pc_next=3938143281
+PC= 971809539, pc_next= 971809543
+PC=3666357763, pc_next=3666357767
+PC=1504205535, pc_next=2004626524
+PC=3483420328, pc_next=3483420332
+PC=3279948537, pc_next=3601595389
+PC=3074378862, pc_next=1789395008
+PC=4234601714, pc_next=4234601718
+PC=2790075032, pc_next=1575022616
+PC=2369772663, pc_next= 496925779
+PC= 775433584, pc_next= 775433588
+PC=1504011325, pc_next=1504011329
+PC=2766001676, pc_next= 433372534
+PC=3731374460, pc_next=1269529498
+PC= 916990088, pc_next= 167301602
+PC=1430435560, pc_next=1430435564
+PC=1965620526, pc_next=1965620530
+PC= 126401197, pc_next=1140403622
+PC= 778632981, pc_next= 795559325
+PC=4092019693, pc_next= 890089756
+PC=1337837762, pc_next=3750588559
+PC=1595197279, pc_next=1595197283
+PC=4259954835, pc_next=1143020978
+PC=3594108664, pc_next=3594108668
+PC=1998541607, pc_next=3133284978
+PC=3358014017, pc_next=3706788496
+PC=2801914879, pc_next=2801914883
+PC=4069349180, pc_next=4069349184
+PC=1286688831, pc_next=1286688835
+PC= 959580092, pc_next=2023278234
+PC=2114498029, pc_next=1418471710
+PC=2616408024, pc_next=1761571603
+PC=2425043886, pc_next= 246189988
+PC=1790442584, pc_next=2958128987
+PC=1079192201, pc_next=3782854814
+PC=2030041666, pc_next=2030041670
+PC=2821660374, pc_next=2361996293
+PC=2349931242, pc_next=2349931246
+PC=1505608950, pc_next=3066712382
+PC=2706901464, pc_next=2199083116
+PC=3705038992, pc_next=3705038996
+PC=2321227288, pc_next=2321227292
+PC=2151184145, pc_next=2151184149
+PC=4034903861, pc_next= 477100647
+PC=2862033585, pc_next= 979077699
+PC=2641009988, pc_next=2675782776
+PC=2311765850, pc_next=3405468923
+PC= 749515500, pc_next=1391672014
+PC= 507580626, pc_next= 507580630
+PC=2079122503, pc_next=1841756720
+PC=3242427171, pc_next= 554496222
+PC= 909442437, pc_next= 474297064
+PC=4284673773, pc_next=2709971338
+PC= 504663498, pc_next= 594811943
+PC=1843690326, pc_next=1843690330
+PC= 932093677, pc_next=1786680320
+PC=1693399403, pc_next= 801413790
+PC=  67841057, pc_next= 396291901
+PC= 908582515, pc_next=2476976091
+PC=3439422865, pc_next=3439422869
+PC=2887623091, pc_next=2021249719
+PC=3237523924, pc_next=3237523928
+PC=2645535976, pc_next=2645535980
+PC=3320434151, pc_next=2141902241
+PC= 886797741, pc_next=  53025069
+PC= 907029662, pc_next=3754528411
+PC=2886113848, pc_next=3680133740
+PC=2666801672, pc_next=2666801676
+Simulation complete via $finish(1) at time 2 US + 0
+/home/kh5u24/summer/MSc_project/testbenches/exercise_4_tb.sv:58 		$finish;
+xcelium> exit
+TOOL:	xrun(64)	22.03-s005: Exiting on Aug 05, 2025 at 14:39:14 BST  (total: 00:00:01)

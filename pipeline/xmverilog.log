@@ -1,5 +1,5 @@
 xmverilog(64): 22.03-s005: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
-TOOL:	xmverilog	22.03-s005: Started on Jun 27, 2025 at 17:12:25 BST
+TOOL:	xmverilog	22.03-s005: Started on Aug 01, 2025 at 01:02:55 BST
 xmverilog
 	-sv
 	+gui
@@ -21,10 +21,13 @@ xmverilog
 	./rtl/progMem.sv
 	./rtl/regMem.sv
 	./rtl/write_back.sv
-	-s
 Recompiling... reason: file './rtl/branching.sv' is newer than expected.
-	expected: Fri Jun 27 17:00:34 2025
-	actual:   Fri Jun 27 17:12:08 2025
+	expected: Fri Jun 27 17:12:08 2025
+	actual:   Sun Jul 27 15:53:00 2025
+file: ./testbench/core_stim.sv
+  #10000000000 $finish;
+             |
+xmvlog: *W,INTOVF (./testbench/core_stim.sv,18|13): bit overflow during conversion from text [2.5(IEEE)] (32 bits).
 file: ./rtl/branching.sv
 	module worklib.branching:sv
 		errors: 0, warnings: 0
@@ -42,7 +45,7 @@ xmelab: *W,ENUMERR (./rtl/core.sv,134|25): This assignment is a violation of Sys
 xmelab: *W,ENUMERR (./rtl/core.sv,165|20): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.branching:sv <0x21f80cd9>
+		worklib.branching:sv <0x32f3d3f9>
 			streams:   8, words: 17507
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
@@ -62,29 +65,15 @@ xmelab: *W,ENUMERR (./rtl/core.sv,165|20): This assignment is a violation of Sys
 	Writing initial simulation snapshot: worklib.core_stim:sv
 xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
 xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
-xcelium> 
-xcelium> source /eda/cadence/xcelium/tools/xcelium/files/xmsimrc
-xcelium> 
+
 -------------------------------------
 Relinquished control to SimVision...
-# Restoring simulation environment...
-xcelium> input -quiet .reinvoke.sim
-xcelium> file delete .reinvoke.sim
+xcelium> 
+xcelium> source /eda/cadence/xcelium/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm core_stim.core_dut.EXE0.Clock core_stim.core_dut.EXE0.EXE_out core_stim.core_dut.EXE0.Rmem core_stim.core_dut.EXE0.Wmem core_stim.core_dut.EXE0.Wreg core_stim.core_dut.EXE0.func3 core_stim.core_dut.EXE0.nReset core_stim.core_dut.EXE0.rd core_stim.core_dut.EXE0.result core_stim.core_dut.EXE0.rs2 core_stim.core_dut.IF0.Clock core_stim.core_dut.IF0.PC core_stim.core_dut.IF0.PC_out core_stim.core_dut.IF0.flush core_stim.core_dut.IF0.hold core_stim.core_dut.IF0.instruction core_stim.core_dut.IF0.instruction_out core_stim.core_dut.IF0.nReset core_stim.core_dut.MEM0.Clock core_stim.core_dut.MEM0.MEM_out core_stim.core_dut.MEM0.Rmem core_stim.core_dut.MEM0.Wreg core_stim.core_dut.MEM0.memOut core_stim.core_dut.MEM0.memOut_out core_stim.core_dut.MEM0.nReset core_stim.core_dut.MEM0.rd core_stim.core_dut.MEM0.result core_stim.core_dut.alu0.PC core_stim.core_dut.alu0.PC4 core_stim.core_dut.alu0.aluCode core_stim.core_dut.alu0.aluImm_m core_stim.core_dut.alu0.aluPC_m core_stim.core_dut.alu0.aluPC_m_out core_stim.core_dut.alu0.alu_out core_stim.core_dut.alu0.aluin1_m core_stim.core_dut.alu0.aluin1_m_out core_stim.core_dut.alu0.aluin2_m core_stim.core_dut.alu0.aluin2_m_out core_stim.core_dut.alu0.imm core_stim.core_dut.alu0.rs1F core_stim.core_dut.alu0.rs2F core_stim.core_dut.branching0.Clock core_stim.core_dut.branching0.PCDEC core_stim.core_dut.branching0.PCIF core_stim.core_dut.branching0.aluOut core_stim.core_dut.branching0.branchConfirmed core_stim.core_dut.branching0.branchType core_stim.core_dut.branching0.branchTypeEXE core_stim.core_dut.branching0.branching_out core_stim.core_dut.branching0.f3DEC core_stim.core_dut.branching0.flush_internal core_stim.core_dut.branching0.imm core_stim.core_dut.branching0.immDEC core_stim.core_dut.branching0.isBranchEXE core_stim.core_dut.branching0.isLoad core_stim.core_dut.branching0.nReset core_stim.core_dut.branching0.negFlag core_stim.core_dut.branching0.neguFlag core_stim.core_dut.branching0.prediction core_stim.core_dut.branching0.predictionReg core_stim.core_dut.branching0.zeroFlag core_stim.core_dut.dataMem0.Clock core_stim.core_dut.dataMem0.Rmem core_stim.core_dut.dataMem0.Wmem core_stim.core_dut.dataMem0.addr core_stim.core_dut.dataMem0.data core_stim.core_dut.dataMem0.f3 core_stim.core_dut.dataMem0.mem core_stim.core_dut.dataMem0.memOut core_stim.core_dut.decoder0.control_signals core_stim.core_dut.decoder0.f7 core_stim.core_dut.decoder0.func3 core_stim.core_dut.decoder0.immSample core_stim.core_dut.decoder0.opcode core_stim.core_dut.forwarding0.WdataMEM core_stim.core_dut.forwarding0.WdataWB core_stim.core_dut.forwarding0.WregEXE core_stim.core_dut.forwarding0.WregMEM core_stim.core_dut.forwarding0.WregWB core_stim.core_dut.forwarding0.addr1DEC core_stim.core_dut.forwarding0.addr2DEC core_stim.core_dut.forwarding0.rdEXE core_stim.core_dut.forwarding0.rdMEM core_stim.core_dut.forwarding0.rdWB core_stim.core_dut.forwarding0.resultEXE core_stim.core_dut.forwarding0.rs1DEC core_stim.core_dut.forwarding0.rs1F core_stim.core_dut.forwarding0.rs2DEC core_stim.core_dut.forwarding0.rs2F core_stim.core_dut.progCount0.Clock core_stim.core_dut.progCount0.PC core_stim.core_dut.progCount0.PCbranch core_stim.core_dut.progCount0.PCcurrent core_stim.core_dut.progCount0.branch core_stim.core_dut.progCount0.bypass core_stim.core_dut.progCount0.hold core_stim.core_dut.progCount0.nReset core_stim.core_dut.progMem0.Clock core_stim.core_dut.progMem0.PC core_stim.core_dut.progMem0.flush core_stim.core_dut.progMem0.hold core_stim.core_dut.progMem0.instruction core_stim.core_dut.progMem0.mem core_stim.core_dut.regMem0.Clock core_stim.core_dut.regMem0.Wdata core_stim.core_dut.regMem0.Wreg core_stim.core_dut.regMem0.addr1 core_stim.core_dut.regMem0.addr2 core_stim.core_dut.regMem0.flush core_stim.core_dut.regMem0.nReset core_stim.core_dut.regMem0.rd core_stim.core_dut.regMem0.regs core_stim.core_dut.regMem0.rs1 core_stim.core_dut.regMem0.rs2 core_stim.core_dut.write_back0.Clock core_stim.core_dut.write_back0.Rmem core_stim.core_dut.write_back0.Wreg core_stim.core_dut.write_back0.memOut core_stim.core_dut.write_back0.nReset core_stim.core_dut.write_back0.rd core_stim.core_dut.write_back0.result core_stim.core_dut.write_back0.write_back_out
+Created probe 1
 xcelium> run
-Simulation complete via $finish(1) at time 100 US + 0
-./testbench/core_stim.sv:18   #100000 $finish;
-xcelium> reset
-xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
-Loaded snapshot worklib.core_stim:sv
-xcelium> run
-Simulation complete via $finish(1) at time 100 US + 0
-./testbench/core_stim.sv:18   #100000 $finish;
-xcelium> reset
-xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
-Loaded snapshot worklib.core_stim:sv
-xcelium> run
-Simulation complete via $finish(1) at time 100 US + 0
-./testbench/core_stim.sv:18   #100000 $finish;
-xcelium> ^C
-xcelium> exit
-TOOL:	xmverilog	22.03-s005: Exiting on Jun 28, 2025 at 13:05:32 BST  (total: 19:53:07)
+Simulation interrupted at 35945600 NS + 6
+xcelium> 

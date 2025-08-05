@@ -1,0 +1,6 @@
+//
+// File created by:  xrun
+// Do not modify this file
+
+s1::(05Aug2025:14:34:06):( xrun -seed random ../../../../testbenches/exercise_3_tb.sv ./dataMem.sv )
+s2::(05Aug2025:14:34:11):( xrun -seed random ../../../../testbenches/exercise_3_tb.sv ./dataMem.sv )

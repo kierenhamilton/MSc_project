@@ -1,0 +1,40 @@
+xrun(64): 22.03-s005: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.03-s005: Started on Aug 05, 2025 at 14:34:11 BST
+xrun
+	-seed random
+	../../../../testbenches/exercise_3_tb.sv
+	./dataMem.sv
+Loading snapshot worklib.exercise_3_tb:sv .................... Done
+SVSEED set randomly from command line: 705902153
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /eda/cadence/xcelium/tools/xcelium/files/xmsimrc
+xcelium> run
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_3_tb.sv,62): (time 51 NS) Assertion exercise_3_tb.check_write has failed 
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_3_tb.sv,61): (time 51 NS) Assertion exercise_3_tb.check_read has failed 
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_3_tb.sv,62): (time 204 NS) Assertion exercise_3_tb.check_write has failed 
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_3_tb.sv,62): (time 459 NS) Assertion exercise_3_tb.check_write has failed 
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_3_tb.sv,62): (time 663 NS) Assertion exercise_3_tb.check_write has failed 
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_3_tb.sv,62): (time 1071 NS) Assertion exercise_3_tb.check_write has failed 
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_3_tb.sv,62): (time 1428 NS) Assertion exercise_3_tb.check_write has failed 
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_3_tb.sv,62): (time 1632 NS) Assertion exercise_3_tb.check_write has failed 
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_3_tb.sv,62): (time 1734 NS) Assertion exercise_3_tb.check_write has failed 
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_3_tb.sv,62): (time 1989 NS) Assertion exercise_3_tb.check_write has failed 
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_3_tb.sv,62): (time 2091 NS) Assertion exercise_3_tb.check_write has failed 
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_3_tb.sv,62): (time 2295 NS) Assertion exercise_3_tb.check_write has failed 
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_3_tb.sv,62): (time 2448 NS) Assertion exercise_3_tb.check_write has failed 
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_3_tb.sv,62): (time 2550 NS) Assertion exercise_3_tb.check_write has failed 
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_3_tb.sv,62): (time 2652 NS) Assertion exercise_3_tb.check_write has failed 
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_3_tb.sv,62): (time 2856 NS) Assertion exercise_3_tb.check_write has failed 
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_3_tb.sv,62): (time 3366 NS) Assertion exercise_3_tb.check_write has failed 
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_3_tb.sv,62): (time 3570 NS) Assertion exercise_3_tb.check_write has failed 
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_3_tb.sv,62): (time 3825 NS) Assertion exercise_3_tb.check_write has failed 
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_3_tb.sv,62): (time 3927 NS) Assertion exercise_3_tb.check_write has failed 
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_3_tb.sv,62): (time 4233 NS) Assertion exercise_3_tb.check_write has failed 
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_3_tb.sv,62): (time 4590 NS) Assertion exercise_3_tb.check_write has failed 
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_3_tb.sv,62): (time 4692 NS) Assertion exercise_3_tb.check_write has failed 
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_3_tb.sv,62): (time 4845 NS) Assertion exercise_3_tb.check_write has failed 
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_3_tb.sv,62): (time 4998 NS) Assertion exercise_3_tb.check_write has failed 
+Simulation complete via $finish(1) at time 5100 NS + 0
+/home/kh5u24/summer/MSc_project/testbenches/exercise_3_tb.sv:58 		$finish;
+xcelium> exit
+TOOL:	xrun(64)	22.03-s005: Exiting on Aug 05, 2025 at 14:34:12 BST  (total: 00:00:01)

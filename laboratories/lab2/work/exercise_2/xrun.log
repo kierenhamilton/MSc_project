@@ -1,0 +1,371 @@
+xrun(64): 22.03-s005: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.03-s005: Started on Aug 05, 2025 at 14:27:56 BST
+xrun
+	-seed random
+	../../../../testbenches/exercise_2_tb.sv
+	./regMem.sv
+file: ../../../../testbenches/exercise_2_tb.sv
+	module worklib.exercise_2_tb:sv
+		errors: 0, warnings: 0
+file: ./regMem.sv
+	module worklib.regMem:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		$unit_0x5f682b8f
+		exercise_2_tb
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.exercise_2_tb:sv <0x1501e760>
+			streams:  10, words: 11136
+		worklib.regMem:sv <0x5757f39b>
+			streams:   0, words:     0
+		worklib.\$unit_0x5f682b8f :compilation_unit <0x75d3a1c0>
+			streams:   7, words:  2143
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                       Instances  Unique
+		Modules:                       2       2
+		Registers:                    24      29
+		Scalar wires:                  3       -
+		Vectored wires:                6       -
+		Always blocks:                 9       9
+		Initial blocks:                4       4
+		Clocking blocks:               1       1
+		Assertions:                    2       2
+		Compilation units:             1       1
+		SV Class declarations:         1       1
+		SV Class specializations:      1       1
+		Simulation timescale:      100ps
+	Writing initial simulation snapshot: worklib.exercise_2_tb:sv
+Loading snapshot worklib.exercise_2_tb:sv .................... Done
+SVSEED set randomly from command line: -1151125149
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /eda/cadence/xcelium/tools/xcelium/files/xmsimrc
+xcelium> run
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,70): (time 100 NS) Assertion exercise_2_tb.check_writing has failed 
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 200 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 100 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 300 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 200 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 400 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 300 NS)
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,70): (time 400 NS) Assertion exercise_2_tb.check_writing has failed 
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 500 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 400 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 600 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 500 NS)
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,70): (time 600 NS) Assertion exercise_2_tb.check_writing has failed 
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 700 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 600 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 800 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 700 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 900 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 800 NS)
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,70): (time 900 NS) Assertion exercise_2_tb.check_writing has failed 
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 1 US) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 900 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 1100 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 1 US)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 1200 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 1100 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 1300 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 1200 NS)
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,70): (time 1300 NS) Assertion exercise_2_tb.check_writing has failed 
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 1400 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 1300 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 1500 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 1400 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 1600 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 1500 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 1700 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 1600 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 1800 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 1700 NS)
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,70): (time 1800 NS) Assertion exercise_2_tb.check_writing has failed 
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 1900 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 1800 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 2 US) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 1900 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 2100 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 2 US)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 2200 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 2100 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 2300 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 2200 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 2400 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 2300 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 2500 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 2400 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 2600 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 2500 NS)
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,70): (time 2600 NS) Assertion exercise_2_tb.check_writing has failed 
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 2700 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 2600 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 2800 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 2700 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 2900 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 2800 NS)
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,70): (time 2900 NS) Assertion exercise_2_tb.check_writing has failed 
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 3 US) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 2900 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 3100 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 3 US)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 3200 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 3100 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 3300 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 3200 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 3400 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 3300 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 3500 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 3400 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 3600 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 3500 NS)
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,70): (time 3600 NS) Assertion exercise_2_tb.check_writing has failed 
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 3700 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 3600 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 3800 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 3700 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 3900 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 3800 NS)
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,70): (time 3900 NS) Assertion exercise_2_tb.check_writing has failed 
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 4 US) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 3900 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 4100 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 4 US)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 4200 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 4100 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 4300 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 4200 NS)
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,70): (time 4300 NS) Assertion exercise_2_tb.check_writing has failed 
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 4400 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 4300 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 4500 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 4400 NS)
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,70): (time 4500 NS) Assertion exercise_2_tb.check_writing has failed 
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 4600 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 4500 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 4700 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 4600 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 4800 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 4700 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 4900 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 4800 NS)
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,70): (time 4900 NS) Assertion exercise_2_tb.check_writing has failed 
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 5 US) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 4900 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 5100 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 5 US)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 5200 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 5100 NS)
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,70): (time 5200 NS) Assertion exercise_2_tb.check_writing has failed 
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 5300 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 5200 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 5400 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 5300 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 5500 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 5400 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 5600 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 5500 NS)
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,70): (time 5600 NS) Assertion exercise_2_tb.check_writing has failed 
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 5700 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 5600 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 5800 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 5700 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 5900 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 5800 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 6 US) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 5900 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 6100 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 6 US)
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,70): (time 6100 NS) Assertion exercise_2_tb.check_writing has failed 
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 6200 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 6100 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 6300 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 6200 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 6400 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 6300 NS)
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,70): (time 6400 NS) Assertion exercise_2_tb.check_writing has failed 
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 6500 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 6400 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 6600 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 6500 NS)
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,70): (time 6600 NS) Assertion exercise_2_tb.check_writing has failed 
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 6700 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 6600 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 6800 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 6700 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 6900 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 6800 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 7 US) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 6900 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 7100 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 7 US)
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,70): (time 7100 NS) Assertion exercise_2_tb.check_writing has failed 
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 7200 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 7100 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 7300 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 7200 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 7400 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 7300 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 7500 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 7400 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 7600 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 7500 NS)
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,70): (time 7600 NS) Assertion exercise_2_tb.check_writing has failed 
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 7700 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 7600 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 7800 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 7700 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 7900 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 7800 NS)
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,70): (time 7900 NS) Assertion exercise_2_tb.check_writing has failed 
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 8 US) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 7900 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 8100 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 8 US)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 8200 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 8100 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 8300 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 8200 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 8400 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 8300 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 8500 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 8400 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 8600 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 8500 NS)
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,70): (time 8600 NS) Assertion exercise_2_tb.check_writing has failed 
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 8700 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 8600 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 8800 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 8700 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 8900 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 8800 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 9 US) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 8900 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 9100 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 9 US)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 9200 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 9100 NS)
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,70): (time 9200 NS) Assertion exercise_2_tb.check_writing has failed 
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 9300 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 9200 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 9400 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 9300 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 9500 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 9400 NS)
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,70): (time 9500 NS) Assertion exercise_2_tb.check_writing has failed 
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 9600 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 9500 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 9700 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 9600 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 9800 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 9700 NS)
+	(dut.memory[addr1] == rs1) &&
+	                            |
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,72): (time 9900 NS) Assertion exercise_2_tb.check_reading has failed (2 cycles, starting 9800 NS)
+xmsim: *E,ASRTST (/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv,70): (time 9900 NS) Assertion exercise_2_tb.check_writing has failed 
+Simulation complete via $finish(1) at time 10 US + 0
+/home/kh5u24/summer/MSc_project/testbenches/exercise_2_tb.sv:63 	$finish();
+xcelium> exit
+TOOL:	xrun(64)	22.03-s005: Exiting on Aug 05, 2025 at 14:27:57 BST  (total: 00:00:01)

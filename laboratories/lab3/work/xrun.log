@@ -1,0 +1,38 @@
+xrun(64): 22.03-s005: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.03-s005: Started on Jul 27, 2025 at 17:17:59 BST
+xrun
+	forwarding_tb.sv
+	forwarding.sv
+Loading snapshot worklib.forwarding_tb:sv .................... Done
+SVSEED default: 1
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /eda/cadence/xcelium/tools/xcelium/files/xmsimrc
+xcelium> run
+Test 1: no forwarding
+Test 2: WB forwarding
+xmsim: *E,ASRTST (./forwarding_tb.sv,131): (time 70 NS) Assertion forwarding_tb.rs1F_forwarding_path_WB has failed 
+xmsim: *E,ASRTST (./forwarding_tb.sv,133): (time 70 NS) Assertion forwarding_tb.rs2F_forwarding_path_WB has failed 
+xmsim: *E,ASRTST (./forwarding_tb.sv,131): (time 100 NS) Assertion forwarding_tb.rs1F_forwarding_path_WB has failed 
+xmsim: *E,ASRTST (./forwarding_tb.sv,133): (time 100 NS) Assertion forwarding_tb.rs2F_forwarding_path_WB has failed 
+Test 3: MEM forwarding
+xmsim: *E,ASRTST (./forwarding_tb.sv,163): (time 120 NS) Assertion forwarding_tb.rs1F_forwarding_path_MEM has failed 
+xmsim: *E,ASRTST (./forwarding_tb.sv,165): (time 120 NS) Assertion forwarding_tb.rs2F_forwarding_path_MEM has failed 
+xmsim: *E,ASRTST (./forwarding_tb.sv,163): (time 130 NS) Assertion forwarding_tb.rs1F_forwarding_path_MEM has failed 
+xmsim: *E,ASRTST (./forwarding_tb.sv,165): (time 130 NS) Assertion forwarding_tb.rs2F_forwarding_path_MEM has failed 
+xmsim: *E,ASRTST (./forwarding_tb.sv,163): (time 140 NS) Assertion forwarding_tb.rs1F_forwarding_path_MEM has failed 
+xmsim: *E,ASRTST (./forwarding_tb.sv,165): (time 140 NS) Assertion forwarding_tb.rs2F_forwarding_path_MEM has failed 
+xmsim: *E,ASRTST (./forwarding_tb.sv,163): (time 150 NS) Assertion forwarding_tb.rs1F_forwarding_path_MEM has failed 
+xmsim: *E,ASRTST (./forwarding_tb.sv,165): (time 150 NS) Assertion forwarding_tb.rs2F_forwarding_path_MEM has failed 
+Test 4: EXE forwarding
+xmsim: *E,ASRTST (./forwarding_tb.sv,194): (time 170 NS) Assertion forwarding_tb.rs1F_forwarding_path_EXE has failed 
+xmsim: *E,ASRTST (./forwarding_tb.sv,196): (time 170 NS) Assertion forwarding_tb.rs2F_forwarding_path_EXE has failed 
+xmsim: *E,ASRTST (./forwarding_tb.sv,194): (time 180 NS) Assertion forwarding_tb.rs1F_forwarding_path_EXE has failed 
+xmsim: *E,ASRTST (./forwarding_tb.sv,196): (time 180 NS) Assertion forwarding_tb.rs2F_forwarding_path_EXE has failed 
+xmsim: *E,ASRTST (./forwarding_tb.sv,194): (time 190 NS) Assertion forwarding_tb.rs1F_forwarding_path_EXE has failed 
+xmsim: *E,ASRTST (./forwarding_tb.sv,196): (time 190 NS) Assertion forwarding_tb.rs2F_forwarding_path_EXE has failed 
+xmsim: *E,ASRTST (./forwarding_tb.sv,194): (time 200 NS) Assertion forwarding_tb.rs1F_forwarding_path_EXE has failed 
+xmsim: *E,ASRTST (./forwarding_tb.sv,196): (time 200 NS) Assertion forwarding_tb.rs2F_forwarding_path_EXE has failed 
+Simulation complete via $finish(1) at time 200 NS + 0
+./forwarding_tb.sv:199 		$finish;
+xcelium> exit
+TOOL:	xrun(64)	22.03-s005: Exiting on Jul 27, 2025 at 17:18:00 BST  (total: 00:00:01)
