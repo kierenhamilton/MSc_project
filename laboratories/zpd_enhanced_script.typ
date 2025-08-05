@@ -1,5 +1,5 @@
 #set text(font: "calibri")
-#set text(size: 12pt)
+#set text(size: 11pt)
 #set page(numbering: "1")
 #set heading(numbering: "1.1")
 #text("RISC-V labs", size: 17pt, weight: "bold")
@@ -13,12 +13,33 @@ for an overall understanding of RISC-V processors.
 - Access to cadteaching8.
 - Basic navigation of the Unix terminal.
 - This lab assumes basic competence in writing SystemVerilog
-  and an ability to test your own designs using some of the
-  tools available in cadteaching8.
+  and an ability to test your own designs using Xcellium and 
+  SimVision inside CadTeaching8.
 
-Each alb
+== Learning outcomes
+The 3 parts focus on different aspects of processor design.
+They can be broken down into 3 sections: 
 
-Unix command tutorial:
+- Lab1: RISC-V assembly 
+  - Understanding of how RISC-V assembly relates to machine code.
+  - Ability to write programs in RISC-V assembly.
+- Lab2: RISC-V core, architecture, and implementation
+  - Understanding of how a RISC-V core handles the instructions. 
+  - Ability to implement SystemVerilog modules based on a specification.
+  - Basic understanding of how instructions interface with memory.
+  - 
+- Lab3: pipeline hazards and branch prediction
+
+Labs are broken down into tasks where a specification along with automated tests are provided.
+
+Each labs can be found in ``` <laboratories/>``` inside their corresponding lab1, lab2, or lab3 directory. 
+
+= UNIX and SystemVerilog tutorial 
+Please feel free to skip this section to lab 1 if you already know how to write SystemVerilog and are comfortable in
+the UNIX command line.
+
+
+== Unix command tutorial:
 1. Open the terminal which can be found in the top left of cadteaching8.
 2. Make a directory that will house this project\
   ``` <mkdir riscv_labs>, <cd riscv_labs>```
@@ -34,7 +55,7 @@ Unix command tutorial:
 
 If you are comfortable using SystemVerilog and some of its features, feel free to skip to lab1.
 
-= SystemVerilog
+== SystemVerilog
 
 SystemVerilog is a hardware description language (HDL), used to describe implementations
 of digital logic. Based on the C programming language, a lot of syntax carries over.
@@ -43,8 +64,6 @@ SystemVeriog is a powerful language that is used for Synthesizable#footnote[
   which is called a netlist. This can then be used to create and tape out a physical microchip.
 ] and non-synthesizable code
 for testing.
-
-#pagebreak()
 
 #set text(size: 10pt)
 
@@ -93,6 +112,7 @@ endmodule
 ]
 
 
+
 #align(center)[
   #box(width: 100%, stroke: black, inset: 4pt, radius: 4pt)[
     #underline([counter_tb.sv -- This is non-synthesizable stimulus for counter.sv])
@@ -131,7 +151,7 @@ Inside of cadteaching8, copy these two files into a directory of your choosing.
 == Design patterns
 #align(center)[
   #box(stroke: black, width: 100%,  inset: 4pt, radius: 4pt)[
-    #underline([case-example.sv -- This details the ])\
+    #underline([case-example.sv])\
     #align(left)[
       ```systemverilog
 typedef enum logic [2:0] { // enumeration links names to numbers for convenience
@@ -158,11 +178,11 @@ endmodule
     ]
   ]
 ]
-This file shows how enums can  be defined and used in place of logic, which is useful for debugging inside of the 
+This file shows how enumerated logic can  be defined and used in place of logic, which is useful for debugging inside of the 
 waveform viewer. 
 #align(center)[
   #box(stroke: black, width: 100%,  inset: 4pt, radius: 4pt)[
-    #underline([case-example.sv -- This details the ])\
+    #underline([case-example_test.sv])\
     #align(left)[
       ```systemverilog
 typedef enum logic [2:0] { // enumeration links names to numbers for convenience
@@ -172,7 +192,7 @@ typedef enum logic [2:0] { // enumeration links names to numbers for convenience
   DENVER = 3'd3,
 } people_e;
 
-module case_example; 
+module case_example_test; 
   people_e people = ADAM;
   logic [7:0] favourite_number;
 
@@ -190,4 +210,8 @@ endmodule
   ]
 ]
 
- 
+Stimulus file for case_example.sv.
+
+The Typedef command is used to define a datatype. Under the hood, it is just logic, although using 
+people_e in place of logic[2:0] has the benefit of type safety, and understandability.
+
